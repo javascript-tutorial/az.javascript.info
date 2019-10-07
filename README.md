@@ -1,39 +1,38 @@
-# The Modern JavaScript Tutorial
+# Müasir JavaScript Dərsliyi
 
-This repository hosts the English content of the Modern JavaScript Tutorial, published at [https://javascript.info](https://javascript.info).
+Bu repositoriya [https://javascript.info](https://javascript.info) saytında yayımlanan Müasir JavaScript Dərsliyinin Azərbaycan dilli məzmununu saxlayır.
 
-## Translations
+## Tərcümə
 
-We'd like to make the tutorial available in many languages. Please help us to translate.
+Məqsədimiz bu dərsliyi Azərbaycan dilində sizlərə çatdırmaqdır. Tərcümə üçün hər zaman köməyə ehtiyacımız olacaq.
 
-See <https://javascript.info/translate> for the details.
+Ətraflı məlumat üçün <https://javascript.info/translate> keçidinə daxil olun.
 
-## Contributions
+## Töhfə
 
-We'd also like to collaborate on the tutorial with other people.
+Biz həm də başqa insanlarla birlikdə işləməyi sevirik.
 
-Something's wrong? A topic is missing? Explain it to people, add as PR 👏
+Nə isə səhv yazılıb? Hansısa mövzu çatışmır? Issue yaradın və bunu bizə izah edin 👏
 
-**You can edit the text in any editor.** The tutorial uses enhanced "markdown" format, easy to grasp. And if you want to see how it looks on-site, there's a server to run the tutorial locally at <https://github.com/javascript-tutorial/server>.  
+**Mətni istədiyiniz mətn redaktoru ilə dəyişə bilərsiniz.** Dərslik, artırılmış "markdown" formatında yazılıb, bu sadədir və asan başa düşülür. Əgər etdiyiniz dəyişiklikləri anında görmək istəyirsinizsə, öz lokal serverinizi yaratmaq üçün bu repositoriyaya baxın: <https://github.com/javascript-tutorial/server>.
 
-The list of contributors is available at <https://javascript.info/about#contributors>.
+## Quruluş
 
-## Structure
+Hər bir fəsil, məqalə və ya tapşırıq öz qovluğunda yerləşdirilməlidir.
 
-Every chapter, article or a task has its folder.
+Qovluq, `N-url` şəklində adlandırılmalıdır. Burada `N`, sıralama məqsədi üçün istifadə olunan ixtiyari bir natural ədəddir, `url` isə saytda həmin mövzuya keçid üçün linkdə istifadə olunacaq.
 
-The folder is named like `N-url`, where `N` is a number for the sorting purposes and `url` is the URL part with title of the material.
+Materialın növü, quvluqdakı adı ilə təyin olunur:
 
-The type of the material is defined by the file inside the folder:
+- `index.md` fəsili
+- `article.md` məqaləni
+- `task.md` isə tapşırıqları təmsil edir (tapşırığın həlləri `solution.md` faylında yerləşdirilməlidir)
 
-  - `index.md` stands for a chapter
-  - `article.md` stands for an article
-  - `task.md` stands for a task (solution must be provided in `solution.md` file aswell)
+Hər bir material `# Əsas başlıq` başlığı ilə başlayır.
 
-Each of these files starts from the `# Main header`.
-
-It's very easy to add something new.
+Yeni məznun əlavə etmək isə çox asandır.
 
 ---
+
 ♥  
 Ilya Kantor @iliakan
