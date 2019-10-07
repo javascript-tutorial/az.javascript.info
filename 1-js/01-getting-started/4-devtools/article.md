@@ -1,6 +1,6 @@
-# Developer console
+# Developer konsolu
 
-Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are *absolutely* going to make errors, at least if you're a human, not a [robot](https://en.wikipedia.org/wiki/Bender_(Futurama)).
+Code is prone to errors. You will quite likely make errors... Oh, what am I talking about? You are _absolutely_ going to make errors, at least if you're a human, not a [robot](<https://en.wikipedia.org/wiki/Bender_(Futurama)>).
 
 But in the browser, users don't see errors by default. So, if something goes wrong in the script, we won't see what's broken and can't fix it.
 
@@ -32,7 +32,6 @@ The exact look of developer tools depends on your version of Chrome. It changes 
 Below the error message, there is a blue `>` symbol. It marks a "command line" where we can type JavaScript commands. Press `key:Enter` to run them (`key:Shift+Enter` to input multi-line commands).
 
 Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
-
 
 ## Firefox, Edge, and others
 
