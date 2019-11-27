@@ -12,7 +12,7 @@ Məqsədimiz bu dərsliyi Azərbaycan dilində sizlərə çatdırmaqdır. Tərc�
 
 Biz həm də başqa insanlarla birlikdə işləməyi sevirik.
 
-Nə isə səhv yazılıb? Hansısa mövzu çatışmır? Issue yaradın və bunu bizə izah edin 👏
+Nə isə səhv yazılıb? Hansısa mövzu çatışmır? PR yaradın və bunu bizə izah edin 👏
 
 **Mətni istədiyiniz mətn redaktoru ilə dəyişə bilərsiniz.** Dərslik, artırılmış "markdown" formatında yazılıb, bu sadədir və asan başa düşülür. Əgər etdiyiniz dəyişiklikləri anında görmək istəyirsinizsə, öz lokal serverinizi yaratmaq üçün bu repositoriyaya baxın: <https://github.com/javascript-tutorial/server>.
 
