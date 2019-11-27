@@ -1,47 +1,51 @@
 # JavaScript-ə giriş
 
-Let's see what's so special about JavaScript, what we can achieve with it, and which other technologies play well with it.
+Gəlin JavaScript-in niyə belə xüsusi olduğuna, onunla nələr edə biləcəyimizə və onun hansı texnologiyalarla qaynayıb qarışdığına bir nəzər yetirək.
 
-## What is JavaScript?
+## JavaScript nədir?
 
-_JavaScript_ was initially created to _"make web pages alive"_.
+_JavaScript_ ilkin olaraq _"web səhifələri canlandırmaq"_ üçün yaradılmışdır.
 
-The programs in this language are called _scripts_. They can be written right in a web page's HTML and run automatically as the page loads.
+Bu dilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
 
-Scripts are provided and executed as plain text. They don't need special preparation or compilation to run.
+Skriptlər əvvəlcədən heç bir hazırlıq, kompilyasiya və s. mərhələlərə ehtiyac olmadan, adi mətn şəklində yazıla və təqdim edilə bilər.
 
-In this aspect, JavaScript is very different from another language called [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>).
+Bu baxımdan, JavaScript, [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) adlandırılan, lakin çox vaxt onunla qarışıq salınan dildən olduqca fərqlidir.
 
-```smart header="Why is it called <u>Java</u>Script?"
-When JavaScript was created, it initially had another name: "LiveScript". But Java was very popular at that time, so it was decided that positioning a new language as a "younger brother" of Java would help.
+```smart header="Bəs onda niyə <u>Java</u>Script?"
 
-But as it evolved, JavaScript became a fully independent language with its own specification called [ECMAScript](http://en.wikipedia.org/wiki/ECMAScript), and now it has no relation to Java at all.
+JavaScript yaradılan vaxtlarda, ilkin olaraq "LiveScript" adlandırılmışdır. Lakin sonradan Java-nın məhşurluğu və digər səbəblərdən dolayı onu Java-nın "kiçik qardaşı" kimi qələmə vermək qərara alınmışdı.
+
+Buna baxamayaraq sonradan JavaScript öz spesifikasiyaları olan ([ECMAScript](http://en.wikipedia.org/wiki/ECMAScript)), tamamilə müstəqil bir dilə çevrildi və artıq Java ilə uzaqdan yaxından heç bir əlaqəsi yoxdur.
+
 ```
 
-Today, JavaScript can execute not only in the browser, but also on the server, or actually on any device that has a special program called [the JavaScript engine](https://en.wikipedia.org/wiki/JavaScript_engine).
+Günümüzdə isə, JavaScript tək brauzer mühitində deyil, serverdə və [JavaScript mühərriki](https://en.wikipedia.org/wiki/JavaScript_engine) olan istənilən bir qurğuda işləyir.
 
-The browser has an embedded engine sometimes called a "JavaScript virtual machine".
+Brauzerin daxilində "JavaScript virtual maşını" adlı bir mühərrik mövcuddur.
 
-Different engines have different "codenames". For example:
+Müxtəlif mühərriklərin müxtəlif kodadları var. Misalçün:
 
-- [V8](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) -- in Chrome and Opera.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
-- ...There are other codenames like "Trident" and "Chakra" for different versions of IE, "ChakraCore" for Microsoft Edge, "Nitro" and "SquirrelFish" for Safari, etc.
+- [V8](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) -- Chrome və Operada.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefoxda.
+- [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) -- Microsoft Edgedə
+- [JavaScriptCore](https://en.wikipedia.org/wiki/WebKit#JavaScriptCore) -- Safaridə (WebKit) və s.
 
-The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome and Opera.
+Yuxarıdakı terminləri yadda saxlamağınız tövsiyyə olunur çünki, bu cür terminlər developer məqalələrində çox istifadə olunur. Nümunə üçün onu deyə bilərik ki, kimsə sizə "filan xüsusiyyət V8-də dəstəklənir" deyəndə, o dəqiqə biləcəksiniz ki, Chrome və Opera (bir də gördünüz MS Edge) bu xüsusiyyəti dəstəkləyir.
 
-```smart header="How do engines work?"
+```smart header="Bəs bu mühərriklər necə işləyir?"
 
-Engines are complicated. But the basics are easy.
+Düzünü desək, bu mühərriklər olduqca mürəkkəbdir lakin əsaslar sadədir:
 
-1. The engine (embedded if it's a browser) reads ("parses") the script.
-2. Then it converts ("compiles") the script to the machine language.
-3. And then the machine code runs, pretty fast.
+1. Əvvəlcə skript oxunulur, token-lərə ayrılır və parse edilir
+2. Yaradılmış token-lərdən [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) qurulur
+3. Həmin tree-dən [bytecode](https://en.wikipedia.org/wiki/Bytecode) generasiya olunur
+4. Bytecode isə maşın koduna çevrilərək icra olunur
 
-The engine applies optimizations at each step of the process. It even watches the compiled script as it runs, analyzes the data that flows through it, and further optimizes the machine code based on that knowledge.
+Təbii ki, mühərrikin işi bununla bitmir. Hər bir mərhələdə müəyyən optimallaşdırmalar aparılır və skriptlər icra olunduqca optimallaşdırma üçün məlumatlar toplanılır. Bunun vasitəsilə daha süərtli maşın kodları generasiya olunur.
 ```
 
-## What can in-browser JavaScript do?
+## JavaScript brauzer mühitində nələrə qadirdir?
 
 Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
 
@@ -80,6 +84,7 @@ Examples of such restrictions include:
 ![](limitations.svg)
 
 Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
+`
 
 ## What makes JavaScript unique?
 
