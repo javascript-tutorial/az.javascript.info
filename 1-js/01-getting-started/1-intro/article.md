@@ -111,10 +111,9 @@ Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana g
 
 Belə dillərə nümunə olaraq aşağıdakıları göstərmək olar:
 
-- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
-- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
-- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
-- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [CoffeeScript](http://coffeescript.org/) JavaScript üçün "Sintaktik şəkərdir"(syntactic sugar) və daha qısa və anlaşıqlı sintaksis ortaya qoyur. Adətən Ruby developerlər onu sevir.
+- [TypeScript](http://www.typescriptlang.org/) JavaScript-ə strict type sistemi əlavə edir və development zamanı bəzi bugların qarşısını alır, çox vaxt performansda da qazandırır. TypeScript Microsoft tərəfindən yaradılmışdır və maintain edilir.
+- [Flow](http://flow.org/) həmçinin strict type sistemi əlavə edir lakin başqa yol ilə. Facebook tərəfindən yaradılmışdır.
 
 Təbii ki, belə dillər daha çoxdur. Lakin bu dilləri başa düşmək üçün əvvəlcə JavaScript-i tam anlamaq şərtdir.
 
