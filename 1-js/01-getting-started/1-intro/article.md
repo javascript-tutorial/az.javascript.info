@@ -47,82 +47,79 @@ Təbii ki, mühərrikin işi bununla bitmir. Hər bir mərhələdə müəyyən o
 
 ## JavaScript brauzer mühitində nələrə qadirdir?
 
-Modern JavaScript is a "safe" programming language. It does not provide low-level access to memory or CPU, because it was initially created for browsers which do not require it.
+Müasir JavaScript olduqca təhlükəsiz proqramlaşdırma dilidir. O, ilkin olaraq sadəcə brauzer mühitində işləmək üçün yaradıldığı üçün yaddaşa və ya CPU-ya birbaşa müdaxilə imkanı vermir.
 
-JavaScript's capabilities greatly depend on the environment it's running in. For instance, [Node.js](https://wikipedia.org/wiki/Node.js) supports functions that allow JavaScript to read/write arbitrary files, perform network requests, etc.
+Lakin JavaScript-in imkanları onun icra olunduğu mühitdən asılı olaraq dəyişir. Misalçün, [Node.js](https://wikipedia.org/wiki/Node.js) ilə JavaScript faylları oxuya/yaza, şəbəkə sorğuları və s. edə bilər.
 
-In-browser JavaScript can do everything related to webpage manipulation, interaction with the user, and the webserver.
+Brauzer daxilində isə, JavaScript web səhifə ilə bağlı demək olar ki, hər şeyi edə bilir.
 
-For instance, in-browser JavaScript is able to:
+Bunlara misal olaraq:
 
-- Add new HTML to the page, change the existing content, modify styles.
-- React to user actions, run on mouse clicks, pointer movements, key presses.
-- Send requests over the network to remote servers, download and upload files (so-called [AJAX](<https://en.wikipedia.org/wiki/Ajax_(programming)>) and [COMET](<https://en.wikipedia.org/wiki/Comet_(programming)>) technologies).
-- Get and set cookies, ask questions to the visitor, show messages.
-- Remember the data on the client-side ("local storage").
+- SƏhifəyə yeni HTML-in əlavə edilməsi və hazırkı kontentin dəyişdirilməsi.
+- Mouse klik, key press və s. kimi istifadəçi tərəfindən tətiklənən eventlərə reaksiya vermək.
+- Şəbəkə üzərindən sorğular göndərmək, fayllar endirmək, upload etmək ( [AJAX](<https://en.wikipedia.org/wiki/Ajax_(programming)>) və [COMET](<https://en.wikipedia.org/wiki/Comet_(programming)>) texnologiyaları vasitəsilə).
+- Cookie-lərlə işəmək, ziyarətçilərə müxtəlif mesajlar göstərmək və ya suallar vermək.
+- İstifadəçi tərəfdə (client-side) məlumatlar saxlamaq və s.
 
-## What CAN'T in-browser JavaScript do?
+Və digər şeyləri göstərmək olar.
 
-JavaScript's abilities in the browser are limited for the sake of the user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+## Bəs JavaScript brauzer daxilində nələri EDƏ BİLMİR?
 
-Examples of such restrictions include:
+İstifadəçinin təhlükəsizliyini təmin etmək üçün, JavaScript-in brauzerdəki funksionallıqları limitlidir.
 
-- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS system functions.
+Bu cür limitlərə aşağıdakılar daxildir:
 
-  Modern browsers allow it to work with files, but the access is limited and only provided if the user does certain actions, like "dropping" a file into a browser window or selecting it via an `<input>` tag.
+- Hər hansı bir web səhifədəki JavaScript sizin sərt diskinizdəki ixtiyari faylları yarada, silə, dəyişə və ya icra edə bilməz. Onun sizin əməliyyat sisteminin funksiyalarına bir başa çıxışı yoxdur.
 
-  There are ways to interact with camera/microphone and other devices, but they require a user's explicit permission. So a JavaScript-enabled page may not sneakily enable a web-camera, observe the surroundings and send the information to the [NSA](https://en.wikipedia.org/wiki/National_Security_Agency).
+  Müasir brauzerlər fayllarla işləməyə imkan yaradır lakin bu əməliyyat `<input>` etiketi vasitəsilə sayta fayl yükləməkdən başqa bir şeyə imkan yaratmır.
 
-- Different tabs/windows generally do not know about each other. Sometimes they do, for example when one window uses JavaScript to open the other one. But even in this case, JavaScript from one page may not access the other if they come from different sites (from a different domain, protocol or port).
+  Bununla bərarbər, brauzer sizə kamera və mikrofon kimi cihazlarlə işləmək imkanı yaradır lakin bu əməliyyatları istifadəçinin bir başa icazəsi olmadan etmək qeyri-mümkündür. Yəni evdə hər hansı bir işlə məşğul olanda kimsə sizi hansısa web səhifədən izləyə bilməz, bunun üçün siz brauzerə icazə verməlisiniz.
 
-  This is called the "Same Origin Policy". To work around that, _both pages_ must agree for data exchange and contain a special JavaScript code that handles it. We'll cover that in the tutorial.
+- Fərqli pəncərələr və tablar normalda bir-biri haqqında heç nə bilmirlər. Əgər, siz JavaScript-i istifadə edərək, başqa bir pəncərə açsanız, bu halda açdığınız pəncərə və cari pəncərə fərqli mənbələrdəndirsə (fərqli domen adı, fərqli protokol və ya port) bir pəncərənin digər pəncərəyə heç bir çıxışı yoxdur.
 
-  This limitation is, again, for the user's safety. A page from `http://anysite.com` which a user has opened must not be able to access another browser tab with the URL `http://gmail.com` and steal information from there.
+  Bu eyni mənbə siyasəti adlandırılır (Same Origin Policy). Yalnız hər iki səhifə müəyyən protokol üzərindən razılaşdığı halda bir-birinin resurslarından istifadə edə bilərlər.
 
-- JavaScript can easily communicate over the net to the server where the current page came from. But its ability to receive data from other sites/domains is crippled. Though possible, it requires explicit agreement (expressed in HTTP headers) from the remote side. Once again, that's a safety limitation.
+  Digər mahdudlaşdırmalar kimi, bu da istifadəçinin güvənliyi üçündür. Hər hansı `http://qeyrimüəyyənbirsayt.com` saytı digər pəncərədə açılmış `http://gmail.com` saytından məlumat götürə bilməməlidir. Əks halda halımız yaxşı olmaz.
 
 ![](limitations.svg)
 
-Such limits do not exist if JavaScript is used outside of the browser, for example on a server. Modern browsers also allow plugin/extensions which may ask for extended permissions.
-`
+Bu cür məhdudiyyətlər sadəcə brauzer daxilində mövcuddur, daha öncə də qeyd etdiyimiz kimi JavaScript-in imkanları mühitə görə dəyişir.
 
-## What makes JavaScript unique?
+## JavaScript-i unikal edən nədir?
 
-There are at least _three_ great things about JavaScript:
+Aşağıdakılar, JavaScript-i unikal edən ən az üç şeydir:
 
 ```compare
-+ Full integration with HTML/CSS.
-+ Simple things are done simply.
-+ Support by all major browsers and enabled by default.
++ HTML/CSS ilə tam inteqrasiya.
++ Sadə şeylər sadəliklə icra olunur.
++ Əksər brauzerlər tərəfindən dəstəklənir və defolt olaraq aktivdir.
 ```
 
-JavaScript is the only browser technology that combines these three things.
+Bu üç xüsusiyyəti özündə birləşdirən yegənə texnologiya JavaScript-dir.
 
-That's what makes JavaScript unique. That's why it's the most widespread tool for creating browser interfaces.
+Məhz bu səbəbdən, JavaScript unikaldır və ən çox yayılmış proqramlaşdırma dillərindəndir.
 
-That said, JavaScript also allows to create servers, mobile applications, etc.
+Yeri gəlmişək, onu da qeyd etmək lazımdır ki, JavaScript ilə mobil tətbiqlər və serverlər də yarada bilərsiniz.
 
-## Languages "over" JavaScript
+## JavaScript "üzərində" dillər
 
-The syntax of JavaScript does not suit everyone's needs. Different people want different features.
+JavaScript-in sintaksisi hamının ehtiyaclarını ödəmir. Müxtəlif insanlar, müxtəlif funksionallıqlar tələb edir.
 
-That's to be expected, because projects and requirements are different for everyone.
+Təbii ki, bu normaldır, çünki layihələr və tələblər hamı üçün fərqlidir.
 
-So recently a plethora of new languages appeared, which are _transpiled_ (converted) to JavaScript before they run in the browser.
+Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana gəlmişdir. Onlar, yalnız development mühitində fərqli funksionallıqlar irəli sürür lakin, daha sonra brauzerdə işləyə bilmək üçün JavaScript-ə çevrilməlidir.
 
-Modern tools make the transpilation very fast and transparent, actually allowing developers to code in another language and auto-converting it "under the hood".
-
-Examples of such languages:
+Belə dillərə nümunə olaraq aşağıdakıları göstərmək olar:
 
 - [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
 - [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
 - [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
 - [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
 
-There are more. Of course, even if we use one of transpiled languages, we should also know JavaScript to really understand what we're doing.
+Təbii ki, belə dillər daha çoxdur. Lakin bu dilləri başa düşmək üçün əvvəlcə JavaScript-i tam anlamaq şərtdir.
 
-## Summary
+## Xülasə
 
-- JavaScript was initially created as a browser-only language, but is now used in many other environments as well.
-- Today, JavaScript has a unique position as the most widely-adopted browser language with full integration with HTML/CSS.
-- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+- JavaScript ilkin olaraq yalnız brauzerlər üçün yaradılmış, lakin sonradan başqa mühitlərdə də istifadə olunmağa başlamışdır.
+- Günümüzdə JavaScript HTML və CSS ilə tam inteqrasiya oluna bilər, geniş yayılmış unikal bir proqramlaşdırma dilidir.
+- JavaScript-ə çevrilən və yeni funksionallıqlar təqdim edən bir çox dillər mövcuddur. Bu dillərdən bəzilərinə nəzər salmaq tövsiyyə olunur. Misalçün, JavaScript-i tam başa düşdükdən sonra TypeScript-dən başlaya bilərsiniz.
