@@ -1,46 +1,42 @@
-# Kod redaktorları
+# Mətn redaktorları
 
-A code editor is the place where programmers spend most of their time.
+Proqramçılar vaxtının çox hissəsini mətn (və ya kod) redaktorları ilə keçirir.
 
-There are two main types of code editors: IDEs and lightweight editors. Many people use one tool of each type.
+Əksər insanlar iki cür mətn redaktorundan istifadə edir: IDE-lər və yüngül redaktorlar.
 
 ## IDE
 
-The term [IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) refers to a powerful editor with many features that usually operates on a "whole project." As the name suggests, it's not just an editor, but a full-scale "development environment."
+[IDE](https://en.wikipedia.org/wiki/Integrated_development_environment) (Integrated Development Environment) termini, güclü, çoxlu sayda xüsusiyyətlərə malik olan və bütün proyekt üzərində işləyən redaktorlara istinad edir. Adından da göründüyü kimi, IDE-lər sizin üçün geniş ölçülü development mühiti yaradır.
 
-An IDE loads the project (which can be many files), allows navigation between files, provides autocompletion based on the whole project (not just the open file), and integrates with a version management system (like [git](https://git-scm.com/)), a testing environment, and other "project-level" stuff.
+IDE çoxlu sayda fayldan ibarət olan proyekti yükləyə, fayllar arasında naviqasiya imkanı yarada, kod yazarkən bütün proyekt səviyyəsində avto-tamamlama xüsusiyyəti təklif edə, test mühiti yarada və versiya idarəetmə sistemləri ([git](https://git-scm.com/) kimi) ilə inteqrasiya imkanı yarada bilər.
 
-If you haven't selected an IDE yet, consider the following options:
+Əgər hələ də IDE seçməmisinizsə, aşağıdakılardan birini seçin:
 
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [WebStorm](http://www.jetbrains.com/webstorm/) (cross-platform, paid).
+- [Visual Studio Code](https://code.visualstudio.com/) (kros-platforma, pulsuz).
+- [WebStorm](http://www.jetbrains.com/webstorm/) (kros-platforma, ödənişlidir lakin təhsil məqsədilə pulsuz istifadə oluna bilər).
 
-For Windows, there's also "Visual Studio", not to be confused with "Visual Studio Code". "Visual Studio" is a paid and mighty Windows-only editor, well-suited for the .NET platform. It's also good at JavaScript. There's also a free version [Visual Studio Community](https://www.visualstudio.com/vs/community/).
+Həmçinin Windows üçün "Visual Studio" ("Visual Studio Code" ilə qarışdırmayın) adlı IDE də mövcuddur. Bu, ödənişli, .NET platforması ilə yaxşı yola gedən, çox güclü və yalnız Windows üzərində işləyən bir IDE-dir. Bu IDE-nin ödənişsiz versiyası da mövcuddur: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
-Many IDEs are paid, but have a trial period. Their cost is usually negligible compared to a qualified developer's salary, so just choose the best one for you.
+## Yüngül redaktorlar
 
-## Lightweight editors
+"Yüngül redaktorlar" IDE-lər qədər güclü olmasa da, sadə, sürətli və eleqantdırlar.
 
-"Lightweight editors" are not as powerful as IDEs, but they're fast, elegant and simple.
+Bu cür redaktorlar, əksər hallarda, hər hansı bir faylı tez-bazar açıb redaktə etmək üçün istifadə olunurlar.
 
-They are mainly used to open and edit a file instantly.
+IDE-lər və yüngül redaktorlar arasındakı əsas fərq ondan ibarətdir ki, IDE-lər bütün proyekt üzərində işləyir, analiz aparır və sizin üçün çox rahatlıq yaradır (çox rahatlıq yaxşı deyil :) ) digər təfərdən, "yüngül redaktorlar" sadəcə bir fayl üzərində işləyirsinizsə olduqca sürətlidir və işinizə çox yarayacaq.
 
-The main difference between a "lightweight editor" and an "IDE" is that an IDE works on a project-level, so it loads much more data on start, analyzes the project structure if needed and so on. A lightweight editor is much faster if we need only one file.
+Lakin, bir çox yüngül redaktorlar (Atom, VSCode və s.) çoxlu sayda extension və pluginlər vasitəsilə IDE səviyyəsinə gətirib çıxarıla bilər.
 
-In practice, lightweight editors may have a lot of plugins including directory-level syntax analyzers and autocompleters, so there's no strict border between a lightweight editor and an IDE.
+Yüngül redaktorlara nümunə kimi aşağıdakıları göstərə bilərik:
 
-The following options deserve your attention:
+- [Atom](https://atom.io/) (kros-platforma, pulsuz).
+- [Visual Studio Code](https://code.visualstudio.com/) (kros-platforma, pulsuz və ən sevilən redaktorlardan biri).
+- [Sublime Text](http://www.sublimetext.com) (kros-platforma, əvvəlcə pulsuz sonra ödənişli).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, pulsuz).
+- [Vim](http://www.vim.org/) və [Emacs](https://www.gnu.org/software/emacs/) isə əgər istifadə edə bilsəniz maraqlı alətlərdir.
 
-- [Atom](https://atom.io/) (cross-platform, free).
-- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
-- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
-- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
-- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+## Gəlin mübahisə etməyək
 
-## Let's not argue
+Bu cür redaktorlar və IDE-lər kimi çoxlu sayda başqaları da var. Sizə qalan isə, özünüzə ən uyğun olanını seçib istifadə etməkdir.
 
-The editors in the lists above are those that either I or my friends whom I consider good developers have been using for a long time and are happy with.
-
-There are other great editors in our big world. Please choose the one you like the most.
-
-The choice of an editor, like any other tool, is individual and depends on your projects, habits, and personal preferences.
+İşlədiyiniz layihələr, şəxsi öncəlikləriniz və s. şeylər sizi seçiminizə təsir edə bilər.
