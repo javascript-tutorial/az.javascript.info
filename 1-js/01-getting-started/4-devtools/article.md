@@ -33,15 +33,12 @@ Below the error message, there is a blue `>` symbol. It marks a "command line" w
 
 Now we can see errors, and that's enough for a start. We'll come back to developer tools later and cover debugging more in-depth in the chapter <info:debugging-chrome>.
 
-<<<<<<< HEAD
-=======
 ```smart header="Multi-line input"
 Usually, when we put a line of code into the console, and then press `key:Enter`, it executes.
 
 To insert multiple lines, press `key:Shift+Enter`. This way one can enter long fragments of JavaScript code.
 ```
 
->>>>>>> ce8e68f21c9dd6abebfa373e05832b9a9054c355
 ## Firefox, Edge, and others
 
 Most other browsers use `key:F12` to open developer tools.

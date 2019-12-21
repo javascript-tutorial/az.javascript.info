@@ -1,40 +1,40 @@
-# Nizamnamə və spesifikasiyalar
+# Manual və standartlar
 
-This book is a _tutorial_. It aims to help you gradually learn the language. But once you're familiar with the basics, you'll need other sources.
+Bu kitab sizin dil ilə tanışlığınıza və onu tədricən öyrənməyinizə yönəlmiş bir dərslikdir. Lakin dilin əsasları ilə tam tanış olduqdan sonra artıq başqa mənbələrə də ehtiyac duyacaqsınız. Gəlin bu cür mənbələrlə tanış olaq.
 
-## Specification
+## Spesifikasiyalar
 
-[The ECMA-262 specification](https://www.ecma-international.org/publications/standards/Ecma-262.htm) contains the most in-depth, detailed and formalized information about JavaScript. It defines the language.
+[ECMA-262 standartları](https://www.ecma-international.org/publications/standards/Ecma-262.htm) JavaScript haqqında ən dərin, detallı və formal məlumatları ehtiva edir. Başqa sözlə desək, dili təyin edir.
 
-But being that formalized, it's difficult to understand at first. So if you need the most trustworthy source of information about the language details, the specification is the right place. But it's not for everyday use.
+Lakin bu spesifikasiyalar çox formal olduğu üçün bəzən anlaşılması çətin ola bilər. Spesifikasiyalar, JavaScript haqqında tapa biləcəyiniz ən güvənli və dəqiq məlumat mənbəyidir, hərçənd günlük istifadə üçün deyil.
 
-A new specification version is released every year. In-between these releases, the latest specification draft is at <https://tc39.es/ecma262/>.
+Spesifikasiyanın hər il yeri versiyası yayımlanır. Ən son versiyası ilə [burada](https://tc39.es/ecma262/) tanış ola bilərsiniz.
 
-To read about new bleeding-edge features, including those that are "almost standard" (so-called "stage 3"), see proposals at <https://github.com/tc39/proposals>.
+ECMA-262 standartlarına il boyunca yeni təkliflər verilir, bu təkliflər bir neçə mərhələdən keçdikdən sonra dilə əlavə olunur (standartlaşdırlır). Ən son təkliflər və "demək olar ki standartlaşdırılmış" (stage 3 proposals) xüsusiyyətlər ilə [burada](https://github.com/tc39/proposals) tanış ola bilərsiniz.
 
-Also, if you're in developing for the browser, then there are other specs covered in the [second part](info:browser-environment) of the tutorial.
+Bununla bərabar, əgər JavaScripti brauzer daxilində istifadə edirsinizsə bunun üçün başqa standartlar mövcuddur. Bu barədə dərsliyin [ikinci hissəsində](info:browser-environment) danışacağıq.
 
-## Manuals
+## Manuallar
 
-- **MDN (Mozilla) JavaScript Reference** is a manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+- **MDN (Mozilla) JavaScript Reference**, nümunələr və digər məlumatlarla tanış ola biləcəyiniz başqa bir mənbədir. MDN, spesifik funksiya, obyektlər, metodlar və s. haqqında dərin məlumat əldə etmək və nümunələrlə tanış olmaq üçün əla yerdir.
 
-  One can find it at <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+  Elə indi bu keçiddən istifadə edib baxmağınız tövsiyyə olunur: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
 
-  Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+  Keçidə daxil olduqdan sonra sizin üçün axtardığınız şeyi tapmaq bir az çətin ola bilər. Bu səbəbdən, çox vaxt Google-da axtarış etmək daha əlverişli olar bilər. Misalçün, deyək ki, `parseInt` funksiyası haqqında ətraflı məlumat almaq istəyirsiniz, bunun üçün <https://google.com/search?q=MDN+parseInt> kimi axtarış edə bilərsiniz.
 
-* **MSDN** – Microsoft manual with a lot of information, including JavaScript (often referred to as JScript). If one needs something specific to Internet Explorer, better go there: <http://msdn.microsoft.com/>.
+* **MSDN** – JavaScript (JScript deyək) və Microsoft-a məxsus digər şeylər haqqında məlumat toplaya biləcəyiniz əla mənbədir. Əgər Internet Explorer-ə xas bir şeylə bağlı məlumat almaq istəsəniz elə bura baxın: <http://msdn.microsoft.com/>.
 
-  Also, we can use an internet search with phrases such as "RegExp MSDN" or "RegExp MSDN jscript".
+  Və təbii ki, sadə bir internet axtarışından da yararlana bilərsiniz. Misalçün, "RegExp MSDN" və ya "RegExp MSDN jscript".
 
-## Compatibility tables
+## Brauzer dəstəyi və uyğunluq cədvəlləri
 
-JavaScript is a developing language, new features get added regularly.
+JavaScript iknişafda olan bir dil olduğu üçün müntəzəm olaraq yeni xüsusiyyətlər əlavə olunur.
 
-To see their support among browser-based and other engines, see:
+Bu cür xüsusiyyətlərin müxtəlif brauzerlər və engine-lər tərəfindən nə dərəcədə dəstəkləndiyini öyrənmək üçün aşağıdakı resurslardan istifadə edin:
 
-- <http://caniuse.com> - per-feature tables of support, e.g. to see which engines support modern cryptography functions: <http://caniuse.com/#feat=cryptography>.
-- <https://kangax.github.io/compat-table> - a table with language features and engines that support those or don't support.
+- <http://caniuse.com> - hər bir xüsusiyyətə görə brauzer dəstəyini göstərir. Misalçün, kriptokrafik funksiyaların hansı brauzerlər tərəfindən dəstəkləndiyini görmək üçün belə bir axtarış edə bilərsiniz: <http://caniuse.com/#feat=cryptography>.
+- <https://kangax.github.io/compat-table> - dildəki xüsusiyyətlərin hansı brauzer, engine və s. tərəfindən dəstəklənib dəstəklənmədiyini göstərən böyük bir cədvəldir.
 
-All these resources are useful in real-life development, as they contain valuable information about language details, their support etc.
+Bütün bu resurslar, dil haqqında müəyyən detallar onların nə dərəcədə dəstəklənib dəstəklənmədiyi və s. kimi dəyərli məlumatlarla zəngin olduğu üçün real iş mühitində çox işinizə yaraya bilər.
 
-Please remember them (or this page) for the cases when you need in-depth information about a particular feature.
+Onları yadda saxlamağınız və detallı məlumat üçün onlara istinad etməyiniz vacibdir.
