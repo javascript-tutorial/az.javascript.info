@@ -63,7 +63,7 @@ Skriptlərdən öncə və sonra kommentlər.
     Modern JavaScript-də bu fokusdan istifadə edilmir. Bu kommentlər `<script>` təqini emal edə bilməyən köhnə brauzerlərdə JavaScript kodunu gizlətmək üçün lazım idi. Sonuncu 15 ildə dərc olunmuş brauzerlərdə bu problemin olmadığından bunun ilə çox köhnə kodları müəyyənləşdirə bilərsiniz.
 
 
-## Kənar skriptlər scripts
+## Kənar skriptlər
 
 Çoxlu JavaScript kodu olduqda bu kodu ayrı faylda saxlamaq mümkündür.
 
