@@ -73,7 +73,7 @@ Skript faylları HTML-ə `src` atributu ilə qoşulurlar:
 <script src="/path/to/script.js"></script>
 ```
 
-Burada, `/path/to/script.js` dəyəri saytın kökündən absolut yol ilə skript faylına istinad edir. Əlavə olaraq, cari səhifədən nisbi yerləşən fayla da istinad etmək olar. Məsələn, `src="script.js"` dəyəri `"script.js"` faylının cari direktoriyada olması deməkdir.
+Burada, `/path/to/script.js` dəyəri saytın kökündən absolut yol ilə skript faylına istinad edir. Əlavə olaraq, cari səhifəyə nisbi yerləşən fayla da istinad etmək olar. Məsələn, `src="script.js"` dəyəri `"script.js"` faylının cari direktoriyada olması deməkdir.
 
 Biz, skriptin mənbəsini tam URL ilə də təyin edə bilərik. Məsələn:
 
