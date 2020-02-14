@@ -2,7 +2,7 @@ HTML kod:
 
 [html src="index.html"]
 
-Eyni direktoriyada yerlşən `alert.js` faylı:
+Eyni direktoriyada yerləşən `alert.js` faylı:
 
 [js src="alert.js"]
 
