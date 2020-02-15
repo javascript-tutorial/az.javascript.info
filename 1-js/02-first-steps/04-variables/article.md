@@ -250,11 +250,11 @@ Proqramçı dəyişənin heç vaxt dəyişməyəcəyindən əmin olduqda dəyiş
 
 ### Böyük hərf ilə yazılmış sabit dəyişənlər
 
-There is a widespread practice to use constants as aliases for difficult-to-remember values that are known prior to execution.
+Praktikada, çətin yadda qalan dəyərlər skript icra olunmamışdan öncə sabit dəyişələr ilə ləqəbləndirilir.
 
-Such constants are named using capital letters and underscores.
+Bu formalı sabit dəyişənlər böyük hərf və altdan xətt ilə adlandırılırlar.
 
-For instance, let's make constants for colors in so-called "web" (hexadecimal) format:
+Məsələn, gəlin "veb" (16-lı rəqəm) formatında olan rənglər üçün sabit dəyişənlər yaradaq:
 
 ```js run
 const COLOR_RED = "#F00";
@@ -262,69 +262,69 @@ const COLOR_GREEN = "#0F0";
 const COLOR_BLUE = "#00F";
 const COLOR_ORANGE = "#FF7F00";
 
-// ...when we need to pick a color
+// ...rəngdən istifadə etdikdə
 let color = COLOR_ORANGE;
 alert(color); // #FF7F00
 ```
 
-Benefits:
+Faydaları:
 
-- `COLOR_ORANGE` is much easier to remember than `"#FF7F00"`.
-- It is much easier to mistype `"#FF7F00"` than `COLOR_ORANGE`.
-- When reading the code, `COLOR_ORANGE` is much more meaningful than `#FF7F00`.
+- `COLOR_ORANGE` dəyəri yadda saxlamaq `"#FF7F00"` dəyərini yadda saxlamaqdan daha asandır.
+- `"#FF7F00"` dəyərində səhv etmək `COLOR_ORANGE` dəyərində səhv etməkdən daha asandır.
+- Kodu oxuduqda `COLOR_ORANGE` dəyərinin mənası `#FF7F00` dəyərinin mənasından daha çoxdur.
 
-When should we use capitals for a constant and when should we name it normally? Let's make that clear.
+Sabit dəyişənləri nə zaman normal formada, nə zaman isə böyük hərflər ilə yazmaq lazımdır? Gəlin bunun açıqlamasını verək.
 
-Being a "constant" just means that a variable's value never changes. But there are constants that are known prior to execution (like a hexadecimal value for red) and there are constants that are *calculated* in run-time, during the execution, but do not change after their initial assignment.
+Dəyişənin "sabit" olması, bu dəyişənin heç vaxt dəyişməməsi deməkdir. Lakin, bəzi sabit dəyişənlər skript icra olunmamışdan öncə (qırmızı rəngin 16-lıq rəqəmi kimi) , bəziləri isə icra zamanı *hesablanır* və sabit qalır.
 
-For instance:
+Məsələn:
 ```js
-const pageLoadTime = /* time taken by a webpage to load */;
+const pageLoadTime = /* veb səhifənin yüklənməsinə xərclənən zaman */;
 ```
 
-The value of `pageLoadTime` is not known prior to the page load, so it's named normally. But it's still a constant because it doesn't change after assignment.
+`pageLoadTime` dəyəri səhifə yüklənməmişdən öncə bilinmədiyindən bu, normal adlandırılır. Lakin, bu dəyər təyin edildikdən sonra dəyişmədiyindən sabit qalır.
 
-In other words, capital-named constants are only used as aliases for "hard-coded" values.  
+Digər sözlə, böyük hərf ilə yazılan sabit dəyişənləri yalnız "əl ilə" yazılan dəyərlər üçün istifadə edin. 
 
-## Name things right
+## Dəyişənləri düzgün adlandırın
 
-Talking about variables, there's one more extremely important thing.
+Dəyişənləri adlandırdıqda çox vacib məqam var.
 
-A variable name should have a clean, obvious meaning, describing the data that it stores.
+Dəyişən adının saxladığı məlumatı təsvir edən təmin və mənalı adı olmalıdır.
 
-Variable naming is one of the most important and complex skills in programming. A quick glance at variable names can reveal which code was written by a beginner versus an experienced developer.
+Dəyişənləri adlandırmaq proqramlaşdırmada çox vacib və mürəkkəb bacarıqlardan biridir. Dəyişənin adına baxdıqda kodun yenibaşlayan və ya təcrübəli proqramçının yazdığını bilmək mümkündür.
 
-In a real project, most of the time is spent modifying and extending an existing code base rather than writing something completely separate from scratch. When we return to some code after doing something else for a while, it's much easier to find information that is well-labeled. Or, in other words, when the variables have good names.
+Real layihədə işlədikdə vaxtın çoxu sıfırdan kod yazmaq əvəzinə mövcud kodu dəyişməyə və artırmağa gedir. Digər tapşırıqlardan kodunuza qayıtdıqda yaxşı adlandırılmış məlumatları tapmaq daha asandır. Digər sözlə dəyişənləri yaxşı adlandırmaq lazımdır.
 
-Please spend time thinking about the right name for a variable before declaring it. Doing so will repay you handsomely.
+Dəyişəni müəyyənləşdirməmişdən öncə yaxşı ad haqqında biraz fikirləşin. Bunu etdikdə faydasını görəcəksiniz.
 
-Some good-to-follow rules are:
+Bəzi əməl edə biləcəyiniz yaxşı qaydalar:
 
-- Use human-readable names like `userName` or `shoppingCart`.
-- Stay away from abbreviations or short names like `a`, `b`, `c`, unless you really know what you're doing.
-- Make names maximally descriptive and concise. Examples of bad names are `data` and `value`. Such names say nothing. It's only okay to use them if the context of the code makes it exceptionally obvious which data or value the variable is referencing.
-- Agree on terms within your team and in your own mind. If a site visitor is called a "user" then we should name related variables `currentUser` or `newUser` instead of `currentVisitor` or `newManInTown`.
+- `userName` və ya `shoppingCart` kimi insanların başa düşə biləcəyi adlardan istifadə edin.
+- Qısaldılmış adlardan və ya `a`, `b`, `c` kimi adlardan uzaq durun.
+- Adları maksimal dərəcədə təsvirli və dəqiq edin. `data` və `value` kimi adlar pisdir. Bu adlar nəyin baş verdiyi haqqda heç nə təsvir etmir. Əgər kodun konteksti dəyişənin hansı məlumat və ya dəyərə istinad etdiyini göstərirsə, belə adlardan istifadə etmək olar.
+- Komandanızda və beyninizdə terminlər haqqında razılığıa gəlin. Əgər sayt ziyatətçisi "user" adlanırsa, buna aid dəyişənləri `currentVisitor` və ya `newManInTown` adlandırmaq əvəzinə `currentUser` və ya `newUser` adlandırın.
 
-Sounds simple? Indeed it is, but creating descriptive and concise variable names in practice is not. Go for it.
+Sadə görünür? Bunun sadə görünməyinə baxmayaraq praktikada təsvirli və dəqiq dəyişən adları düzəltmək çətindir.
 
-```smart header="Reuse or create?"
-And the last note. There are some lazy programmers who, instead of declaring new variables, tend to reuse existing ones.
+```smart header="Yenidən işlət yoxsa yarat?"
+Bəzi avara proqramçılar yeni dəyişən yaratmaq əvəzinə mövcud dəyişəni istifadə etməyi sevirlər.
 
-As a result, their variables are like boxes into which people throw different things without changing their stickers. What's inside the box now? Who knows? We need to come closer and check.
+Nəticədə, bu dəyişənlər etiketi dəyişməyən, amma daxili dəyişən qutulara bənzəyirlər. Qutunun içində nəyin olduğunu heç kim bilmir. Bu səbəbdən, biz bu kodlara yaxından baxım yoxlamalıyıq.
 
-Such programmers save a little bit on variable declaration but lose ten times more on debugging.
+Bu proqramçılar dəyişən yaratmaqda az vaxt, amma debaq zamanı on dəfə çox vaxt xərcləyirlər.
 
-An extra variable is good, not evil.
+Yeni dəyişən yaratmaq pis deyil.
 
-Modern JavaScript minifiers and browsers optimize code well enough, so it won't create performance issues. Using different variables for different values can even help the engine optimize your code.
+Modern JavaScript minifikasiya edici qurğuları və brauzerlər kodu yaxşı optimallaşdırırlar. Bu səbəbdən, çox dəyişən yaratdıqda performans problemləri yaranmayacaq. Fərqli dəyərlər üçün fərqli dəyişənlər işlətdikdə JavaScript mühərriki kodunuzu daha da yaxşı optimizasiya edə bilər.
 ```
 
-## Summary
+## Xülasə
 
-We can declare variables to store data by using the `var`, `let`, or `const` keywords.
+Dəyişənləri  `var`, `let` və ya `const` açar sözləri ilə yaratmaq mümkündür.
 
-- `let` -- is a modern variable declaration.
-- `var` -- is an old-school variable declaration. Normally we don't use it at all, but we'll cover subtle differences from `let` in the chapter <info:var>, just in case you need them.
-- `const` -- is like `let`, but the value of the variable can't be changed.
+- `let` -- modern dəyişən yaratmaq üçün işlədilir.
+- `var` -- köhnə üsulda dəyişən yaratmaq üçün işlədilir. Normalda, biz bu dəyişəndən istifadə etmirik, amma <info:var> bölməsində `let` və `var` arasında olan fərqlərdən danışacağıq.
+- `const` -- `let` kimidir. Lakin, bununla yaranan dəyişənin dəyəri dəyişə bilməz.
 
-Variables should be named in a way that allows us to easily understand what's inside them.
+Dəyişənləri, təyin olunan dəyəri yaxşı başa salan adlar ilə adlandırmağı tövsiyyə edirik.

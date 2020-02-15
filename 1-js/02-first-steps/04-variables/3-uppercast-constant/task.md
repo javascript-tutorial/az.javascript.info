@@ -2,9 +2,9 @@ importance: 4
 
 ---
 
-# Uppercase const?
+# Böyük hərf ilə const?
 
-Examine the following code:
+Aşağıdakı koda baxın:
 
 ```js
 const birthday = '18.04.1982';
@@ -12,13 +12,13 @@ const birthday = '18.04.1982';
 const age = someCode(birthday);
 ```
 
-Here we have a constant `birthday` date and the `age` is calculated from `birthday` with the help of some code (it is not provided for shortness, and because details don't matter here).
+Burada `birthday` adlı sabit zaman dəyişəni və `birthday`-dən hesablanan `age` sabit dəyişəni var (hesablama funksiyasının vacib olmadığından bu kodun tətbiq detalı göstərilməyib).
 
-Would it be right to use upper case for `birthday`? For `age`? Or even for both?
+`birthday` üçün böyük hərf işlətmək yaxşı fikirdir? Bəs `age` üçün? Bəs hər ikisi üçün?
 
 ```js
-const BIRTHDAY = '18.04.1982'; // make uppercase?
+const BIRTHDAY = '18.04.1982'; // böyük hərf ilə yazaq?
 
-const AGE = someCode(BIRTHDAY); // make uppercase?
+const AGE = someCode(BIRTHDAY); // böyük hərf ilə yazaq?
 ```
 
