@@ -129,4 +129,4 @@ Yuxarıdakı nümunənin işləməsi üçün skriptləri ayrı-ayrı təqlərə 
 - Kənar faylda yerləşən skriptləri `<script src="path/to/script.js"></script>` təqi ilə yükləmək mümkündür.
 
 
-Brauzer skriptləri və onların veb səhifə ilə interaksiyası haqqında öyrənilməli daha çox məlumat var. Lakin, dərsliyin bu hissəsinin JavaScript dilinə hərs olunduğu üçün biz brauzerə xas tətbiqlərə fokuslanmayacağıq. Biz JavaScript kodunu icra etmək üçün brauzerdən istifadə edəcəyik. Brauzerdən istifadə etdikdə icra olunan skriptləri onlayn oxumaq olur. Lakin, skriptləri başqa mühitlərdə də icra etmək mümkündür.
+Brauzer skriptləri və onların veb səhifə ilə interaksiyası haqqında öyrənilməli daha çox məlumat var. Lakin, dərsliyin bu hissəsinin JavaScript dilinə həsr olunduğu üçün biz brauzerə xas tətbiqlərə fokuslanmayacağıq. Biz JavaScript kodunu icra etmək üçün brauzerdən istifadə edəcəyik. Brauzerdən istifadə etdikdə icra olunan skriptləri onlayn oxumaq olur. Lakin, skriptləri başqa mühitlərdə də icra etmək mümkündür.
