@@ -2,11 +2,11 @@ importance: 5
 
 ---
 
-# Show an alert
+# Xəbərdarlıq göstər
 
-Create a page that shows a message "I'm JavaScript!".
+"Mən JavaScript-əm!" mesajı göstərən səhifə yaradın.
 
-Do it in a sandbox, or on your hard drive, doesn't matter, just ensure that it works.
+Bunu ya sandbox-da, ya da öz maşınınızda tətbiq edin. Skriptin işlədiyindən əmin olun.
 
 [demo src="solution"]
 
