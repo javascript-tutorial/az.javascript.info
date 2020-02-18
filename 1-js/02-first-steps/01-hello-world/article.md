@@ -124,7 +124,7 @@ Yuxarıdakı nümunənin işləməsi üçün skriptləri ayrı-ayrı təqlərə 
 
 ## Xülasə
 
-- JavaScript kodunu səhifəyə əlavə etmək üçün `<script>` təqindən istifadə edin.
+- JavaScript kodunu səhifəyə əlavə etmək üçün `<script>` təqindən istifadə edə bilərik.
 - `type` və `language` atributlarından istifadə etmək vacib deyil.
 - Kənar faylda yerləşən skriptləri `<script src="path/to/script.js"></script>` təqi ilə yükləmək mümkündür.
 
