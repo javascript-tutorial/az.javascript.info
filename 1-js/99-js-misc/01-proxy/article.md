@@ -4,6 +4,8 @@ A `Proxy` object wraps another object and intercepts operations, like reading/wr
 
 Proxies are used in many libraries and some browser frameworks. We'll see many practical applications in this article.
 
+## Proxy
+
 The syntax:
 
 ```js
@@ -485,7 +487,7 @@ range = new Proxy(range, {
 *!*
   has(target, prop) {
 */!*
-    return prop >= target.start && prop <= target.end
+    return prop >= target.start && prop <= target.end;
   }
 });
 
