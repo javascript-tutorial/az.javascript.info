@@ -1,12 +1,12 @@
-In the code below, each line corresponds to the item in the task list.
+Aşağıdakı kodda olan hər sətir tapşıqıda olan hər maddəyə aiddir.
 
 ```js run
-let admin, name; // can declare two variables at once
+let admin, name; // eyni zamanda iki dəyişən yaratmaq mümkündür
 
-name = "John";
+name = "Orxan";
 
 admin = name;
 
-alert( admin ); // "John"
+alert( admin ); // "Orxan"
 ```
 
