@@ -1,7 +1,7 @@
 
 # Objects
 
-As we know from the chapter <info:types>, there are seven data types in JavaScript. Six of them are called "primitive", because their values contain only a single thing (be it a string or a number or whatever).
+As we know from the chapter <info:types>, there are eight data types in JavaScript. Seven of them are called "primitive", because their values contain only a single thing (be it a string or a number or whatever).
 
 In contrast, objects are used to store keyed collections of various data and more complex entities. In JavaScript, objects penetrate almost every aspect of the language. So we must understand them first before going in-depth anywhere else.
 
@@ -103,7 +103,7 @@ user.likes birds = true
 
 JavaScript doesn't understand that. It thinks that we address `user.likes`, and then gives a syntax error when comes across unexpected `birds`.
 
-The dot requires the key to be a valid variable identifier. That implies: contains no spaces, doesn't start with a digit and doesn't include special characters (`$` и `_` are allowed).
+The dot requires the key to be a valid variable identifier. That implies: contains no spaces, doesn't start with a digit and doesn't include special characters (`$` and `_` are allowed).
 
 There's an alternative "square bracket notation" that works with any string:
 
@@ -215,7 +215,7 @@ For instance:
 function makeUser(name, age) {
   return {
     name: name,
-    age: age
+    age: age,
     // ...other properties
   };
 }
@@ -233,7 +233,7 @@ function makeUser(name, age) {
 *!*
   return {
     name, // same as name: name
-    age   // same as age: age
+    age,  // same as age: age
     // ...
   };
 */!*
@@ -301,11 +301,11 @@ As for now, it's important to know that such behavior of `__proto__` can become 
 
 The problem is that a visitor may choose `__proto__` as the key, and the assignment logic will be ruined (as shown above).
 
-Later we'll see workarounds for the problem:
-1. We'll see how to make an objects treat `__proto__` as a regular property in the chapter [](info:prototype-methods).
-2. There's also study another data structure [Map](info:map-set) in the chapter <info:map-set>, which supports arbitrary keys.
+There are two workarounds for the problem:
+1. Modify the object's behavior to treat `__proto__` as a regular property. We'll learn how to do it in the chapter [](info:prototype-methods).
+2. Using [Map](info:map-set) data structure which supports arbitrary keys. We'll learn it in the chapter <info:map-set>.
 
-## Property existance test, "in" operator
+## Property existence test, "in" operator
 
 A notable objects feature is that it's possible to access any property. There will be no error if the property doesn't exist! Accessing a non-existing property just returns `undefined`. It provides a very common way to test whether the property exists -- to get it and compare vs undefined:
 

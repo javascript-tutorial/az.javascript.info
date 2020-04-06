@@ -45,8 +45,13 @@ Brauzer `<script>` təqini emal edən kimi təqdə olan JavaScript kodu avtomati
 
 `<script>` təqinin indiki zamanda çox az işlədilən, amma köhnə kodlarda tapa biləcəyiniz bir neçə atributları var.
 
+<<<<<<< HEAD
 `type` atributu: <code>&lt;script <u>type</u>=...&gt;</code>
 : Köhnə HTML standartı olan HTML4-də skript təqinin `type` atributunun olması vacib idi. Bu atributun dəyəri adətən `type="text/javascript"` idi. Bu artıq lazım deyil. Əlavə olaraq, modern HTML standartında bu atributun mənası tam dəyişmişdir. İndi, bu atribut JavaScript modulları üçün işlədilə bilər. Biz modullar haqqında bu dərsliyin digər bölməsində danışacağıq.
+=======
+The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
+: The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
+>>>>>>> c89ddc5d92195e08e2c32e30526fdb755fec4622
 
 `language` atributu: <code>&lt;script <u>language</u>=...&gt;</code>
 : Bu atributda skriptin dili göstərilirdi. JavaScript-in əsas dil olduğundan bu atributun artıq mənası qalmayıb. Bu atributdan istifadə etmək lazım deyil.
