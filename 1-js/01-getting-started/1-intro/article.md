@@ -6,11 +6,11 @@ Gəlin JavaScript-in niyə belə xüsusi olduğuna, onunla nələr edə biləcə
 
 _JavaScript_ ilkin olaraq _"web səhifələri canlandırmaq"_ üçün yaradılmışdır.
 
-Bu dilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
+Bu dil ilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
 
 Skriptlər əvvəlcədən heç bir hazırlıq, kompilyasiya və s. mərhələlərə ehtiyac olmadan, adi mətn şəklində yazıla və təqdim edilə bilər.
 
-Bu baxımdan, JavaScript, [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) adlandırılan, lakin çox vaxt onunla qarışıq salınan dildən olduqca fərqlidir.
+Bu baxımdan, JavaScript [Java](<https://en.wikipedia.org/wiki/Java_(programming_language)>) adlandırılan, lakin çox vaxt onunla qarışıq salınan dildən olduqca fərqlidir.
 
 ```smart header="Bəs onda niyə <u>Java</u>Script?"
 
@@ -27,15 +27,15 @@ Brauzerin daxilində "JavaScript virtual maşını" adlı bir mühərrik mövcud
 Müxtəlif mühərriklərin müxtəlif kodadları var. Misalçün:
 
 - [V8](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) -- Chrome və Operada.
-- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefoxda.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- Firefoxda.
 - [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) -- Microsoft Edgedə
 - [JavaScriptCore](https://en.wikipedia.org/wiki/WebKit#JavaScriptCore) -- Safaridə (WebKit) və s.
 
-Yuxarıdakı terminləri yadda saxlamağınız tövsiyyə olunur çünki, bu cür terminlər developer məqalələrində çox istifadə olunur. Nümunə üçün onu deyə bilərik ki, kimsə sizə "filan xüsusiyyət V8-də dəstəklənir" deyəndə, o dəqiqə biləcəksiniz ki, Chrome və Opera (bir də gördünüz MS Edge) bu xüsusiyyəti dəstəkləyir.
+Yuxarıdakı terminləri yadda saxlamağınız tövsiyyə olunur, çünki bu cür terminlər developer məqalələrində çox istifadə olunur. Nümunə üçün onu deyə bilərik ki, kimsə sizə "filan xüsusiyyət V8-də dəstəklənir" deyəndə, o dəqiqə biləcəksiniz ki, Chrome və Opera (bir də gördüyünüz MS Edge) bu xüsusiyyəti dəstəkləyir.
 
 ```smart header="Bəs bu mühərriklər necə işləyir?"
 
-Düzünü desək, bu mühərriklər olduqca mürəkkəbdir lakin əsaslar sadədir:
+Düzünü desək, bu mühərriklər olduqca mürəkkəbdir, lakin əsaslar sadədir:
 
 1. Əvvəlcə skript oxunulur, token-lərə ayrılır və parse edilir
 2. Yaradılmış token-lərdən [AST](https://en.wikipedia.org/wiki/Abstract_syntax_tree) qurulur
@@ -65,7 +65,7 @@ Və digər şeyləri göstərmək olar.
 
 ## Bəs JavaScript brauzer daxilində nələri EDƏ BİLMİR?
 
-İstifadəçinin təhlükəsizliyini təmin etmək üçün, JavaScript-in brauzerdəki funksionallıqları limitlidir.
+İstifadəçinin təhlükəsizliyini təmin etmək üçün JavaScript-in brauzerdəki funksionallıqları limitlidir.
 
 Bu cür limitlərə aşağıdakılar daxildir:
 
@@ -87,7 +87,7 @@ Bu cür məhdudiyyətlər sadəcə brauzer daxilində mövcuddur, daha öncə d�
 
 ## JavaScript-i unikal edən nədir?
 
-Aşağıdakılar, JavaScript-i unikal edən ən az üç şeydir:
+Aşağıdakılar JavaScript-i unikal edən ən az üç şeydir:
 
 ```compare
 + HTML/CSS ilə tam inteqrasiya.
@@ -99,15 +99,15 @@ Bu üç xüsusiyyəti özündə birləşdirən yegənə texnologiya JavaScript-d
 
 Məhz bu səbəbdən, JavaScript unikaldır və ən çox yayılmış proqramlaşdırma dillərindəndir.
 
-Yeri gəlmişək, onu da qeyd etmək lazımdır ki, JavaScript ilə mobil tətbiqlər və serverlər də yarada bilərsiniz.
+Yeri gəlmişkən, onu da qeyd etmək lazımdır ki, JavaScript ilə mobil tətbiqlər və serverlər də yarada bilərsiniz.
 
 ## JavaScript "üzərində" dillər
 
-JavaScript-in sintaksisi hamının ehtiyaclarını ödəmir. Müxtəlif insanlar, müxtəlif funksionallıqlar tələb edir.
+JavaScript-in sintaksisi hamının ehtiyaclarını ödəmir. Müxtəlif insanlar müxtəlif funksionallıqlar tələb edir.
 
 Təbii ki, bu normaldır, çünki layihələr və tələblər hamı üçün fərqlidir.
 
-Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana gəlmişdir. Onlar, yalnız development mühitində fərqli funksionallıqlar irəli sürür lakin, daha sonra brauzerdə işləyə bilmək üçün JavaScript-ə çevrilməlidir.
+Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana gəlmişdir. Onlar, yalnız development mühitində fərqli funksionallıqlar irəli sürür, lakin daha sonra brauzerdə işləyə bilmək üçün JavaScript-ə çevrilməlidir.
 
 Belə dillərə nümunə olaraq aşağıdakıları göstərmək olar:
 
