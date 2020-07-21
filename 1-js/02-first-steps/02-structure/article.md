@@ -1,44 +1,44 @@
-# Code structure
+# Kod Strukturu
 
-The first thing we'll study is the building blocks of code.
+Biz ilk olaraq kod bloklarını yaratmağı öyrənəcəyik.
 
-## Statements
+## İfadələr
 
-Statements are syntax constructs and commands that perform actions.
+İfadələr fəaliyyəti əks etdirən sintaksis quruluşları və əmrlərdir.
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+Biz artıq "Salam, dünya!" ismarıcını göstərən `alert('Salam, dünya!')` ifadəsi ilə tanışıq.
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+Biz kodumuzda istədiyimiz qədər ifadələri əlavə edə bilirik. İfadələr öz növbəsində nöqtəli vergül ilə ayrıla bilərlər.
 
-For example, here we split "Hello World" into two alerts:
-
-```js run no-beautify
-alert('Hello'); alert('World');
-```
-
-Usually, statements are written on separate lines to make the code more readable:
+Məsələn, burada biz "Salam Dünya"-nı iki xəbərdarlığa bölürük:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('Salam'); alert('Dünya');
 ```
 
-## Semicolons [#semicolon]
-
-A semicolon may be omitted in most cases when a line break exists.
-
-This would also work:
+Adətən kodu daha rahat oxunabilən etmək üçün ifadələr ayrı sətirdə yazılır:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('Salam');
+alert('Dünya');
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+## Nöqtəli vergül [#semicolon]
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+Sətir bittiyi halda nöqtəli vergül buraxıla bilər.
 
-There are cases when a newline does not mean a semicolon. For example:
+Bu həmçinin işləyir:
+
+```js run no-beautify
+alert('Salam')
+alert('Dünya')
+```
+
+Burada, JavaScript-də sətir kəsilməsi "gizli" nöqtəli vergülü bildirir. Bu [avtomatik nöqtəli vergül əlavəsi](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) adlanır.
+
+**Əksər hallarda yeni sətir nöqtəli vergülü bildirir. Ancaq "əksər hallar" " həmişəni" bildirmir!**
+
+Bəzi hallarda yeni sətir nöqtəli vergülü bildirmir. Məsələn:
 
 ```js run no-beautify
 alert(3 +
@@ -46,114 +46,114 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+Burada JavaScript nöqtəli vergülü daxil etmədiyi üçün kod `6` nəticəsini göstərir. İntuitiv şəkildə aydındır ki, əgər sətir müsbət `"+"` ilə bitərsə, deməli bu "natamam ifadədir". Beləliklə, nöqtəli vergülə ehtiyac duyulmur və bu halda nəzərdə tutulduğu kimi işləyir.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**Ancaq bəzi hallarda JavaScript nöqtəli vergülün harada lazım olmasını "uğursuz" şəkildə fərz edir.**
 
-Errors which occur in such cases are quite hard to find and fix.
+Belə hallarda baş verən xətaları tapmaq və düzəltmək çətindir.
 
 ````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+Əgər siz belə xətanı göstərən spesifik misalı görmək istəyirsinizsə, bu koda nəzər salın:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of the code: it shows `1` then `2`.
+Hələki mötərizəsi `[]` və `forEach` haqqında düşünməyə dəyməz. Biz onları sonra öyrənəcəyik. İndiki vəziyyət üçün sadəcə kodun nəticəsini yadda saxlayın: ilk öncə `1`-i və daha sonra `2`-ni göstərir.
 
-Now, let's add an `alert` before the code and *not* finish it with a semicolon:
+İndi isə gəlin koddan öncə `alert`- i əlavə edək və nöqtəli vergül ilə *bitirməyək*:
 
 ```js run no-beautify
-alert("There will be an error")
+alert("TBurada xəta olacaqdır")
 
 [1, 2].forEach(alert)
 ```
 
-Now if we run the code, only the first `alert` is shown and then we have an error!
+Əgər indi biz kodu işə salsaq, ilk `alert` göstərilir və sonra bizdə xəta baş verir!
 
-But everything is fine again if we add a semicolon after `alert`:
+Amma  əgər biz `alert`-dən sonra nöqtəli vergül əlavə etsək hər şey qaydasına düşəcək:
 ```js run
-alert("All fine now");
+alert("Hər şey qaydasındadır");
 
 [1, 2].forEach(alert)  
 ```
 
-Now we have the "All fine now" message followed by `1` and `2`.
+İndi bizim "Hər şey qaydasındadır" ismarıcımız var və ondan sonra`1` və `2`gəlir.
 
 
-The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets `[...]`.
+JavaScript `[...]` düz mötərizədən öncə nöqtəli vergülün gəldiyini fərz etmədiyi üçün qeyri-nöqtəli vergül versiyasında xəta baş verir.
 
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
+Beləliklə, nöqtəli vergül avtomatik daxil edilmədiyi üçün birinci nümunədəki kodu tək ifadə kimi qəbul edir. Javscript mexanizmi bunu belə görür:
 
 ```js run no-beautify
-alert("There will be an error")[1, 2].forEach(alert)
+alert("Burada xəta olacaqdır")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+Anacq bu bir yox, iki ayrı ifadə olmalıdır. Bu halda belə bir birləşdirmə səhvdir və buna görə də xəta baş verir. Bu xəta digər situasiyalarda da baş verə bilər. 
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Hətta yeni sətir ilə ayırılsa belə, biz ifadələr arasında nöqtəli vergülləri daxil etməyi məsləhət görürük. Bu qayda geniş şəkildə icma tərəfindən tədbiq olunur. Gəlin bir daha qeyd edək ki, *çox zaman nöqtəli vergülü buraxmaq mümkündür*. Ancaq xüsusilə kodlaşdırmaya yeni başlayanlar üçün nöqtəli vergülü istifadə etmək məsləhətdir.
 
-## Comments [#code-comments]
+## Şəhrlər [#code-comments]
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+Zaman keçdikcə proqramlar daha çox mürəkkəbləşir. Buna görə də kodun nə etdiyi və səbəbini izah edən *şəhrləri* əlavə etmək vacibdir.
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Şəhrlər skriptin istənilən yerində istifadə oluna bilər. Mexanizm şəhrlərə əhəmiyyət vermədiyi üçün şəhrlər skriptin icrasına təsir etmirlər.
 
-**One-line comments start with two forward slash characters `//`.**
+**Bir sətirli şəhrlər iki sləş (çəpinə xətt) `//` işarəsi ilə başlayır.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Sətirin qalan hissəsi şəhrdir. Şəhrlər ayrıca sətirdə qeyd oluna və ya ifadənin davamı ilə qeyd oluna bilər.The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
 
-Like here:
+Məsələn:
 ```js run
-// This comment occupies a line of its own
+// Bu şəhr ayrı bir sətrdə qeyd olunub
 alert('Hello');
 
-alert('World'); // This comment follows the statement
+alert('World'); // Bu şəhr ifadənin davamı ilə qyd olunub
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Çoxsətirli şəhrlər sləş və ulduz işarələri <code>/&#42;</code> ilə başlayır və ulduz və sləş simvolları ilə <code>&#42;/</code> bitirlər.**
 
-Like this:
+Məsələn:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* İki ismarıclı nümunə.
+Bu çoxsətirli şəhrdir.
 */
-alert('Hello');
-alert('World');
+alert('Salam');
+alert('Dünya');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+Şəhrlərdəki məzmun nəzərə alınmır, beləliklə əgər biz kodu <code>/&#42; ... &#42;/</code> daxilinə qoysaq kod icra olunmayacaq.
 
-Sometimes it can be handy to temporarily disable a part of code:
+Bəzən kodun bir hissəsini belə üsullar ləğv etmək yaxşı üsuldur:
 
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* Kodu şəhr kimi qeyd etmək
+alert('Salam');
 */
-alert('World');
+alert('Dünya');
 ```
 
 ```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
+Əksər redaktə proqramlarında  təksətirli şəhrlər kimi qeyd etmək üçün `key:Ctrl+/` qaynarklavişləri və ya çoxsətirli şəhrlərdə `key:Ctrl+Shift+/` qaynar klavişləri basmaqla kod sətrini şəhrə keçirmək mümkündür. Mac istifadə etdikde isə  `key:Ctrl` yerinə `key:Cmd` qaynar klavişləri basın.
 ```
 
-````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+````warn header="Bir-birinin daxilində şəhrlər yaratmaq dəstəklənmir!"
+`/*...*/`-nin daxilində digər bir `/*...*/` ola bilməz.
 
-Such code will die with an error:
+Belə kod xəta gğstərərək "öləcəkdir":
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* bir-birnin daxilində şəhrlər ?!? */
 */
 alert( 'World' );
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Zəhmət olmasa öz kodunuzu şəhr etməyə çəkinməyin.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+Şəhrlər kodda izləri çoxaltsa da bu problem deyil. İstehsal serverinə dərc etdərkən kodun yığcamlaşdırılması üçün müxtəlif alətlər mövcuddur. Onlar şəhrləri aradan qaldırır, beləliklə şəhrlər iş skriptində qarşınıza çıxmır. Buna görə də, şəhrlərin məhsula heç bir mənfi təsiri yoxdur. 
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Sonra dərslikdə daha yaxşı şəhrlər yazmağı izah edən <info:code-quality>  bölməsi olacaqdır.
