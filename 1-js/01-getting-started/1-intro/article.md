@@ -4,7 +4,11 @@ Gəlin JavaScript-in niyə belə xüsusi olduğuna, onunla nələr edə biləcə
 
 ## JavaScript nədir?
 
+<<<<<<< HEAD
 _JavaScript_ ilkin olaraq _"web səhifələri canlandırmaq"_ üçün yaradılmışdır.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> cdf382de4cf3ed39ca70cb7df60c4c4886f2d22e
 
 Bu dilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
 
@@ -71,7 +75,11 @@ Bu cür limitlərə aşağıdakılar daxildir:
 
 - Hər hansı bir web səhifədəki JavaScript sizin sərt diskinizdəki ixtiyari faylları yarada, silə, dəyişə və ya icra edə bilməz. Onun sizin əməliyyat sisteminin funksiyalarına bir başa çıxışı yoxdur.
 
+<<<<<<< HEAD
   Müasir brauzerlər fayllarla işləməyə imkan yaradır lakin bu əməliyyat `<input>` etiketi vasitəsilə sayta fayl yükləməkdən başqa bir şeyə imkan yaratmır.
+=======
+- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+>>>>>>> cdf382de4cf3ed39ca70cb7df60c4c4886f2d22e
 
   Bununla bərarbər, brauzer sizə kamera və mikrofon kimi cihazlarlə işləmək imkanı yaradır lakin bu əməliyyatları istifadəçinin bir başa icazəsi olmadan etmək qeyri-mümkündür. Yəni evdə hər hansı bir işlə məşğul olanda kimsə sizi hansısa web səhifədən izləyə bilməz, bunun üçün siz brauzerə icazə verməlisiniz.
 
