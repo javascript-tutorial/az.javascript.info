@@ -4,6 +4,8 @@ A `Proxy` object wraps another object and intercepts operations, like reading/wr
 
 Proxies are used in many libraries and some browser frameworks. We'll see many practical applications in this article.
 
+## Proxy
+
 The syntax:
 
 ```js
@@ -453,7 +455,7 @@ Such properties have their own issues though. In particular, they are not inheri
 
 ## "In range" with "has" trap
 
-Let's see more examples.ar
+Let's see more examples.
 
 We have a range object:
 
@@ -485,7 +487,7 @@ range = new Proxy(range, {
 *!*
   has(target, prop) {
 */!*
-    return prop >= target.start && prop <= target.end
+    return prop >= target.start && prop <= target.end;
   }
 });
 
@@ -660,7 +662,7 @@ In most cases we can do the same without `Reflect`, for instance, reading a prop
 
 ### Proxying a getter
 
-Let's see an example that demonstrates why `Reflect.get` is better. And we'll also see why `get/set` have the fourth argument `receiver`, that we didn't use before.
+Let's see an example that demonstrates why `Reflect.get` is better. And we'll also see why `get/set` have the third argument `receiver`, that we didn't use before.
 
 We have an object `user` with `_name` property and a getter for it.
 
@@ -838,7 +840,7 @@ So there's no such problem when proxying an array.
 
 ### Private fields
 
-The similar thing happens with private class fields.
+A similar thing happens with private class fields.
 
 For example, `getName()` method accesses the private `#name` property and breaks after proxying:
 
@@ -961,7 +963,7 @@ revoke();
 alert(proxy.data); // Error
 ```
 
-A call to `revoke()` removes all internal references to the target object from the proxy, so they are no more connected. The target object can be garbage-collected after that.
+A call to `revoke()` removes all internal references to the target object from the proxy, so they are no longer connected. The target object can be garbage-collected after that.
 
 We can also store `revoke` in a `WeakMap`, to be able to easily find it by a proxy object:
 
