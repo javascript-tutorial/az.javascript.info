@@ -4,7 +4,11 @@ Gəlin JavaScript-in niyə belə xüsusi olduğuna, onunla nələr edə biləcə
 
 ## JavaScript nədir?
 
+<<<<<<< HEAD
 _JavaScript_ ilkin olaraq _"web səhifələri canlandırmaq"_ üçün yaradılmışdır.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> f830bc5d9454d85829e011d914f215eb5896579a
 
 Bu dilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
 
@@ -71,7 +75,11 @@ Bu cür limitlərə aşağıdakılar daxildir:
 
 - Hər hansı bir web səhifədəki JavaScript sizin sərt diskinizdəki ixtiyari faylları yarada, silə, dəyişə və ya icra edə bilməz. Onun sizin əməliyyat sisteminin funksiyalarına bir başa çıxışı yoxdur.
 
+<<<<<<< HEAD
   Müasir brauzerlər fayllarla işləməyə imkan yaradır lakin bu əməliyyat `<input>` etiketi vasitəsilə sayta fayl yükləməkdən başqa bir şeyə imkan yaratmır.
+=======
+- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+>>>>>>> f830bc5d9454d85829e011d914f215eb5896579a
 
   Bununla bərarbər, brauzer sizə kamera və mikrofon kimi cihazlarlə işləmək imkanı yaradır lakin bu əməliyyatları istifadəçinin bir başa icazəsi olmadan etmək qeyri-mümkündür. Yəni evdə hər hansı bir işlə məşğul olanda kimsə sizi hansısa web səhifədən izləyə bilməz, bunun üçün siz brauzerə icazə verməlisiniz.
 
@@ -111,9 +119,17 @@ Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana g
 
 Belə dillərə nümunə olaraq aşağıdakıları göstərmək olar:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) JavaScript üçün "Sintaktik şəkərdir"(syntactic sugar) və daha qısa və anlaşıqlı sintaksis ortaya qoyur. Adətən Ruby developerlər onu sevir.
 - [TypeScript](http://www.typescriptlang.org/) JavaScript-ə strict type sistemi əlavə edir və development zamanı bəzi bugların qarşısını alır, çox vaxt performansda da qazandırır. TypeScript Microsoft tərəfindən yaradılmışdır və maintain edilir.
 - [Flow](http://flow.org/) həmçinin strict type sistemi əlavə edir lakin başqa yol ilə. Facebook tərəfindən yaradılmışdır.
+=======
+- [CoffeeScript](http://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](http://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](http://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that allow to write application in pure Python without JavaScript.
+>>>>>>> f830bc5d9454d85829e011d914f215eb5896579a
 
 Təbii ki, belə dillər daha çoxdur. Lakin bu dilləri başa düşmək üçün əvvəlcə JavaScript-i tam anlamaq şərtdir.
 
