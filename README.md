@@ -1,6 +1,10 @@
 # Müasir JavaScript Dərsliyi
 
+<<<<<<< HEAD
 Bu repositoriya [https://javascript.info](https://javascript.info) saytında yayımlanan Müasir JavaScript Dərsliyinin Azərbaycan dilli məzmununu saxlayır.
+=======
+This repository hosts the English content of the Modern JavaScript Tutorial, published in [https://javascript.info](https://javascript.info).
+>>>>>>> dccca58f268ad6d5a6f2160613a8ea3c5cd53a2d
 
 ## Tərcümə
 
@@ -28,7 +32,13 @@ Materialın növü, quvluqdakı adı ilə təyin olunur:
 - `article.md` məqaləni
 - `task.md` isə tapşırıqları təmsil edir (tapşırığın həlləri `solution.md` faylında yerləşdirilməlidir)
 
+<<<<<<< HEAD
 Hər bir material `# Əsas başlıq` başlığı ilə başlayır.
+=======
+  - `index.md` stands for a chapter
+  - `article.md` stands for an article
+  - `task.md` stands for a task (solution must be provided in `solution.md` file as well)
+>>>>>>> dccca58f268ad6d5a6f2160613a8ea3c5cd53a2d
 
 Yeni məznun əlavə etmək isə çox asandır.
 
