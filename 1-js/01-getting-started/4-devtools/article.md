@@ -8,7 +8,11 @@ Məhz bu səbəbdən, etdiyimiz xətaları görmək və yazdığımız skriptlə
 
 Bu cür alətlərin ən yaxşısı və seviləni Chrome və Firefoxda olduğu üçün, əksər proqramçılar məhz bu brauzerləri istifadə edir. Digər brauzerlər də bu kimi tərtibatçı alətləri təqdim etsələr də, Chrome və Firefox ilə demək olar ki, eyni şey olduğu üçün bu iki brauzer əksər proqramçıların sevimlisidir və sadəcə brauzer-spesifik problemlər yarandığı hallarda digər brauzerlərə keçid edirlər.
 
+<<<<<<< HEAD
 Tərtibatçı alətləri güclüdür və çoxlu sayda xüsusiyyətləri var. Başlanğıc üçün, gəlin onları açmağı, xətalara baxmağı və JavaScript komandalarını icra etməyi öyrənək.
+=======
+Developer tools are potent, they have many features. To start, we'll learn how to open them, look at errors, and run JavaScript commands.
+>>>>>>> 97ef86242f9f236b13152e1baf52a55c4db8728a
 
 ## Google Chrome
 
