@@ -14,14 +14,23 @@ ECMA-262 standartlarına il boyunca yeni təkliflər verilir, bu təkliflər bir
 
 Bununla bərabar, əgər JavaScripti brauzer daxilində istifadə edirsinizsə bunun üçün başqa standartlar mövcuddur. Bu barədə dərsliyin [ikinci hissəsində](info:browser-environment) danışacağıq.
 
+<<<<<<< HEAD
 ## Manuallar
+=======
+Also, if you're developing for the browser, then there are other specifications covered in the [second part](info:browser-environment) of the tutorial.
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 
 - **MDN (Mozilla) JavaScript Reference**, nümunələr və digər məlumatlarla tanış ola biləcəyiniz başqa bir mənbədir. MDN, spesifik funksiya, obyektlər, metodlar və s. haqqında dərin məlumat əldə etmək və nümunələrlə tanış olmaq üçün əla yerdir.
 
+<<<<<<< HEAD
   Elə indi bu keçiddən istifadə edib baxmağınız tövsiyyə olunur: <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference>.
+=======
+- **MDN (Mozilla) JavaScript Reference** is the main manual with examples and other information. It's great to get in-depth information about individual language functions, methods etc.
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 
   Keçidə daxil olduqdan sonra sizin üçün axtardığınız şeyi tapmaq bir az çətin ola bilər. Bu səbəbdən, çox vaxt Google-da axtarış etmək daha əlverişli olar bilər. Misalçün, deyək ki, `parseInt` funksiyası haqqında ətraflı məlumat almaq istəyirsiniz, bunun üçün <https://google.com/search?q=MDN+parseInt> kimi axtarış edə bilərsiniz.
 
+<<<<<<< HEAD
 * **MSDN** – JavaScript (JScript deyək) və Microsoft-a məxsus digər şeylər haqqında məlumat toplaya biləcəyiniz əla mənbədir. Əgər Internet Explorer-ə xas bir şeylə bağlı məlumat almaq istəsəniz elə bura baxın: <http://msdn.microsoft.com/>.
 
   Və təbii ki, sadə bir internet axtarışından da yararlana bilərsiniz. Misalçün, "RegExp MSDN" və ya "RegExp MSDN jscript".
@@ -29,6 +38,9 @@ Bununla bərabar, əgər JavaScripti brauzer daxilində istifadə edirsinizsə b
 ## Brauzer dəstəyi və uyğunluq cədvəlləri
 
 JavaScript iknişafda olan bir dil olduğu üçün müntəzəm olaraq yeni xüsusiyyətlər əlavə olunur.
+=======
+Although, it's often best to use an internet search instead. Just use "MDN [term]" in the query, e.g. <https://google.com/search?q=MDN+parseInt> to search for `parseInt` function.
+>>>>>>> 4d01fc20d4d82358e61518a31efe80dec9bb2602
 
 Bu cür xüsusiyyətlərin müxtəlif brauzerlər və engine-lər tərəfindən nə dərəcədə dəstəkləndiyini öyrənmək üçün aşağıdakı resurslardan istifadə edin:
 
