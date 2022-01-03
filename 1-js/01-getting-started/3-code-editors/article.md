@@ -35,7 +35,14 @@ Yüngül redaktorlara nümunə kimi aşağıdakıları göstərə bilərik:
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, pulsuz).
 - [Vim](http://www.vim.org/) və [Emacs](https://www.gnu.org/software/emacs/) isə əgər istifadə edə bilsəniz maraqlı alətlərdir.
 
+<<<<<<< HEAD
 ## Gəlin mübahisə etməyək
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> 3c934b5a46a76861255e3a4f29da6fd54ab05c8c
 
 Bu cür redaktorlar və IDE-lər kimi çoxlu sayda başqaları da var. Sizə qalan isə, özünüzə ən uyğun olanını seçib istifadə etməkdir.
 
