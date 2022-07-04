@@ -12,8 +12,13 @@ IDE çoxlu sayda fayldan ibarət olan proyekti yükləyə, fayllar arasında nav
 
 Əgər hələ də IDE seçməmisinizsə, aşağıdakılardan birini seçin:
 
+<<<<<<< HEAD
 - [Visual Studio Code](https://code.visualstudio.com/) (kros-platforma, pulsuz).
 - [WebStorm](http://www.jetbrains.com/webstorm/) (kros-platforma, ödənişlidir lakin təhsil məqsədilə pulsuz istifadə oluna bilər).
+=======
+- [Visual Studio Code](https://code.visualstudio.com/) (cross-platform, free).
+- [WebStorm](https://www.jetbrains.com/webstorm/) (cross-platform, paid).
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 Həmçinin Windows üçün "Visual Studio" ("Visual Studio Code" ilə qarışdırmayın) adlı IDE də mövcuddur. Bu, ödənişli, .NET platforması ilə yaxşı yola gedən, çox güclü və yalnız Windows üzərində işləyən bir IDE-dir. Bu IDE-nin ödənişsiz versiyası da mövcuddur: [Visual Studio Community](https://www.visualstudio.com/vs/community/).
 
@@ -35,7 +40,14 @@ Yüngül redaktorlara nümunə kimi aşağıdakıları göstərə bilərik:
 - [Notepad++](https://notepad-plus-plus.org/) (Windows, pulsuz).
 - [Vim](http://www.vim.org/) və [Emacs](https://www.gnu.org/software/emacs/) isə əgər istifadə edə bilsəniz maraqlı alətlərdir.
 
+<<<<<<< HEAD
 ## Gəlin mübahisə etməyək
+=======
+- [Atom](https://atom.io/) (cross-platform, free).
+- [Sublime Text](http://www.sublimetext.com) (cross-platform, shareware).
+- [Notepad++](https://notepad-plus-plus.org/) (Windows, free).
+- [Vim](http://www.vim.org/) and [Emacs](https://www.gnu.org/software/emacs/) are also cool if you know how to use them.
+>>>>>>> fe1c4a241f12a0939d1e0977cec6504ccd67201f
 
 Bu cür redaktorlar və IDE-lər kimi çoxlu sayda başqaları da var. Sizə qalan isə, özünüzə ən uyğun olanını seçib istifadə etməkdir.
 
