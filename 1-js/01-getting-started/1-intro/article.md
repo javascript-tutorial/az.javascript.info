@@ -1,10 +1,18 @@
 # JavaScript-ə giriş
 
+<<<<<<< HEAD
 Gəlin JavaScript-in niyə belə xüsusi olduğuna, onunla nələr edə biləcəyimizə və onun hansı texnologiyalarla qaynayıb qarışdığına bir nəzər yetirək.
+=======
+Let's see what's so special about JavaScript, what we can achieve with it, and what other technologies play well with it.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 ## JavaScript nədir?
 
+<<<<<<< HEAD
 _JavaScript_ ilkin olaraq _"web səhifələri canlandırmaq"_ üçün yaradılmışdır.
+=======
+*JavaScript* was initially created to "make web pages alive".
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 Bu dilə yazılmış proqramlar _skriptlər_ adlandırılır. Bu skriptlər, birbaşa web səhifənin HTML-inin içərisində yazıla və səhifə yükləndikcə icra oluna bilər.
 
@@ -26,12 +34,20 @@ Brauzerin daxilində "JavaScript virtual maşını" adlı bir mühərrik mövcud
 
 Müxtəlif mühərriklərin müxtəlif kodadları var. Misalçün:
 
+<<<<<<< HEAD
 - [V8](<https://en.wikipedia.org/wiki/V8_(JavaScript_engine)>) -- Chrome və Operada.
 - [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefoxda.
 - [Chakra](<https://en.wikipedia.org/wiki/Chakra_(JScript_engine)>) -- Microsoft Edgedə
 - [JavaScriptCore](https://en.wikipedia.org/wiki/WebKit#JavaScriptCore) -- Safaridə (WebKit) və s.
 
 Yuxarıdakı terminləri yadda saxlamağınız tövsiyyə olunur çünki, bu cür terminlər developer məqalələrində çox istifadə olunur. Nümunə üçün onu deyə bilərik ki, kimsə sizə "filan xüsusiyyət V8-də dəstəklənir" deyəndə, o dəqiqə biləcəksiniz ki, Chrome və Opera (bir də gördünüz MS Edge) bu xüsusiyyəti dəstəkləyir.
+=======
+- [V8](https://en.wikipedia.org/wiki/V8_(JavaScript_engine)) -- in Chrome, Opera and Edge.
+- [SpiderMonkey](https://en.wikipedia.org/wiki/SpiderMonkey) -- in Firefox.
+- ...There are other codenames like "Chakra" for IE, "JavaScriptCore", "Nitro" and "SquirrelFish" for Safari, etc.
+
+The terms above are good to remember because they are used in developer articles on the internet. We'll use them too. For instance, if "a feature X is supported by V8", then it probably works in Chrome, Opera and Edge.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 ```smart header="Bəs bu mühərriklər necə işləyir?"
 
@@ -67,11 +83,19 @@ Və digər şeyləri göstərmək olar.
 
 İstifadəçinin təhlükəsizliyini təmin etmək üçün, JavaScript-in brauzerdəki funksionallıqları limitlidir.
 
+<<<<<<< HEAD
 Bu cür limitlərə aşağıdakılar daxildir:
+=======
+JavaScript's abilities in the browser are limited for the sake of a user's safety. The aim is to prevent an evil webpage from accessing private information or harming the user's data.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 - Hər hansı bir web səhifədəki JavaScript sizin sərt diskinizdəki ixtiyari faylları yarada, silə, dəyişə və ya icra edə bilməz. Onun sizin əməliyyat sisteminin funksiyalarına bir başa çıxışı yoxdur.
 
+<<<<<<< HEAD
   Müasir brauzerlər fayllarla işləməyə imkan yaradır lakin bu əməliyyat `<input>` etiketi vasitəsilə sayta fayl yükləməkdən başqa bir şeyə imkan yaratmır.
+=======
+- JavaScript on a webpage may not read/write arbitrary files on the hard disk, copy them or execute programs. It has no direct access to OS functions.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
   Bununla bərarbər, brauzer sizə kamera və mikrofon kimi cihazlarlə işləmək imkanı yaradır lakin bu əməliyyatları istifadəçinin bir başa icazəsi olmadan etmək qeyri-mümkündür. Yəni evdə hər hansı bir işlə məşğul olanda kimsə sizi hansısa web səhifədən izləyə bilməz, bunun üçün siz brauzerə icazə verməlisiniz.
 
@@ -90,9 +114,15 @@ Bu cür məhdudiyyətlər sadəcə brauzer daxilində mövcuddur, daha öncə d�
 Aşağıdakılar, JavaScript-i unikal edən ən az üç şeydir:
 
 ```compare
+<<<<<<< HEAD
 + HTML/CSS ilə tam inteqrasiya.
 + Sadə şeylər sadəliklə icra olunur.
 + Əksər brauzerlər tərəfindən dəstəklənir və defolt olaraq aktivdir.
+=======
++ Full integration with HTML/CSS.
++ Simple things are done simply.
++ Supported by all major browsers and enabled by default.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 ```
 
 Bu üç xüsusiyyəti özündə birləşdirən yegənə texnologiya JavaScript-dir.
@@ -111,14 +141,29 @@ Son zamanlarda, JavaScript-ə çevrilən (transpiled) bir çox dillər meydana g
 
 Belə dillərə nümunə olaraq aşağıdakıları göstərmək olar:
 
+<<<<<<< HEAD
 - [CoffeeScript](http://coffeescript.org/) JavaScript üçün "Sintaktik şəkərdir"(syntactic sugar) və daha qısa və anlaşıqlı sintaksis ortaya qoyur. Adətən Ruby developerlər onu sevir.
 - [TypeScript](http://www.typescriptlang.org/) JavaScript-ə strict type sistemi əlavə edir və development zamanı bəzi bugların qarşısını alır, çox vaxt performansda da qazandırır. TypeScript Microsoft tərəfindən yaradılmışdır və maintain edilir.
 - [Flow](http://flow.org/) həmçinin strict type sistemi əlavə edir lakin başqa yol ilə. Facebook tərəfindən yaradılmışdır.
+=======
+- [CoffeeScript](https://coffeescript.org/) is a "syntactic sugar" for JavaScript. It introduces shorter syntax, allowing us to write clearer and more precise code. Usually, Ruby devs like it.
+- [TypeScript](https://www.typescriptlang.org/) is concentrated on adding "strict data typing" to simplify the development and support of complex systems. It is developed by Microsoft.
+- [Flow](https://flow.org/) also adds data typing, but in a different way. Developed by Facebook.
+- [Dart](https://www.dartlang.org/) is a standalone language that has its own engine that runs in non-browser environments (like mobile apps), but also can be transpiled to JavaScript. Developed by Google.
+- [Brython](https://brython.info/) is a Python transpiler to JavaScript that enables the writing of applications in pure Python without JavaScript.
+- [Kotlin](https://kotlinlang.org/docs/reference/js-overview.html) is a modern, concise and safe programming language that can target the browser or Node.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
 
 Təbii ki, belə dillər daha çoxdur. Lakin bu dilləri başa düşmək üçün əvvəlcə JavaScript-i tam anlamaq şərtdir.
 
 ## Xülasə
 
+<<<<<<< HEAD
 - JavaScript ilkin olaraq yalnız brauzerlər üçün yaradılmış, lakin sonradan başqa mühitlərdə də istifadə olunmağa başlamışdır.
 - Günümüzdə JavaScript HTML və CSS ilə tam inteqrasiya oluna bilər, geniş yayılmış unikal bir proqramlaşdırma dilidir.
 - JavaScript-ə çevrilən və yeni funksionallıqlar təqdim edən bir çox dillər mövcuddur. Bu dillərdən bəzilərinə nəzər salmaq tövsiyyə olunur. Misalçün, JavaScript-i tam başa düşdükdən sonra TypeScript-dən başlaya bilərsiniz.
+=======
+- JavaScript was initially created as a browser-only language, but it is now used in many other environments as well.
+- Today, JavaScript has a unique position as the most widely-adopted browser language, fully integrated with HTML/CSS.
+- There are many languages that get "transpiled" to JavaScript and provide certain features. It is recommended to take a look at them, at least briefly, after mastering JavaScript.
+>>>>>>> 82ed8f11b40bd40797427a5dd1763edbe1fca523
