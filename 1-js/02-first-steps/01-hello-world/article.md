@@ -9,7 +9,11 @@ Gəlin ilk olaraq skripti səhifəyə qoşaq. Server mühitlərində (Node.js ki
 
 ## "script" təqi
 
+<<<<<<< HEAD
 `<script>` təqindən istifadə edərək JavaScript proqramlarını HTML sənədinin istənilən yerinə əlavə etmək olar.
+=======
+JavaScript programs can be inserted almost anywhere into an HTML document using the `<script>` tag.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 Məsələn:
 
@@ -45,8 +49,13 @@ Brauzer `<script>` təqini emal edən kimi təqdə olan JavaScript kodu avtomati
 
 `<script>` təqinin indiki zamanda çox az işlədilən, amma köhnə kodlarda tapa biləcəyiniz bir neçə atributları var.
 
+<<<<<<< HEAD
 `type` atributu: <code>&lt;script <u>type</u>=...&gt;</code>
 : Köhnə HTML standartı olan HTML4-də skript təqinin `type` atributunun olması vacib idi. Bu atributun dəyəri adətən `type="text/javascript"` idi. Bu artıq lazım deyil. Əlavə olaraq, modern HTML standartında bu atributun mənası tam dəyişmişdir. İndi, bu atribut JavaScript modulları üçün işlədilə bilər. Biz modullar haqqında bu dərsliyin digər bölməsində danışacağıq.
+=======
+The `type` attribute: <code>&lt;script <u>type</u>=...&gt;</code>
+: The old HTML standard, HTML4, required a script to have a `type`. Usually it was `type="text/javascript"`. It's not required anymore. Also, the modern HTML standard totally changed the meaning of this attribute. Now, it can be used for JavaScript modules. But that's an advanced topic, we'll talk about modules in another part of the tutorial.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 `language` atributu: <code>&lt;script <u>language</u>=...&gt;</code>
 : Bu atributda skriptin dili göstərilirdi. JavaScript-in əsas dil olduğundan bu atributun artıq mənası qalmayıb. Bu atributdan istifadə etmək lazım deyil.
@@ -73,12 +82,16 @@ Skript faylları HTML-ə `src` atributu ilə qoşulurlar:
 <script src="/path/to/script.js"></script>
 ```
 
+<<<<<<< HEAD
 Burada, `/path/to/script.js` dəyəri saytın kökündən absolut yol ilə skript faylına istinad edir. Əlavə olaraq, cari səhifəyə nisbi yerləşən fayla da istinad etmək olar. Məsələn, `src="script.js"` dəyəri `"script.js"` faylının cari direktoriyada olması deməkdir.
+=======
+Here, `/path/to/script.js` is an absolute path to the script from the site root. One can also provide a relative path from the current page. For instance, `src="script.js"`, just like `src="./script.js"`, would mean a file `"script.js"` in the current folder.
+>>>>>>> 18b1314af4e0ead5a2b10bb4bacd24cecbb3f18e
 
 Biz, skriptin mənbəsini tam URL ilə də təyin edə bilərik. Məsələn:
 
 ```html
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.2.0/lodash.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.11/lodash.js"></script>
 ```
 
 Bir neçə skripti qoşmaq üçün bir neçə təqdən istifadə edin:
