@@ -1,23 +1,23 @@
-# Popups and window methods
+# Pop-uplar və window üsulları
 
-A popup window is one of the oldest methods to show additional document to user.
+Pop-up istifadəçiyə əlavə document göstərmək üçün ən köhnə üsullardan biridir.
 
-Basically, you just run:
+Təməl olaraq, siz sadəcə çalışdırın::
 ```js
 window.open('https://javascript.info/')
 ```
 
-...And it will open a new window with given URL. Most modern browsers are configured to open new tabs instead of separate windows.
+...Və verilmiş URL ilə yeni bir pəncərə açacaq. Müasir brauzerlərin əksəriyyəti ayrı pəncərələr əvəzinə yeni tablar açmaq üçün konfiqurasiya edilmişdir.
 
-Popups exist from really ancient times. The initial idea was to show another content without closing the main window. As of now, there are other ways to do that: we can load content dynamically with [fetch](info:fetch) and show it in a dynamically generated `<div>`. So, popups is not something we use everyday.
+Popuplar həqiqətən çox  qədim zamanlardan qalmadır.. İlkin ideya əsas pəncərəni bağlamadan başqa məzmunu göstərmək idi. Hal-hazırda, bunun başqa yolları var: biz məzmunu [fetch](info:fetch) ilə dinamik olaraq yükləyə və onu dinamik şəkildə yaradılan `<div>`-də göstərə bilərik. Beləliklə, pop-uplar hər gün istifadə etdiyimiz bir şey deyil.
 
-Also, popups are tricky on mobile devices, that don't show multiple windows simultaneously.
+Həmçinin, pop-uplar eyni vaxtda birdən çox pəncərəni göstərməyən mobil cihazlarda aldadıcılıq edir.
 
-Still, there are tasks where popups are still used, e.g. for OAuth authorization (login with Google/Facebook/...), because:
+Yenə də pop-upların hələ də istifadə olunduğu vəzifələr var, məsələn. OAuth icazəsi üçün (login with Google/Facebook/...), çünki:
 
-1. A popup is a separate window with its own independent JavaScript environment. So opening a popup with a third-party non-trusted site is safe.
-2. It's very easy to open a popup.
-3. A popup can navigate (change URL) and send messages to the opener window.
+1. Açılan pəncərə öz müstəqil JavaScript mühiti olan ayrıca pəncərədir. Beləliklə, üçüncü tərəfin etibarlı olmayan saytı ilə pop-up açmaq təhlükəsizdir.
+2. Pop-up açmaq çox asandır.
+3. Bir pop-up gəzəbilər (URL'yi dəyişdirmək) ve açıcı pəncərəyə mesaj göndərəbilər.
 
 ## Popup blocking
 
