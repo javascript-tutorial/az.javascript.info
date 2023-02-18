@@ -1,115 +1,116 @@
-# Browser environment, specs
+# Brauzer mühiti, texniki xüsusiyyətlər
 
-The JavaScript language was initially created for web browsers. Since then it has evolved and become a language with many uses and platforms.
+JavaScript dili əvvəlcə veb brauzerlər üçün yaradılmışdır. O vaxtdan bəri inkişaf etdi və bir çox istifadəsi və platforması olan bir dilə çevrildi.
 
-A platform may be a browser, or a web-server or another *host*, even a coffee machine. Each of them provides platform-specific functionality. The JavaScript specification calls that a *host environment*.
+Platforma brauzer, veb-server və ya başqa bir *host*, hətta qəhvə maşını ola bilər. Onların hər biri platformaya xas funksiyaları təmin edir. JavaScript spesifikasiyası bunu *host mühiti* adlandırır.
 
-A host environment provides own objects and functions additional to the language core. Web browsers give a means to control web pages. Node.js provides server-side features, and so on.
+Host mühiti dil nüvəsinə əlavə olaraq öz obyektlərini və funksiyalarını təmin edir. Veb brauzerləri veb səhifələrini idarə etmək üçün bir vasitədir. Node.js server tərəfi xüsusiyyətlərini  və s. təmin edir.
 
-Here's a bird's-eye view of what we have when JavaScript runs in a web-browser:
+JavaScript veb-brauzerdə işlədiyi zaman əldə etdiyimiz şeyə quşbaxışı nəzər salaq:
 
 ![](windowObjects.svg)
 
-There's a "root" object called `window`. It has two roles:
+"window" adında bir "root" obyekt var. Onun iki rolu vardır:
 
-1. First, it is a global object for JavaScript code, as described in the chapter <info:global-object>.
-2. Second, it represents the "browser window" and provides methods to control it.
+1. Birincisi, bu fəsildə təsvir olunduğu kimi JavaScript kodu üçün qlobal obyektdir <info:global-object>.
+2. İkincisi, o, "brauzer pəncərəsini" təmsil edir və onu idarə etmək üçün üsullar təqdim edir.
 
-For instance, here we use it as a global object:
+Məsələn, biz onu qlobal obyekt olaraq aşağıdakı kimi  istifadə edirik:
 
 ```js run
 function sayHi() {
-  alert("Hello");
+  alert("Salam");
 }
 
 // global functions are methods of the global object:
 window.sayHi();
 ```
 
-And here we use it as a browser window, to see the window height:
+Və burada pəncərənin hündürlüyünü görmək üçün onu brauzer pəncərəsi kimi istifadə edirik:
 
 ```js run
 alert(window.innerHeight); // inner window height
 ```
 
-There are more window-specific methods and properties, we'll cover them later.
+Pəncərəyə(window) xas olan daha çox üsul və xüsusiyyətlər var, biz onları daha sonra nəzərdən keçirəcəyik.
 
 ## DOM (Document Object Model)
 
-Document Object Model, or DOM for short, represents all page content as objects that can be modified.
+Sənəd Obyekt Modeli və ya qısaca SOM, özünü bütün səhifə məzmununu dəyişdirə bilən obyektlər kimi təmsil edir.
 
-The `document` object is the main "entry point" to the page. We can change or create anything on the page using it.
+`document` obyekti səhifənin əsas "giriş nöqtəsidir". Bundan istifadə edərək səhifədə hər hansı bir şeyi dəyişdirə və yaxudda yeni bir şey yarada bilərik.
 
-For instance:
+Məsələn:
 ```js run
-// change the background color to red
+// arxa fon rəngini qırmızıya çevir
 document.body.style.background = "red";
 
-// change it back after 1 second
+// 1 saniyədən sonra onu yenidən dəyişdir
 setTimeout(() => document.body.style.background = "", 1000);
 ```
 
-Here we used `document.body.style`, but there's much, much more. Properties and methods are described in the specification:
+Burada biz `document.body.style`, istifadə etdik, lakin daha çox şey var. Xüsusiyyətlər və üsullar spesifikasiyada təsvir edilmişdir:
 
-- **DOM Living Standard** at <https://dom.spec.whatwg.org>
+- **DOM yaşayış standartı** at <https://dom.spec.whatwg.org>
 
 ```smart header="DOM is not only for browsers"
-The DOM specification explains the structure of a document and provides objects to manipulate it. There are non-browser instruments that use DOM too.
+DOM spesifikasiyası sənədin strukturunu izah edir və onu idarə etmək üçün obyektlər təqdim edir. DOM-dan istifadə  edən və brauzer olmayan alətlər də var.
 
-For instance, server-side scripts that download HTML pages and process them can also use DOM. They may support only a part of the specification though.
+Məsələn, HTML səhifələrini yükləyən və onları emal edən server tərəfi skriptləri də DOM-dan istifadə edə bilər. Onlar spesifikasiyanın yalnız bir hissəsini dəstəkləyə bilər.
 ```
 
 ```smart header="CSSOM for styling"
-CSS rules and stylesheets are structured in a different way than HTML. There's a separate specification, [CSS Object Model (CSSOM)](https://www.w3.org/TR/cssom-1/), that explains how they are represented as objects, and how to read and write them.
+CSS qaydaları və üslub cədvəlləri HTML-dən fərqli bir şəkildə qurulmuşdur. Ayrı bir spesifikasiya var, [CSS Object Model (CSSOM)](https://www.w3.org/TR/cssom-1/), bu, onların obyekt kimi necə təmsil olunduğunu və necə oxunub yazılacağını izah edir.
 
-CSSOM is used together with DOM when we modify style rules for the document. In practice though, CSSOM is rarely required, because usually CSS rules are static. We rarely need to add/remove CSS rules from JavaScript, but that's also possible.
+Sənəd üçün üslub qaydalarına dəyişiklik etdikdə CSSOM DOM ilə birlikdə istifadə olunur. Təcrübədə CSSOM nadir hallarda tələb olunur, çünki adətən CSS qaydaları statik olur. Bizə nadir hallarda JavaScript-dən CSS qaydalarını əlavə etmək/çıxarmaq lazımdır, lakin bu da mümkündür.
 ```
 
 ## BOM (Browser Object Model)
 
-The Browser Object Model (BOM) represents additional objects provided by the browser (host environment) for working with everything except the document.
+Brauzer Obyekt Modeli (BOM) sənəddən başqa hər şeylə işləmək üçün brauzer (host mühiti) tərəfindən təmin edilən əlavə obyektləri təmsil edir.
 
-For instance:
+Məsələn:
 
-- The [navigator](mdn:api/Window/navigator) object provides background information about the browser and the operating system. There are many properties, but the two most widely known are: `navigator.userAgent` -- about the current browser, and `navigator.platform` -- about the platform (can help to differ between Windows/Linux/Mac etc).
-- The [location](mdn:api/Window/location) object allows us to read the current URL and can redirect the browser to a new one.
+- [navigator](mdn:api/Window/navigator) obyekti brauzer və əməliyyat sistemi haqqında məlumat verir. Bir çox xüsusiyyəti var, lakin ən çox tanınan iki xüsusiyyəti bunlardır: `navigator.userAgent` -- cari brauzer haqqında və `navigator.platform` -- platforma haqqında (Windows/Linux/Mac və s. arasında fərq qoymağa kömək edə bilər).
+- [location](mdn:api/Window/location) obyekti bizə cari URL-ni oxumağa imkan verə və brauzeri yenisinə yönləndirə bilər.
 
-Here's how we can use the `location` object:
+`location` obyektindən necə istifadə edə bilərik:
 
 ```js run
-alert(location.href); // shows current URL
+alert(location.href); // cari URL-ni göstərir
 if (confirm("Go to Wikipedia?")) {
-  location.href = "https://wikipedia.org"; // redirect the browser to another URL
+  location.href = "https://wikipedia.org"; // brauzeri başqa URL-ə yönləndir
 }
 ```
 
-Functions `alert/confirm/prompt` are also a part of BOM: they are directly not related to the document, but represent pure browser methods of communicating with the user.
+`alert/confirm/prompt` funksiyaları da BOM-un bir hissəsidir: onlar birbaşa sənədlə əlaqəli deyil, lakin istifadəçi ilə ünsiyyət qurmağın təmiz brauzer üsullarını təmsil edirlər.
 
 ```smart header="Specifications"
-BOM is the part of the general [HTML specification](https://html.spec.whatwg.org).
+BOM ümumi [HTML specification](https://html.spec.whatwg.org)-in bir hissəsidir.
 
-Yes, you heard that right. The HTML spec at <https://html.spec.whatwg.org> is not only about the "HTML language" (tags, attributes), but also covers a bunch of objects, methods and browser-specific DOM extensions. That's "HTML in broad terms". Also, some parts have additional specs listed at <https://spec.whatwg.org>.
+Bəli, düz eşitdiniz. <https://html.spec.whatwg.org> ünvanındakı HTML spesifikasiyası təkcə "HTML dili" (teqlər, atributlar) haqqında deyil, həm də bir sıra obyektləri, metodları və brauzerə məxsus DOM uzantılarını əhatə edir. Bu, "geniş mənada HTML"dir. Həmçinin, bəzi hissələrin <https://spec.whatwg.org> ünvanında sadalanan əlavə xüsusiyyətləri də vardır.
 ```
 
-## Summary
+## Xülasə olaraq
 
-Talking about standards, we have:
+Standartlar haqqında danışarkən bizdə:
 
-DOM specification
-: Describes the document structure, manipulations and events, see <https://dom.spec.whatwg.org>.
+DOM spesifikasiyası
+: Sənəd strukturunu, manipulyasiyaları və hadisələri təsvir edir, bura baxa bilərsiniz <https://dom.spec.whatwg.org>.
 
-CSSOM specification
-: Describes stylesheets and style rules, manipulations with them and their binding to documents, see <https://www.w3.org/TR/cssom-1/>.
+CSSOM spesifikasiyası
+: Üslub cədvəllərini və üslub qaydalarını, onlarla manipulyasiyaları və onların sənədlərə bind olmasını təsvir edir, bura baxa bilərsiniz <https://www.w3.org/TR/cssom-1/>.
 
-HTML specification
-: Describes the HTML language (e.g. tags) and also the BOM (browser object model) -- various browser functions: `setTimeout`, `alert`, `location` and so on, see <https://html.spec.whatwg.org>. It takes the DOM specification and extends it with many additional properties and methods.
+HTML spesifikasiyası
+: HTML dilini (məsələn, teqlər) və həmçinin BOM (brauzer obyekt modeli) -- müxtəlif brauzer funksiyalarını təsvir edir: `setTimeout`, `alert`, `location` və s., baxın <https://html.spec.whatwg .org>. DOM spesifikasiyasını götürür və onu bir çox əlavə xüsusiyyətlər və üsullarla genişləndirir.
 
-Additionally, some classes are described separately at <https://spec.whatwg.org/>.
 
-Please note these links, as there's so much stuff to learn it's impossible to cover and remember everything.
+Bundan əlavə, bəzi dərslər <https://spec.whatwg.org/> saytında ayrıca təsvir edilmişdir.
 
-When you'd like to read about a property or a method, the Mozilla manual at <https://developer.mozilla.org/en-US/search> is also a nice resource, but the corresponding spec may be better: it's more complex and longer to read, but will make your fundamental knowledge sound and complete.
+Zəhmət olmasa bu linklərə diqqət yetirin, çünki öyrənmək üçün o qədər şey var ki, hər şeyi əhatə etmək və yadda saxlamaq mümkün deyil.
 
-To find something, it's often convenient to use an internet search "WHATWG [term]" or "MDN [term]", e.g <https://google.com?q=whatwg+localstorage>, <https://google.com?q=mdn+localstorage>.
+Özəllik və ya metod haqqında oxumaq istədiyiniz zaman, <https://developer.mozilla.org/en-US/search>-da Mozilla təlimatı da gözəl mənbədir, lakin müvafiq spesifikasiya daha yaxşı ola bilər: o, daha mürəkkəb və oxunması daha uzun müddətdir, lakin fundamental biliklərinizi sağlamlaşdıracaq və tamamlayacaq.
 
-Now we'll get down to learning DOM, because the document plays the central role in the UI.
+Nəyisə tapmaq üçün "WHATWG [term]" və ya "MDN [term]" internet axtarışından istifadə etmək çox vaxt rahatdır, məsələn, <https://google.com?q=whatwg+localstorage>, <https://google. com?q=mdn+localstorage>.
+
+İndi DOM-u öyrənməyə başlayacağıq, çünki DOM UI-də çox əsas bir  rol oynayır.
