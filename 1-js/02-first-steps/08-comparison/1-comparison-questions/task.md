@@ -1,10 +1,10 @@
-importance: 5
+Vaciblik: 5
 
 ---
 
-# Comparisons
+# Qarşılaşdırmalar
 
-What will be the result for these expressions?
+Aşağıdakı ifadələrin cavabları nə olacaq?
 
 ```js no-beautify
 5 > 4
@@ -15,4 +15,3 @@ undefined === null
 null == "\n0\n"
 null === +"\n0\n"
 ```
-
