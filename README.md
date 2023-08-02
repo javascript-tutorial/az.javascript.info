@@ -30,7 +30,7 @@ Materialın növü, quvluqdakı adı ilə təyin olunur:
 
 Hər bir material `# Əsas başlıq` başlığı ilə başlayır.
 
-Yeni məznun əlavə etmək isə çox asandır.
+Yeni məzmun əlavə etmək isə çox asandır.
 
 ---
 
