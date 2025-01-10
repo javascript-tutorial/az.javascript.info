@@ -25,7 +25,7 @@ alert('Dünya');
 
 ## Nöqtəli Vergüllər [#semicolon]
 
-Sətir kəsilməsi mövcud olduqda nöqtəli vergül buraxıla bilər.
+Sətir sonunda bir çox hallarda nöqtəli vergül buraxıla bilər.
 
 Bu da işləyəcək:
 
