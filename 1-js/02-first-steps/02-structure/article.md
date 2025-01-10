@@ -94,66 +94,66 @@ Amma kod iki ayrı ifadə olmalı idi, tək deyil. Bu halda birləşmə səhv ba
 
 Əgər ifadələr sətirlərlə ayrılıbsa, onların arasına nöqtəli vergül qoymağı tövsiyə edirik. Bu qayda JavaScript cəmiyyəti tərəfindən geniş şəkildə qəbul olunub. Yenidən bir də qeyd edək ki, nöqtəli vergülləri çox vaxt buraxmaq -- *mümkündür*. Lakin, xüsusilə yeni başlayanlar üçün, nöqtəli vergüllərdən istifadə etmək daha təhlükəsizdir.
 
-## Comments [#code-comments]
+## Şərhlər [#code-comments]
 
-As time goes on, programs become more and more complex. It becomes necessary to add *comments* which describe what the code does and why.
+Zaman keçdikcə proqramlar daha mürəkkəb hala gələ bilər. Bu zaman kodun nə etdiyini və niyə olduğunu izah edən *şərhlər* əlavə etmək lazım olur.
 
-Comments can be put into any place of a script. They don't affect its execution because the engine simply ignores them.
+Şərhləri skriptin istənilən yerində yerləşdirmək olar. Onlar kodun icrasına təsir etmir, çünki, JavaScript mühərriki onları sadəcə nəzərə almır.
 
-**One-line comments start with two forward slash characters `//`.**
+**Təksətirlik şərhlər iki ardıcıl slash (`//`) ilə başlayır.**
 
-The rest of the line is a comment. It may occupy a full line of its own or follow a statement.
+Sətirin qalan hissəsi şərh hesab olunur. Şərhlər ayrıca bir sətri tuta bilər və ya bir ifadəni izləyə bilər.
 
-Like here:
+Məsələn:
 ```js run
-// This comment occupies a line of its own
-alert('Hello');
+// Bu şərh ayrıca bir sətirdə yerləşir
+alert('Salam');
 
-alert('World'); // This comment follows the statement
+alert('Dünya'); // Bu şərh ifadədən sonra yerləşir
 ```
 
-**Multiline comments start with a forward slash and an asterisk <code>/&#42;</code> and end with an asterisk and a forward slash <code>&#42;/</code>.**
+**Çoxsətirli şərhlər bir slash (`/`) və asterisk (`*`) ilə başlayır <code>/&#42;</code> və bir asterisk (`*`) və slash (`/`) ilə bitir <code>&#42;/</code>.**
 
-Like this:
+Məsələn:
 
 ```js run
-/* An example with two messages.
-This is a multiline comment.
+/* İki mesaj ehtiva edən bir nümunə.
+Bu çoxsətirli bir şərhdir.
 */
-alert('Hello');
-alert('World');
+alert('Salam');
+alert('Dünya');
 ```
 
-The content of comments is ignored, so if we put code inside <code>/&#42; ... &#42;/</code>, it won't execute.
+Şərhlərin məzmunu JavaScript mühərriki tərəfindən nəzərə alınmadığı üçün, əgər kodu <code>/&#42; ... &#42;/</code> içərisində yerləşdirsək, o icra olunmayacaq.
 
-Sometimes it can be handy to temporarily disable a part of code:
+Bəzən kodun müəyyən bir hissəsini müvəqqəti olaraq söndürmək üçün şərhlərdən istifadə etmək faydalıdır:
 
 ```js run
-/* Commenting out the code
-alert('Hello');
+/* Kodu deaktiv edirik
+alert('Salam');
 */
-alert('World');
+alert('Dünya');
 ```
 
-```smart header="Use hotkeys!"
-In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl`.
+```smart header="Qısayollardan istifadə edin!"
+Əksər redaktorlarda bir kod sətrini təksətirlik şərh etmək üçün `key:Ctrl+/` qısayolundan, çoxsətirli şərhlər üçün isə (kodun bir hissəsini seçib) `key:Ctrl+Shift+/` kombinasiyasından istifadə edə bilərsiniz. Mac istifadəçiləri `key:Ctrl` əvəzinə `key:Cmd` istifadə edə bilərlər.
 ```
 
-````warn header="Nested comments are not supported!"
-There may not be `/*...*/` inside another `/*...*/`.
+````warn header="İç-içə şərhlər dəstəklənmir!"
+`/*...*/` içərisində başqa bir `/*...*/` şərhi yerləşdirilə bilməz.
 
-Such code will die with an error:
+Belə bir kod xəta ilə nəticələnir:
 
 ```js run no-beautify
 /*
-  /* nested comment ?!? */
+  /* İç-içə şərh ?!? */
 */
-alert( 'World' );
+alert('Dünya');
 ```
 ````
 
-Please, don't hesitate to comment your code.
+Kodunuzu şərh etməkdən çəkinməyin.
 
-Comments increase the overall code footprint, but that's not a problem at all. There are many tools which minify code before publishing to a production server. They remove comments, so they don't appear in the working scripts. Therefore, comments do not have negative effects on production at all.
+Şərhlər ümumi kodun ölçüsünü artırır, lakin bu problem deyil. Bir çox alət kodu "production server"da, yəni istehsal serverində yayımlamadan əvvəl kiçildir. Bu prosesdə şərhlər silinir və işlək skriptlərdə yer almır. Buna görə də şərhlərin istehsal serverinə heç bir mənfi təsiri yoxdur.
 
-Later in the tutorial there will be a chapter <info:code-quality> that also explains how to write better comments.
+Daha sonra bu dərslikdə <info:code-quality> adlı bir fəsil olacaq. Bu fəsil daha yaxşı şərhlər yazmaq barədə əlavə məsləhətlər verəcək.
