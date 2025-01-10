@@ -48,51 +48,51 @@ alert(3 +
 
 Bu kodun nəticəsi `6` olacaq, çünki, JavaScript interpretatoru burada nöqtəli vergül daxil etmir. JavaScript üçün intuitiv olaraq aydındır ki, əgər sətir `+` (üstəgəl) simvolu ilə bitirsə, bu "natamam ifadə"dir və nöqtəli vergül tələb olunmur. Bu halda kod gözlənildiyi kimi işləyir.
 
-**But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
+**Amma müəyyən hallar da var ki, JavaScript belə hallarda nöqtəli vergülü avtomatik əlavə edə bilmir və nəticədə xəta yaranır.**
 
-Errors which occur in such cases are quite hard to find and fix.
+Belə hallarda xətaları tapmaq və düzəltmək olduqca çətin ola bilər.
 
-````smart header="An example of an error"
-If you're curious to see a concrete example of such an error, check this code out:
+````smart header="Xəta üçün bir nümunə"
+Əgər belə bir xətaya konkret nümunə görmək istəyirsinizsə, bu kodu yoxlayın:
 
 ```js run
 [1, 2].forEach(alert)
 ```
 
-No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of the code: it shows `1` then `2`.
+İndilik `[]` (kvadrat mötərizələr) və `forEach` haqqında düşünməyə ehtiyac yoxdur. Onları daha sonra öyrənəcəyik. Hazırda sadəcə kodun nəticəsinə diqqət edin: bu kod əvvəlcə `1`, daha sonra `2` göstərəcək.
 
-Now, let's add an `alert` before the code and *not* finish it with a semicolon:
+İndi kodun əvvəlinə bir `alert` əlavə edək və onu nöqtəli vergülsüz bitirək:
 
 ```js run no-beautify
-alert("There will be an error")
+alert("Xəta baş verəcək")
 
 [1, 2].forEach(alert)
 ```
 
-Now if we run the code, only the first `alert` is shown and then we have an error!
+İndi bu kodu işə salsaq, yalnız ilk `alert` mesajı görünəcək və daha sonra xəta ilə üzləşəcəyik!
 
-But everything is fine again if we add a semicolon after `alert`:
+Amma əgər `alert` ifadəsindən sonra nöqtəli vergül əlavə etsək, hər şey yenidən qaydasında olacaq:
 ```js run
-alert("All fine now");
+alert("Hər şey qaydasındadır.");
 
 [1, 2].forEach(alert)  
 ```
 
-Now we have the "All fine now" message followed by `1` and `2`.
+İndi "Hər şey qaydasındadır." mesajından sonra `1` və `2` görünür.
 
 
-The error in the no-semicolon variant occurs because JavaScript does not assume a semicolon before square brackets `[...]`.
+Nöqtəli vergülün olmadığı variantda xəta JavaScript'in kvadrat mötərizədən əvvəl nöqtəli vergülü avtomatik əlavə edə bilməməsindən qaynaqlanır.
 
-So, because the semicolon is not auto-inserted, the code in the first example is treated as a single statement. Here's how the engine sees it:
+Beləliklə, nöqtəli vergül avtomatik olaraq əlavə edilmədiyindən, ilk nümunədəki kod tək ifadə kimi qəbul olunur. JavaScript mühərriki kodu belə görür:
 
 ```js run no-beautify
-alert("There will be an error")[1, 2].forEach(alert)
+alert("Xəta baş verəcək")[1, 2].forEach(alert)
 ```
 
-But it should be two separate statements, not one. Such a merging in this case is just wrong, hence the error. This can happen in other situations.
+Amma kod iki ayrı ifadə olmalı idi, tək deyil. Bu halda birləşmə səhv baş verir və nəticədə xəta yaranır. Bu problem digər hallarda da yarana bilər.
 ````
 
-We recommend putting semicolons between statements even if they are separated by newlines. This rule is widely adopted by the community. Let's note once again -- *it is possible* to leave out semicolons most of the time. But it's safer -- especially for a beginner -- to use them.
+Əgər ifadələr sətirlərlə ayrılıbsa, onların arasına nöqtəli vergül qoymağı tövsiyə edirik. Bu qayda JavaScript cəmiyyəti tərəfindən geniş şəkildə qəbul olunub. Yenidən bir də qeyd edək ki, nöqtəli vergülləri çox vaxt buraxmaq -- *mümkündür*. Lakin, xüsusilə yeni başlayanlar üçün, nöqtəli vergüllərdən istifadə etmək daha təhlükəsizdir.
 
 ## Comments [#code-comments]
 
