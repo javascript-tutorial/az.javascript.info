@@ -13,32 +13,32 @@ Kodumuzda istədiyimiz qədər ifadə ola bilər. İfadələr nöqtəli vergüll
 Məsələn, burada "Salam, dünya" mesajını iki xəbərdarlıq şəklində ayırmışıq:
 
 ```js run no-beautify
-alert('Hello'); alert('World');
+alert('Salam'); alert('Dünya');
 ```
 
-Usually, statements are written on separate lines to make the code more readable:
+Adətən, ifadələr kodun oxunaqlılığını artırmaq üçün ayrı-ayrı sətirlərdə yazılır:
 
 ```js run no-beautify
-alert('Hello');
-alert('World');
+alert('Salam');
+alert('Dünya');
 ```
 
-## Semicolons [#semicolon]
+## Nöqtəli Vergüllər [#semicolon]
 
-A semicolon may be omitted in most cases when a line break exists.
+Sətir kəsilməsi mövcud olduqda nöqtəli vergül buraxıla bilər.
 
-This would also work:
+Bu da işləyəcək:
 
 ```js run no-beautify
-alert('Hello')
-alert('World')
+alert('Salam')
+alert('Dünya')
 ```
 
-Here, JavaScript interprets the line break as an "implicit" semicolon. This is called an [automatic semicolon insertion](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion).
+Burada JavaScript interpretatoru sətir sonunu "örtülü" nöqtəli vergül kimi qəbul edir. Bu proses [avtomatik nöqtəli vergül daxil edilməsi (automatic semicolon insertion)](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) adlanır.
 
-**In most cases, a newline implies a semicolon. But "in most cases" does not mean "always"!**
+**Əksər hallarda yeni sətir bir nöqtəli vergülü nəzərdə tutur. Amma "əksər hallarda" "hər zaman" demək deyil!**
 
-There are cases when a newline does not mean a semicolon. For example:
+Müəyyən hallar var ki, yeni sətir nöqtəli vergül anlamına gəlmir. Məsələn:
 
 ```js run no-beautify
 alert(3 +
@@ -46,7 +46,7 @@ alert(3 +
 + 2);
 ```
 
-The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so the semicolon is not required. And in this case that works as intended.
+Bu kodun nəticəsi `6` olacaq, çünki, JavaScript interpretatoru burada nöqtəli vergül daxil etmir. JavaScript üçün intuitiv olaraq aydındır ki, əgər sətir `+` (üstəgəl) simvolu ilə bitirsə, bu "natamam ifadə"dir və nöqtəli vergül tələb olunmur. Bu halda kod gözlənildiyi kimi işləyir.
 
 **But there are situations where JavaScript "fails" to assume a semicolon where it is really needed.**
 
