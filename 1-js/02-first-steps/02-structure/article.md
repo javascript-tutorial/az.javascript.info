@@ -156,4 +156,5 @@ Kodunuzu şərh etməkdən çəkinməyin.
 
 Şərhlər ümumi kodun ölçüsünü artırır, lakin bu problem deyil. Bir çox alət kodu "production server"da, yəni istehsal serverində yayımlamadan əvvəl kiçildir. Bu prosesdə şərhlər silinir və işlək skriptlərdə yer almır. Buna görə də şərhlərin istehsal serverinə heç bir mənfi təsiri yoxdur.
 
-Daha sonra bu dərslikdə <info:code-quality> adlı bir fəsil olacaq. Bu fəsil daha yaxşı şərhlər yazmaq barədə əlavə məsləhətlər verəcək.
+Daha sonra bu dərslikdə [Kod keyfiyyəti](<info:code-quality>) adlı bir fəsil olacaq. Bu fəsil daha yaxşı şərhlər yazmaq barədə əlavə 
+məsləhətlər verəcək.
