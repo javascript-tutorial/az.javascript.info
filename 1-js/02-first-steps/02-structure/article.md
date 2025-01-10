@@ -36,7 +36,7 @@ alert('Dünya')
 
 Burada JavaScript interpretatoru sətir sonunu "örtülü" nöqtəli vergül kimi qəbul edir. Bu proses [avtomatik nöqtəli vergül daxil edilməsi (automatic semicolon insertion)](https://tc39.github.io/ecma262/#sec-automatic-semicolon-insertion) adlanır.
 
-**Əksər hallarda yeni sətir bir nöqtəli vergülü nəzərdə tutur. Amma "əksər hallarda" "hər zaman" demək deyil!**
+**Əksər hallarda yeni sətir nöqtəli vergül əlavə edildiyini ifadə edir. Amma "əksər hallarda" "hər zaman" demək deyil!**
 
 Müəyyən hallar var ki, yeni sətir nöqtəli vergül anlamına gəlmir. Məsələn:
 
