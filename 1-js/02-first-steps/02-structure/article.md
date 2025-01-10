@@ -1,16 +1,16 @@
-# Code structure
+# Kod Strukturu
 
-The first thing we'll study is the building blocks of code.
+İlk öyrənəcəyimiz mövzu kodun əsas elementləridir.
 
-## Statements
+## İfadələr
 
-Statements are syntax constructs and commands that perform actions.
+İfadələr sintaksis konstruksiyaları və əmrlərdir ki, müəyyən əməliyyatlar yerinə yetirir.
 
-We've already seen a statement, `alert('Hello, world!')`, which shows the message "Hello, world!".
+Artıq `alert('Salam, dünya!')` ifadəsini görmüşük ki, bu da "Salam, dünya!" mesajını göstərir.
 
-We can have as many statements in our code as we want. Statements can be separated with a semicolon.
+Kodumuzda istədiyimiz qədər ifadə ola bilər. İfadələr nöqtəli vergüllə ayrılır.
 
-For example, here we split "Hello World" into two alerts:
+Məsələn, burada "Salam, dünya" mesajını iki xəbərdarlıq şəklində ayırmışıq:
 
 ```js run no-beautify
 alert('Hello'); alert('World');
