@@ -1,6 +1,7 @@
-# The modern mode, "use strict"
+# Müasir mod, "use strict"
 
 For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+
 
 That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
 
