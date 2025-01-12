@@ -1,27 +1,25 @@
 # Müasir mod, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+JavaScript uzun müddət ərzində uyğunsuzluq problemləri olmadan inkişaf etdi. Köhnə xüsusiyyətlər dəyişdirilmədən, dilə yeni xüsusiyyətlər əlavə olundu.
 
+Bunun üstünlüyü mövcud kodun işləmə qabiliyyətini heç vaxt pozmaması idi. Lakin mənfi tərəfi o idi ki, JavaScript'in yaradıcılarının etdiyi hərhansı bir səhv və ya düzgün olmayan bir qərar dilin daimi bir hissəsinə çevrilirdi.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
-
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Bu vəziyyət 2009-cu ildə ECMAScript 5 (ES5) standartı təqdim edilənə qədər davam etdi. ES5 dilə yeni xüsusiyyətlər əlavə etdi və mövcud olan bəzi xüsusiyyətləri dəyişdirdi. Köhnə kodların işləməyə davam etməsi üçün bir çox dəyişikliklər susqunluq halında (by default) deaktiv edilmişdi. Bu dəyişiklikləri aktiv etmək üçün xüsusi bir direktivdən istifadə etməlisiniz: `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Bu direktiv bir string kimi görünür: `"use strict"` və ya `'use strict'`. Əgər bu direktiv bir skriptin ən üst hissəsində yerləşdirilərsə, həmin skript "müasir" qaydada işləyir.
 
-For example:
+Məsələn:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// bu kod müasir qaydada işləyir
 ...
 ```
 
-We will learn functions (a way to group commands) soon. Looking ahead, let's note that `"use strict"` can be put at the beginning of the function body instead of the whole script. Doing that enables strict mode in that function only. But usually, people use it for the whole script.
-
+Biz funksiyaları (ifadələri qruplaşdırmaq üçün bir yoldur) tezliklə öyrənəcəyik. İndilik isə qeyd etməliyik ki, `"use strict"` direktivini skriptin ən üstündə yerləşdirmək əvəzinə, bir funksiyanın başlanğıcına da əlavə etmək mümkündür. Bu halda yalnız həmin funksiya müasir qaydada işləyəcək. Lakin, adətən insanlar bu direktivi bütün skript üçün istifadə edirlər.
 
 ````warn header="Ensure that \"use strict\" is at the top"
 Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
