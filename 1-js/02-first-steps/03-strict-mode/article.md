@@ -1,4 +1,4 @@
-# Müasir rejim, "use strict"
+# Müasir Rejim, "use strict"
 
 JavaScript uzun müddət ərzində uyğunsuzluq problemləri olmadan inkişaf etdi. Köhnə xüsusiyyətlər dəyişdirilmədən, dilə yeni xüsusiyyətlər əlavə olundu.
 
@@ -46,7 +46,7 @@ Bir dəfə sıx rejim aktivləşdikdən sonra, geri dönüş mümkün deyil.
 
 ## Brauzer Konsolu
 
-Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqun olaraq `use strict` rejimini aktivləşdirmir.
+Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqunluq halında `use strict` rejimini aktivləşdirmir.
 
 Bəzən, `use strict` rejimi ilə fərqlər yaranır və nəticədə yanlış nəticələr əldə edə bilərsiniz.
 
