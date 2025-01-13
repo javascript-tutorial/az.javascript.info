@@ -1,85 +1,84 @@
-# The modern mode, "use strict"
+# Müasir Rejim, "use strict"
 
-For a long time, JavaScript evolved without compatibility issues. New features were added to the language while old functionality didn't change.
+JavaScript uzun müddət ərzində uyğunsuzluq problemləri olmadan inkişaf etdi. Köhnə xüsusiyyətlər dəyişdirilmədən, dilə yeni xüsusiyyətlər əlavə olundu.
 
-That had the benefit of never breaking existing code. But the downside was that any mistake or an imperfect decision made by JavaScript's creators got stuck in the language forever.
+Bunun üstünlüyü mövcud kodun işləmə qabiliyyətini heç vaxt pozmaması idi. Lakin mənfi tərəfi o idi ki, JavaScript'in yaradıcılarının etdiyi hərhansı bir səhv və ya düzgün olmayan bir qərar dilin daimi bir hissəsinə çevrilirdi.
 
-This was the case until 2009 when ECMAScript 5 (ES5) appeared. It added new features to the language and modified some of the existing ones. To keep the old code working, most such modifications are off by default. You need to explicitly enable them with a special directive: `"use strict"`.
+Bu vəziyyət 2009-cu ildə ECMAScript 5 (ES5) standartı təqdim edilənə qədər davam etdi. ES5 dilə yeni xüsusiyyətlər əlavə etdi və mövcud olan bəzi xüsusiyyətləri dəyişdirdi. Köhnə kodların işləməyə davam etməsi üçün bir çox dəyişikliklər susqunluq halında (by default) deaktiv edilmişdi. Bu dəyişiklikləri aktiv etmək üçün xüsusi bir direktivdən istifadə etməlisiniz: `"use strict"`.
 
 ## "use strict"
 
-The directive looks like a string: `"use strict"` or `'use strict'`. When it is located at the top of a script, the whole script works the "modern" way.
+Bu direktiv bir string kimi görünür: `"use strict"` və ya `'use strict'`. Əgər bu direktiv bir skriptin ən üst hissəsində yerləşdirilərsə, həmin skript "müasir" qaydada işləyir.
 
-For example:
+Məsələn:
 
 ```js
 "use strict";
 
-// this code works the modern way
+// bu kod müasir qaydada işləyir
 ...
 ```
 
-We will learn functions (a way to group commands) soon. Looking ahead, let's note that `"use strict"` can be put at the beginning of the function body instead of the whole script. Doing that enables strict mode in that function only. But usually, people use it for the whole script.
+Biz funksiyaları (ifadələri qruplaşdırmaq üçün bir yoldur) tezliklə öyrənəcəyik. İndilik isə qeyd etməliyik ki, `"use strict"` direktivini skriptin ən üstündə yerləşdirmək əvəzinə, bir funksiyanın başlanğıcına da əlavə etmək mümkündür. Bu halda yalnız həmin funksiya müasir qaydada işləyəcək. Lakin, adətən insanlar bu direktivi bütün skript üçün istifadə edirlər.
 
+````warn header="\"use strict\" direktivinin ən üstdə olduğundan əmin olun"
+Əmin olun ki, `"use strict"` direktivi skriptinizin ən üst hissəsində yerləşir, əks halda sıx rejim aktivləşməyəcək.
 
-````warn header="Ensure that \"use strict\" is at the top"
-Please make sure that `"use strict"` is at the top of your scripts, otherwise strict mode may not be enabled.
-
-Strict mode isn't enabled here:
+Burada sıx rejim aktiv deyil:
 
 ```js no-strict
-alert("some code");
-// "use strict" below is ignored--it must be at the top
+alert("bəzi kodlar");
+// "use strict" aşağıda yerləşdiyindən nəzərə alınmayacaq -- o mütləq ən yuxarıda olmalıdır
 
 "use strict";
 
-// strict mode is not activated
+// sıx rejim aktiv deyil
 ```
 
-Only comments may appear above `"use strict"`.
+Sadəcə şərhlər `"use strict"` direktivindən əvvəl yerləşdirilə bilər.
 ````
 
-```warn header="There's no way to cancel `use strict`"
-There is no directive like `"no use strict"` that reverts the engine to old behavior.
+```warn header="`use strict`'i ləğv etmək mümkün deyil"
+Sıx rejimi deaktiv etmək üçün `"no use strict"` kimi bir direktiv mövcud deyil.
 
-Once we enter strict mode, there's no going back.
+Bir dəfə sıx rejim aktivləşdikdən sonra, geri dönüş mümkün deyil.
 ```
 
-## Browser console
+## Brauzer Konsolu
 
-For the future, when you use a browser console to test features, please note that it doesn't `use strict` by default.
+Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqunluq halında `use strict` seçənəyini aktivləşdirmir.
 
-Sometimes, when `use strict` makes a difference, you'll get incorrect results.
+Bəzən, `use strict` ilə fərqlər yaranır və nəticədə yanlış nəticələr əldə edə bilərsiniz.
 
-You can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+`key:Shift+Enter` kombinasiyasından istifadə edərək çoxsətirli kod daxil edib `use strict` direktivini ən üstünə yerləşdirin. Məsələn:
 
 ```js
-'use strict'; <Shift+Enter for a newline>
-//  ...your code
-<Enter to run>
+'use strict'; <Shift+Enter ilə yeni sətir əlavə edin>
+//  ...sizin kod
+<İcra etmək üçün Enter>
 ```
 
-It works in most browsers, namely Firefox and Chrome.
+Bu metod əksər brauzerlərdə, məsələn, Firefox və Chrome'da işləyir.
 
-If it doesn't, the most reliable way to ensure `use strict` would be to input the code into console like this:
+Əgər bu işləməzsə, `use strict` ifadəsini istifadə etmənin ən etibarlı yolu aşağıdakı nümunədə göstərildiyi kimi istifadə etməkdir:
 
 ```js
 (function() {
   'use strict';
 
-  // ...your code...
+  // ...sizin kod...
 })()
 ```
 
-## Always "use strict"
+## Hər Zaman "use strict"
 
-We have yet to cover the differences between strict mode and the "default" mode.
+Biz hələ sıx rejim ilə "default" rejim arasındakı fərqləri tam əhatə etməmişik.
 
-In the next chapters, as we learn language features, we'll note the differences between the strict and default modes. Luckily, there aren't many and they actually make our lives better.
+Növbəti fəsillərdə dil xüsusiyyətlərini öyrəndikcə, sıx rejim və defolt rejim arasındakı fərqləri vurğulayacağıq. Xoşbəxtlikdən, bu fərqlər azdır və həyatımızı daha da asanlaşdırır.
 
-For now, it's enough to know about it in general:
+İndilik, aşağıdakıları bilmək kifayətdir:
 
-1. The `"use strict"` directive switches the engine to the "modern" mode, changing the behavior of some built-in features. We'll see the details later in the tutorial.
-2. Strict mode is enabled by placing `"use strict"` at the top of a script or function. Several language features, like "classes" and "modules", enable strict mode automatically.
-3. Strict mode is supported by all modern browsers.
-4. We recommended always starting scripts with `"use strict"`. All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+1. `"use strict"` direktivi mühərriki sıx rejimə keçirir və bəzi daxili xüsusiyyətlərin davranışını dəyişir. Bunun detallarını daha sonra dərslikdə öyrənəcəyik.
+2. `"use strict"` direktivini skriptin və ya funksiyanın ən üstünə yerləşdirərək sıx rejimi aktivləşdirə bilərsiniz. "Siniflər" ("classes") və "modullar" ("modules") kimi bəzi dil xüsusiyyətləri sıx rejimi avtomatik aktivləşdirir.
+3. Sıx rejim bütün müasir brauzerlər tərəfindən dəstəklənir.
+4. Tövsiyə olunur ki, bütün skriptlərinizə `"use strict"` ilə başlayasınız. Bu dərslikdəki nümunələrin hamısı, başqa cür göstərilmədiyi təqdirdə (çox nadir hallarda), sıx rejimi nəzərdə tutur.
