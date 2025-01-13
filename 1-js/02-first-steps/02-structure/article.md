@@ -1,14 +1,14 @@
 # Kod Strukturu
 
-İlk öyrənəcəyimiz mövzu kodun əsas elementləridir.
+İlk öyrənəcəyimiz mövzu, kodun bloklarını inşa etməkdir.
 
 ## İfadələr
 
 İfadələr sintaksis konstruksiyaları və əmrlərdir ki, müəyyən əməliyyatlar yerinə yetirir.
 
-Artıq `alert('Salam, dünya!')` ifadəsini görmüşük ki, bu da "Salam, dünya!" mesajını göstərir.
+Biz artıq alert('Salam, Dünya!') ilə bir ifadə görmüşük, ki, bu da bizə "Salam, Dünya!" mesajını göstərir.
 
-Kodumuzda istədiyimiz qədər ifadə ola bilər. İfadələr nöqtəli vergüllə ayrılır.
+Kodumuzda istədiyimiz qədər ifadə ola bilər. İfadələr bir-birindən "nöqtəli vergül"lərlə ayrıla bilər.
 
 Məsələn, burada "Salam, dünya" mesajını iki xəbərdarlıq şəklində ayırmışıq:
 
@@ -59,7 +59,7 @@ Belə hallarda xətaları tapmaq və düzəltmək olduqca çətin ola bilər.
 [1, 2].forEach(alert)
 ```
 
-İndilik `[]` (kvadrat mötərizələr) və `forEach` haqqında düşünməyə ehtiyac yoxdur. Onları daha sonra öyrənəcəyik. Hazırda sadəcə kodun nəticəsinə diqqət edin: bu kod əvvəlcə `1`, daha sonra `2` göstərəcək.
+İndilik `[]` (kvadrat mötərizələr) və `forEach` haqqında düşünməyə ehtiyac yoxdur. Onları daha sonra öyrənəcəyik. Hazırda sadəcə kodun nəticəsinə diqqət edin: bu kod əvvəlcə `1`, daha sonra `2` göstərir.
 
 İndi kodun əvvəlinə bir `alert` əlavə edək və onu nöqtəli vergülsüz bitirək:
 
@@ -136,7 +136,7 @@ alert('Dünya');
 ```
 
 ```smart header="Qısayollardan istifadə edin!"
-Əksər redaktorlarda bir kod sətrini təksətirlik şərh etmək üçün `key:Ctrl+/` qısayolundan, çoxsətirli şərhlər üçün isə (kodun bir hissəsini seçib) `key:Ctrl+Shift+/` kombinasiyasından istifadə edə bilərsiniz. Mac istifadəçiləri `key:Ctrl` əvəzinə `key:Cmd` istifadə edə bilərlər.
+Əksər redaktorlarda bir kod sətrini təksətirlik şərh etmək üçün `key:Ctrl+/` qısayolundan, çoxsətirli şərhlər üçün isə (kodun bir hissəsini seçib) `key:Ctrl+Shift+/` kombinasiyasından istifadə edə bilərsiniz. Mac istifadəçiləri, sözügedən kombinasiyalardan istifadədə key:Ctrl əvəzinə key:Cmd klavişiylə cəhd edə bilərlər.
 ```
 
 ````warn header="İç-içə şərhlər dəstəklənmir!"

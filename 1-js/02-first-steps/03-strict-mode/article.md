@@ -38,7 +38,7 @@ alert("bəzi kodlar");
 Sadəcə şərhlər `"use strict"` direktivindən əvvəl yerləşdirilə bilər.
 ````
 
-```warn header="`use strict` rejimini deaktiv etmək mümkün deyil"
+```warn header="`use strict`'i ləğv etmək mümkün deyil"
 Sıx rejimi deaktiv etmək üçün `"no use strict"` kimi bir direktiv mövcud deyil.
 
 Bir dəfə sıx rejim aktivləşdikdən sonra, geri dönüş mümkün deyil.
@@ -46,9 +46,9 @@ Bir dəfə sıx rejim aktivləşdikdən sonra, geri dönüş mümkün deyil.
 
 ## Brauzer Konsolu
 
-Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqunluq halında `use strict` rejimini aktivləşdirmir.
+Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqunluq halında `use strict` seçənəyini aktivləşdirmir.
 
-Bəzən, `use strict` rejimi ilə fərqlər yaranır və nəticədə yanlış nəticələr əldə edə bilərsiniz.
+Bəzən, `use strict` ilə fərqlər yaranır və nəticədə yanlış nəticələr əldə edə bilərsiniz.
 
 `key:Shift+Enter` kombinasiyasından istifadə edərək çoxsətirli kod daxil edib `use strict` direktivini ən üstünə yerləşdirin. Məsələn:
 
@@ -60,7 +60,7 @@ Bəzən, `use strict` rejimi ilə fərqlər yaranır və nəticədə yanlış n�
 
 Bu metod əksər brauzerlərdə, məsələn, Firefox və Chrome'da işləyir.
 
-Əgər bu işləməzsə, ən etibarlı yol `use strict` rejimini aşağıdakı nümunədə göstərildiyi kimi istifadə etməkdir:
+Əgər bu işləməzsə, `use strict` ifadəsini istifadə etmənin ən etibarlı yolu aşağıdakı nümunədə göstərildiyi kimi istifadə etməkdir:
 
 ```js
 (function() {
