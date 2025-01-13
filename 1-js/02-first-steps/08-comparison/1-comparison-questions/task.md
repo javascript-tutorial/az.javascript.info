@@ -4,7 +4,7 @@ importance: 5
 
 # Qarşılaşdırmalar
 
-Aşağıdakı ifadələrin cavabları nə olacaq?
+Aşağıdakı ifadələrin nəticəsi nə olacaq?
 
 ```js no-beautify
 5 > 4
