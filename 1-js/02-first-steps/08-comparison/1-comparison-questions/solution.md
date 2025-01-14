@@ -10,7 +10,7 @@ null == "\n0\n" → false
 null === +"\n0\n" → false
 ```
 
-Səbəblərdən bəziləri:
+Bəzi səbəblər:
 
 1. Əlbəttəki, doğru.
 2. Lüğət müqayisəsi. `"a"` `"p"`-dən əvvəl gəlir, buna görə də `"false"`.
