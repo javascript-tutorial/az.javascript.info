@@ -218,7 +218,7 @@ num = 5; // "num" dəyişəni olmadıqda dəyişən yaranacaq
 alert(num); // 5
 ```
 
-Bunun pis praktika olduğundan bu sizə strikt rejimində xəta verəcək:
+Bu pis bir praktika hesab olunur və sıx rejimdə xətaya səbəb olacaq:
 
 ```js
 "use strict";
