@@ -1,24 +1,24 @@
 # Dəyişənlər
 
-Çox vaxt JavaScript applikasiyalarının məlumatlar ilə işləmələri lazımdır. Məsələn:
-1. onlayn mağaza applikasiyasında satılan mallar və alış-veriş səbəti haqqında məlumatlar lazımdır.
-2. çat applikasiyasında isitfadəçilər, ismarıclar və başqa maddələr haqqında məlumatlar lazımdır.
+Çox vaxt JavaScript tətbiqləri məlumatlarla işləməlidir. Məsələn:
+1. Onlayn mağaza -- məlumatlar satılan məhsulları və alış-veriş səbətini əhatə edə bilər.
+2. Çat tətbiqi -- məlumatlar istifadəçiləri, mesajları və daha çoxunu ehtiva edə bilər.
 
-Məlumatları saxlamaq üçün dəyişənlərdən istifadə edilir.
+Dəyişənlər bu məlumatları saxlamaq üçün istifadə olunur.
 
 ## Dəyişən
 
-[Dəyişən](https://en.wikipedia.org/wiki/Variable_(computer_science)), məlumat üçün üçün "adlı saxlama yeridir." Dəyişənlər ilə mağaza malları, applikasiyaya ziyarət edənlər və digər məlumatları saxlamaq mümkündür.
+[Dəyişən (variable)](https://en.wikipedia.org/wiki/Variable_(computer_science)), məlumatlar üçün "adlandırılmış yaddaş" yeridir. Biz dəyişənlərdən məhsulları, ziyarətçiləri və digər məlumatları yadda saxlamaq üçün istifadə edə bilərik.
 
 JavaScript-də dəyişən yaratmaq üçün `let` açar sözündən istifadə edin.
 
-Aşağıdakı ifadədə "message" adlı dəyişən yaradılır (digər sözlə, *bildirilir* ingiliscə, *declare*):
+Aşağıdakı ifadə "message" adlı bir dəyişən yaradır (başqa sözlə "elan edir"):
 
 ```js
 let message;
 ```
 
-İndi, biz `=` təyinat operatorundan istifadə edərək bu dəyişənə məlumat təyin edə bilərik:
+İndi biz mənimsətmə operatorundan (`=`) istifadə edərək bu dəyişənə bəzi məlumatlar yerləşdirə bilərik:
 
 ```js
 let message;
@@ -53,9 +53,9 @@ Biz, həmçinin bir neçə dəyişəni eyni sətirdə müəyyənləşdirə bilə
 let user = 'Orxan', age = 25, message = 'Salam';
 ```
 
-Bunun daha qısa olmasına baxmayaraq biz belə kod yazmağı tövsiyyə etmirik. Oxunaqlığı çoxaltmaq üçün hər dəyişən üçün ayrı sətir işlədin.
+Bunun daha qısa olmasına baxmayaraq biz belə kod yazmağı tövsiyə etmirik. Oxunaqlığı çoxaltmaq üçün hər dəyişən üçün ayrı sətir istifadə edin.
 
-Çox sətirli variantın biraz uzun olmasına baxmayaraq bunu oxumaq daha asandır:
+Çox sətirli variantın bir az uzun olmasına baxmayaraq bunu oxumaq daha asandır:
 
 ```js
 let user = 'Orxan';
@@ -70,7 +70,7 @@ let user = 'Orxan',
   message = 'Salam';
 ```
 
-...vı ya "vergül-birinci" stilində də müəyyənləşdirirlər:
+...və ya "vergül-birinci" stilində də müəyyənləşdirirlər:
 
 ```js no-beautify
 let user = 'Orxan'
@@ -88,14 +88,14 @@ Siz, köhnə skriptlərdə `let` əvəzinə `var` açar sözünün işlədildiyi
 *!*var*/!* message = 'Salam';
 ```
 
-`var` dəyişəni *az qala* `let` ilə eynidir. Bu açar sözü dəyişənin daha "köhnə" üsul ilə müəyyənləşdirir.
+`var` açar sözü `let` açar sözü ilə *demək olar ki* eynidir. O da dəyişən elan edir, lakin bir qədər fərqli, "köhnə üsulla".
 
 `let` və `var` arasında olan hiss edilməyən fərqlər var. Lakin, indi bu fərqlər bizi maralandırmır. Biz, bu fərqlər haqqında <info:var> bölməsində detallı danışacağıq.
 ````
 
 ## Real dünyada analogiya
 
-"Dəyişən" konsepsiyasını yaxşı anlamaq üçün bunun, üzərində unikal adlı etiketi olan məlumatlar "qutusu" olduğunu fikirləşin.
+Dəyişən anlayışını asanlıqla qavraya bilərik, əgər onu üzərində unikal ad yazılmış bir "etiket" olan məlumatlar üçün bir "qutu" kimi təsəvvür etsək.
 
 Məsələn, `message` dəyişəni daxilində "Salam!" dəyəri olan və `"message"` adı ilə etiketlənən qutudur:
 
@@ -118,7 +118,7 @@ Dəyər dəyişdikdə dəyişəndə olan köhnə məlumat silinir:
 
 ![](variable-change.svg)
 
-Əlavə olaraq, biz iki dəyişən yaradıb birinin məlumatını o birisinə kopiyalaya bilərik.
+Biz həmçinin iki dəyişən elan edib, məlumatı birindən digərinə köçürə bilərik.
 
 ```js run
 let hello = 'Salam dünya!';
@@ -126,7 +126,7 @@ let hello = 'Salam dünya!';
 let message;
 
 *!*
-// 'Salam dünya' dəyərini hello dəyişənindən message dəyişəninə kopiyala
+// 'Salam dünya' dəyərini hello dəyişənindən message dəyişəninə kopyala
 message = hello;
 */!*
 
@@ -138,9 +138,9 @@ alert(message); // Salam dünya!
 ```smart header="Funksional dillər"
 Nəzərinizə çatdırmaq istəyirik ki, [Scala](http://www.scala-lang.org/) və [Erlang](http://www.erlang.org/) kimi [funksional](https://en.wikipedia.org/wiki/Functional_programming) proqramlaşdırma dillərində dəyişənin dəyişilməsinə icazə verilmir.
 
-Bu dillərdə, dəyər "qutuya" yerləşdirildikdən sonra orada ömürlük qalır. Fərqli məlumat saxlamaq istədikdə proqramlaşdırma dili bizə yeni qutu (dəyişənin yaradılması) yaratmağa məcbur edir. Biz köhnə dəyəri yenidən təyin edə bilmirik.
+Belə dillərdə, dəyər "qutunun içinə" bir dəfə yerləşdirildikdən sonra, o, orada əbədi qalır. Əgər başqa bir şey saxlamağımız lazım olarsa, dil bizi yeni bir qutu (yeni dəyişən elan etməyi) yaratmağa məcbur edir. Köhnəsini yenidən istifadə edə bilmirik.
 
-İlk baxışda bunun biraz qəribə olmasına baxmayaraq bu dillərdə çox ciddi təkmilləşdirmə etmək mümkündür. Bundan əlavə, paralel hesablamalar kimi bəzi tapşırıqlarda bu məhdudiyyətin olmasının faydası var. Fikrinizi genişləndirmək üçün bu formalı dili öyrənməyi (hətta bunu işlətməyi planlaşdırmasanız belə) tövsiyyə edirik.
+İlk baxışda bunun bir az qəribə olmasına baxmayaraq bu dillərdə çox ciddi təkmilləşdirmə etmək mümkündür. Bundan əlavə, paralel hesablamalar kimi bəzi tapşırıqlarda bu məhdudiyyətin olmasının faydası var. Fikrinizi genişləndirmək üçün bu formalı dili öyrənməyi (hətta bunu istifadə etməyi planlaşdırmasanız belə) tövsiyə edirik.
 ```
 
 ## Dəyişənlərin adlandırılması [#variable-naming]
@@ -159,9 +159,9 @@ let test123;
 
 Dəyişən adı bir neçə sözdən ibarət olduqda çox zaman [camelCase](https://en.wikipedia.org/wiki/CamelCase) formatından istifadə olunur. Bu formatında ilk sözdən başqa bütün sözlər böyük hərf ilə başlayır: `myVeryLongName`.
 
-Dəyişən adlarında dollar (`'$'`) altdan xətt (`'_'`) işarələrinin də işlədilə bilməsi maraqlıdır. Bu simvollar, hərflər kimi xüsusi mənası olmayan sadə simvollardır.
+Dəyişən adlarında dollar (`'$'`), altdan xətt (`'_'`) simvollarının da istifadə edilə bilməsi maraqlıdır. Bu simvollar, hərflər kimi xüsusi mənası olmayan sadə simvollardır.
 
-Aşağıdakı dəyişən adlar etibarlıdır:
+Aşağıdakı adlar keçərlidir:
 
 ```js run untrusted
 let $ = 1; // "$" adlı dəyişən təyin et
@@ -170,7 +170,7 @@ let _ = 2; // "_" adlı dəyişən təyin et
 alert($ + _); // 3
 ```
 
-Səhv məlumat adlarının nümunələri:
+Yanlış dəyişən adlarına nümunələr:
 
 ```js no-beautify
 let 1a; // dəyişən adı rəqəm ilə başlaya bilməz
@@ -178,40 +178,40 @@ let 1a; // dəyişən adı rəqəm ilə başlaya bilməz
 let my-name; // dəyişən adında '-' kimi simvollar ola bilməz
 ```
 
-```smart header="Case matters"
+```smart header="Böyük-kiçik hərflər fərq yaradır"
 `apple` və `AppLE` adları fərqli dəyişənlərə istinad edir.
 ```
 
-````smart header="Latın adlarını işlətmək olar, amma tövsiyyə edilmir"
-Kiril hərfləri və iyeroqlif daxil olmaqla istənilən dildə olan hərfləri işlətmək olar:
+````smart header="Qeyri-latin hərflər istifadə etmək mümkündür, lakin tövsiyə edilmir"
+Hər hansı bir dildən, o cümlədən kiril hərflərindən və hətta heroqliflərdən istifadə etmək mümkündür, məsələn:
 
 ```js
 let имя = '...';
 let 我 = '...';
 ```
 
-Texniki olaraq, burada heç bir xəta yoxdur. Lakin, beynəlxalq ənənəyə görə dəyişən adları İngiliscə yazılır. Kiçik skript yazsaq belə bu skriptin uzun həyatı ola bilər. Digər ölkələrdə olan proqramistlər bu skripti oxumalı ola bilərlər.
+Texniki olaraq, burada heç bir səhv yoxdur, belə adlar uyğundur, lakin dəyişən adlarında ingilis dilindən istifadə etmək beynəlxalq bir ənənədir. Hətta kiçik bir skript yazsaq belə, onun uzun bir ömrü ola bilər. Başqa ölkələrdən olan insanlar bir gün onu oxumağa ehtiyac duya bilərlər.
 ````
 
 ````warn header="Qorunan adlar"
-JavaScript dilində işlədilən bəzi [qorunan sözləri](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) dəyişən adı kimi işlətmək olmaz.
+JavaScript dilində istifadə edilən bəzi [qorunan sözləri](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords) dəyişən adı kimi istifadə etmək olmaz.
 
 Məsələn: `let`, `class`, `return` və `function` sözləri qorunur.
 
 Aşağıdakı kodda sintaksis xətası baş verəcək:
 
 ```js run no-beautify
-let let = 5; // xəta! "let" adlı dəyişən işlətmək olmaz!
-let return = 5; // xəta! "return" adlı dəyişən işlətmək olmaz!
+let let = 5; // xəta! "let" adlı dəyişən istifadə etmək olmaz!
+let return = 5; // xəta! "return" adlı dəyişən istifadə etmək olmaz!
 ```
 ````
 
 ````warn header="`use strict`-siz təyinat"
 
-Normalda, dəyişəni işlətməmişdən öncə bu dəyişəni yaratmaq lazımdır. Lakin, keçmişdə dəyişəni `let` kimi açar sözü işlətmədən müəyyənləşdirmək mümkün idi. Skriptlərə `use strict` əlavə etmədikdə bu formada olan kodlar işləyəcək.
+Adətən, dəyişəni istifadə etməzdən əvvəl elan etməliyik. Lakin keçmişdə, sadəcə dəyəri təyin etməklə `let` istifadə etmədən də dəyişən yaratmaq texniki olaraq mümkün idi. Bu, hələ də köhnə skriptlərlə uyğunluğu qorumaq üçün skriptlərimizdə `use strict` istifadə etmədiyimiz təqdirdə mümkündür.
 
 ```js run no-strict
-// qeyd: bu nümunədə "use strict" işlədilmir
+// qeyd: bu nümunədə "use strict" direktivi istifadə edilmir
 
 num = 5; // "num" dəyişəni olmadıqda dəyişən yaranacaq
 
@@ -231,13 +231,13 @@ num = 5; // xəta: num təyin edilməyib
 
 ## Sabit dəyişənlər
 
-Sabit (dəyişməyən) dəyişən yaratmaq istəyirsinizsə, `let` əvəzinə `const` işlədin:
+Sabit (dəyişməyən) dəyişən yaratmaq istəyirsinizsə, `let` əvəzinə `const` istifadə edin:
 
 ```js
 const myBirthday = '18.04.1982';
 ```
 
-`const` ilə yaranan dəyişənlər "sabit dəyişənlər" adlandırılır. Bu dəyişənləri yenidən təyin etmək mümkün deyil. Dəyişənin dəyərini dəyişmək istədikdə xəta baş verəcək:
+`const` istifadə edilərək elan edilmiş dəyişənlər "konstantlar/sabit dəyişənlər" adlanır. Onlar yenidən təyin edilə bilməz. Bunu etməyə cəhd edilsə, xəta yaranacaq:
 
 ```js run
 const myBirthday = '18.04.1982';
@@ -245,12 +245,12 @@ const myBirthday = '18.04.1982';
 myBirthday = '01.01.2001'; // xəta, sabit dəyişəni dəyişmək olmaz!
 ```
 
-Proqramçı dəyişənin heç vaxt dəyişməyəcəyindən əmin olduqda dəyişəni `const` ilə təyin edərək bu dəyişənin dəyişməyəcəyini siğortalayıb digər proqramçılara bildirə bilər.
+Proqramçı bir dəyişənin heç vaxt dəyişməyəcəyinə əmin olduqda, bunu `const` ilə elan edə bilər ki, bunu təmin etsin və hər kəsə açıq şəkildə bildirsin.
 
 
 ### Böyük hərf ilə yazılmış sabit dəyişənlər
 
-Praktikada, çətin yadda qalan dəyərlər skript icra olunmamışdan öncə sabit dəyişələr ilə ləqəbləndirilir.
+İcra edilmədən əvvəl məlum olan və yadda saxlamaq çətin olan dəyərlər üçün sabit dəyişənlərdən ləqəb (alias) kimi istifadə etmək geniş yayılmış bir praktikadır.
 
 Bu formalı sabit dəyişənlər böyük hərf və altdan xətt ilə adlandırılırlar.
 
@@ -290,13 +290,13 @@ Digər sözlə, böyük hərf ilə yazılan sabit dəyişənləri yalnız "əl i
 
 Dəyişənləri adlandırdıqda çox vacib məqam var.
 
-Dəyişən adının saxladığı məlumatı təsvir edən təmin və mənalı adı olmalıdır.
+Dəyişən adı, saxladığı məlumatı təsvir edən, aydın və konkret bir mənaya sahib olmalıdır.
 
-Dəyişənləri adlandırmaq proqramlaşdırmada çox vacib və mürəkkəb bacarıqlardan biridir. Dəyişənin adına baxdıqda kodun yenibaşlayan və ya təcrübəli proqramçının yazdığını bilmək mümkündür.
+Dəyişənləri adlandırmaq proqramlaşdırmada çox vacib və mürəkkəb bacarıqlardan biridir. Dəyişən adlarına tez bir nəzər salmaqla, kodun başlanğıc səviyyəli bir proqramçı tərəfindən yoxsa təcrübəli bir proqramçı tərəfindən yazıldığını müəyyən etmək mümkündür.
 
-Real layihədə işlədikdə vaxtın çoxu sıfırdan kod yazmaq əvəzinə mövcud kodu dəyişməyə və artırmağa gedir. Digər tapşırıqlardan kodunuza qayıtdıqda yaxşı adlandırılmış məlumatları tapmaq daha asandır. Digər sözlə dəyişənləri yaxşı adlandırmaq lazımdır.
+Real bir layihədə, vaxtın böyük hissəsi sıfırdan tamamilə ayrı bir şey yazmaqdan daha çox mövcud kod bazasını dəyişdirmək və genişləndirməyə sərf olunur. Bir müddət başqa bir işlə məşğul olduqdan sonra koda qayıtdığımızda, yaxşı işarələnmiş məlumatları tapmaq daha asan olur. Başqa sözlə, dəyişənlər yaxşı adlara sahib olduqda bu daha rahat olur.
 
-Dəyişəni müəyyənləşdirməmişdən öncə yaxşı ad haqqında biraz fikirləşin. Bunu etdikdə faydasını görəcəksiniz.
+Dəyişəni müəyyənləşdirməmişdən öncə yaxşı ad haqqında bir az fikirləşin. Bunu etdikdə faydasını görəcəksiniz.
 
 Bəzi əməl edə biləcəyiniz yaxşı qaydalar:
 
@@ -307,24 +307,24 @@ Bəzi əməl edə biləcəyiniz yaxşı qaydalar:
 
 Sadə görünür? Bunun sadə görünməyinə baxmayaraq praktikada təsvirli və dəqiq dəyişən adları düzəltmək çətindir.
 
-```smart header="Yenidən işlət yoxsa yarat?"
-Bəzi avara proqramçılar yeni dəyişən yaratmaq əvəzinə mövcud dəyişəni istifadə etməyi sevirlər.
+```smart header="Yenidən istifadə et yoxsa yarat?"
+Son olaraq, bəzi tənbəl proqramçılar, yeni dəyişənlər elan etmək əvəzinə, mövcud dəyişənləri yenidən istifadə etməyə meyillidirlər.
 
-Nəticədə, bu dəyişənlər etiketi dəyişməyən, amma daxili dəyişən qutulara bənzəyirlər. Qutunun içində nəyin olduğunu heç kim bilmir. Bu səbəbdən, biz bu kodlara yaxından baxım yoxlamalıyıq.
+Nəticədə, bu dəyişənlər etiketi dəyişməyən, amma daxili dəyişən qutulara bənzəyirlər. Qutunun içində nəyin olduğunu heç kim bilmir. Bu səbəbdən, biz bu kodlara yaxından baxıb yoxlamalıyıq.
 
 Bu proqramçılar dəyişən yaratmaqda az vaxt, amma debaq zamanı on dəfə çox vaxt xərcləyirlər.
 
 Yeni dəyişən yaratmaq pis deyil.
 
-Modern JavaScript minifikasiya edici qurğuları və brauzerlər kodu yaxşı optimallaşdırırlar. Bu səbəbdən, çox dəyişən yaratdıqda performans problemləri yaranmayacaq. Fərqli dəyərlər üçün fərqli dəyişənlər işlətdikdə JavaScript mühərriki kodunuzu daha da yaxşı optimizasiya edə bilər.
+Müasir JavaScript minifikasiya alətləri və brauzerlər kodu kifayət qədər yaxşı optimallaşdırır, buna görə performans problemləri yaratmayacaq. Fərqli dəyərlər üçün fərqli dəyişənlərdən istifadə etmək hətta mühərrikin kodunuzu daha yaxşı optimallaşdırmasına kömək edə bilər.
 ```
 
 ## Xülasə
 
 Dəyişənləri  `var`, `let` və ya `const` açar sözləri ilə yaratmaq mümkündür.
 
-- `let` -- modern dəyişən yaratmaq üçün işlədilir.
-- `var` -- köhnə üsulda dəyişən yaratmaq üçün işlədilir. Normalda, biz bu dəyişəndən istifadə etmirik, amma <info:var> bölməsində `let` və `var` arasında olan fərqlərdən danışacağıq.
-- `const` -- `let` kimidir. Lakin, bununla yaranan dəyişənin dəyəri dəyişə bilməz.
+- `let` — müasir dəyişən elanıdır.  
+- `var` — köhnə üsulla dəyişən elanıdır. Adətən, ondan ümumiyyətlə istifadə etmirik, lakin <info:var> <info:var> bölməsində `let` və `var` arasında olan fərqlərdən danışacağıq.
+- `const` — `let` kimidir, amma dəyişənin dəyəri dəyişdirilə bilməz.
 
-Dəyişənləri, təyin olunan dəyəri yaxşı başa salan adlar ilə adlandırmağı tövsiyyə edirik.
+Dəyişənlər elə adlandırılmalıdır ki, onların içində nə olduğunu asanlıqla anlaya bilək.
