@@ -10,12 +10,12 @@ null == "\n0\n" → false
 null === +"\n0\n" → false
 ```
 
-Some of the reasons:
+Bəzi səbəblər:
 
-1. Obviously, true.
-2. Dictionary comparison, hence false. `"a"` is smaller than `"p"`.
-3. Again, dictionary comparison, first char of `"2"` is greater than the first char of `"1"`.
-4. Values `null` and `undefined` equal each other only.
-5. Strict equality is strict. Different types from both sides lead to false.
-6. Similar to `(4)`, `null` only equals `undefined`.
-7. Strict equality of different types.
+1. Əlbəttəki, doğru.
+2. Lüğət müqayisəsi. `"a"` `"p"`-dən əvvəl gəlir, buna görə də `"false"`.
+3. Yenə lüğət müqayisəsinə görə ilk simvol olan `"2"`, `"1"`-dən böyükdür.
+4. `null` və `undefined` bir-birinə bərabərdir. Digər heç bir dəyərlə bərabər olmaz.
+5. Sıx bərabərlik (`===`) eyni zamanda hər iki tərəfin tipini də nəzərə alır. Fərqli tiplər olduqda nəticə həmişə `false` olaraq nəticələnir.
+6. `(4)` kimi `null` yalnız `undefined` tipinə bərabərdir.
+7. Fərqli tiplər arasında sıx bərabərlik (`===`) mümkün deyil.
