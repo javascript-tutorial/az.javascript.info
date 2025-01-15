@@ -2,7 +2,7 @@ importance: 3
 
 ---
 
-# Giving the right name
+# Düzgün adın verilməsi
 
-1. Create a variable with the name of our planet. How would you name such a variable?
-2. Create a variable to store the name of a current visitor to a website. How would you name that variable?
+1. Bizim planetimiz adında dəyişən yaradın. Bu dəyişəni necə adlandırardınız?
+2. Veb səhifəyə daxil olan cari ziyarətçinin adını dəyişəndə saxlayın. Bu dəyişəni necə adlandırardınız?

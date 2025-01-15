@@ -2,9 +2,9 @@ importance: 2
 
 ---
 
-# Working with variables
+# Dəyişənlər ilə işləmək
 
-1. Declare two variables: `admin` and `name`.
-2. Assign the value `"John"` to `name`.
-3. Copy the value from `name` to `admin`.
-4. Show the value of `admin` using `alert` (must output "John").
+1. İki dəyişən elan edin: `admin` və `name`.
+2. `name` dəyişəninə `"Orxan"` dəyərini təyin edin.
+3. `name` dəyişənindən `admin` dəyişəninə dəyəri kopyalayın.
+4. `admin` dəyişəninin dəyərini `alert` istifadə edərək göstərin (nəticə "Orxan" olmalıdır).
