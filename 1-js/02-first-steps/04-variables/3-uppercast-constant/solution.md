@@ -1,4 +1,4 @@
-Normalda, biz əl ilə yazılan sabit dəyişənləri böyük hərf ilə yazırıq. Digər sözlə dəyişənin dəyəri skriptin icrasından öncə bilindikdə və kodda birbaşa yazıldıqda biz bu dəyişəni böyük hərflərlə yazırıq.
+Normalda, biz əl ilə yazılan sabit dəyişənləri böyük hərflərlə yazırıq. Digər sözlə dəyişənin dəyəri skriptin icrasından öncə bilindikdə və kodda birbaşa yazıldıqda biz bu dəyişəni böyük hərflərlə yazırıq.
 
 Bu kodda `birthday` məhz belədir. Ona görə də onun üçün böyük hərflərdən istifadə edə bilərik.
 

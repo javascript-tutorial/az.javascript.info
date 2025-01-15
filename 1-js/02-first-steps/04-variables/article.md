@@ -150,14 +150,15 @@ JavaScript-də dəyişənlərin adlandırılmasında iki məhdudiyyət var:
 1. Dəyişən adında yalnız hərflər, rəqəmlər və ya `$` və `_` kimi simvollar ola bilər.
 2. Dəyişən adının ilk hərfi rəqəm ola bilməz.
 
-Etibarlı adlar üçün nümunələr:
+Keçərli adlar üçün nümunələr:
 
 ```js
 let userName;
 let test123;
 ```
 
-Dəyişən adı bir neçə sözdən ibarət olduqda çox zaman [camelCase](https://en.wikipedia.org/wiki/CamelCase) formatından istifadə olunur. Bu formatında ilk sözdən başqa bütün sözlər böyük hərf ilə başlayır: `myVeryLongName`.
+Dəyişən adı bir neçə sözdən ibarət olduqda çox zaman [camelCase](https://en.wikipedia.org/wiki/CamelCase) 
+formatından istifadə olunur. Bu formatda/stildə ilk sözdən başqa bütün sözlər böyük hərf ilə başlayır: `myVeryLongName`.
 
 Dəyişən adlarında dollar (`'$'`), altdan xətt (`'_'`) simvollarının da istifadə edilə bilməsi maraqlıdır. Bu simvollar, hərflər kimi xüsusi mənası olmayan sadə simvollardır.
 
@@ -182,7 +183,7 @@ let my-name; // dəyişən adında '-' kimi simvollar ola bilməz
 `apple` və `AppLE` adları fərqli dəyişənlərə istinad edir.
 ```
 
-````smart header="Qeyri-latin hərflər istifadə etmək mümkündür, lakin tövsiyə edilmir"
+````smart header="Qeyri-latın hərflər istifadə etmək mümkündür, lakin tövsiyə edilmir"
 Hər hansı bir dildən, o cümlədən kiril hərflərindən və hətta heroqliflərdən istifadə etmək mümkündür, məsələn:
 
 ```js
@@ -201,8 +202,8 @@ Məsələn: `let`, `class`, `return` və `function` sözləri qorunur.
 Aşağıdakı kodda sintaksis xətası baş verəcək:
 
 ```js run no-beautify
-let let = 5; // xəta! "let" adlı dəyişən istifadə etmək olmaz!
-let return = 5; // xəta! "return" adlı dəyişən istifadə etmək olmaz!
+let let = 5; // xəta! dəyişəni "let" olaraq adlandırmaq olmaz!
+let return = 5; // xəta! dəyişəni "return" olaraq adlandırmaq olmaz!
 ```
 ````
 
@@ -218,7 +219,7 @@ num = 5; // "num" dəyişəni olmadıqda dəyişən yaranacaq
 alert(num); // 5
 ```
 
-Bu pis bir praktika hesab olunur və sıx rejimdə xətaya səbəb olacaq:
+Bu pis bir praktika hesab olunur və sıx rejimdə (strict mode) xətaya səbəb olacaq:
 
 ```js
 "use strict";
@@ -252,7 +253,7 @@ Proqramçı bir dəyişənin heç vaxt dəyişməyəcəyinə əmin olduqda, bunu
 
 İcra edilmədən əvvəl məlum olan və yadda saxlamaq çətin olan dəyərlər üçün sabit dəyişənlərdən ləqəb (alias) kimi istifadə etmək geniş yayılmış bir praktikadır.
 
-Bu formalı sabit dəyişənlər böyük hərf və altdan xətt ilə adlandırılırlar.
+Belə konstantların adlandırılmasında böyük hərflər və alt xətlərdən (`_`) istifadə olunur.
 
 Məsələn, gəlin "veb" (16-lı rəqəm) formatında olan rənglər üçün sabit dəyişənlər yaradaq:
 
@@ -271,15 +272,15 @@ Faydaları:
 
 - `COLOR_ORANGE` dəyəri yadda saxlamaq `"#FF7F00"` dəyərini yadda saxlamaqdan daha asandır.
 - `"#FF7F00"` dəyərində səhv etmək `COLOR_ORANGE` dəyərində səhv etməkdən daha asandır.
-- Kodu oxuduqda `COLOR_ORANGE` dəyərinin mənası `#FF7F00` dəyərinin mənasından daha çoxdur.
+- Kodu oxuduqda `COLOR_ORANGE`'in ifadə etdiyi məna, `#FF7F00`'dən daha anlamlıdır.
 
 Sabit dəyişənləri nə zaman normal formada, nə zaman isə böyük hərflər ilə yazmaq lazımdır? Gəlin bunun açıqlamasını verək.
 
-Dəyişənin "sabit" olması, bu dəyişənin heç vaxt dəyişməməsi deməkdir. Lakin, bəzi sabit dəyişənlər skript icra olunmamışdan öncə (qırmızı rəngin 16-lıq rəqəmi kimi) , bəziləri isə icra zamanı *hesablanır* və sabit qalır.
+Dəyişənin “sabit” olması, onun dəyərinin heç vaxt dəyişməməsi deməkdir. Lakin bəzi sabit dəyişənlər skript icra olunmazdan əvvəl məlum olur (məsələn, qırmızı rəngin onaltılıq dəyəri kimi), digərləri isə icra zamanı *hesablanır* və sabit qalır.
 
 Məsələn:
 ```js
-const pageLoadTime = /* veb səhifənin yüklənməsinə xərclənən zaman */;
+const pageLoadTime = /* Veb səhifənin yüklənmə müddəti */;
 ```
 
 `pageLoadTime` dəyəri səhifə yüklənməmişdən öncə bilinmədiyindən bu, normal adlandırılır. Lakin, bu dəyər təyin edildikdən sonra dəyişmədiyindən sabit qalır.
@@ -292,7 +293,7 @@ Dəyişənləri adlandırdıqda çox vacib məqam var.
 
 Dəyişən adı, saxladığı məlumatı təsvir edən, aydın və konkret bir mənaya sahib olmalıdır.
 
-Dəyişənləri adlandırmaq proqramlaşdırmada çox vacib və mürəkkəb bacarıqlardan biridir. Dəyişən adlarına tez bir nəzər salmaqla, kodun başlanğıc səviyyəli bir proqramçı tərəfindən yoxsa təcrübəli bir proqramçı tərəfindən yazıldığını müəyyən etmək mümkündür.
+Dəyişənləri adlandırmaq proqramlaşdırmada çox vacib və mürəkkəb bacarıqlardan biridir. Dəyişən adlarına tez bir nəzər salmaqla, kodun başlanğıc səviyyəli bir proqramçı yoxsa təcrübəli bir proqramçı tərəfindən yazıldığını müəyyən etmək mümkündür.
 
 Real bir layihədə, vaxtın böyük hissəsi sıfırdan tamamilə ayrı bir şey yazmaqdan daha çox mövcud kod bazasını dəyişdirmək və genişləndirməyə sərf olunur. Bir müddət başqa bir işlə məşğul olduqdan sonra koda qayıtdığımızda, yaxşı işarələnmiş məlumatları tapmaq daha asan olur. Başqa sözlə, dəyişənlər yaxşı adlara sahib olduqda bu daha rahat olur.
 
@@ -303,9 +304,9 @@ Bəzi əməl edə biləcəyiniz yaxşı qaydalar:
 - `userName` və ya `shoppingCart` kimi insanların başa düşə biləcəyi adlardan istifadə edin.
 - Qısaldılmış adlardan və ya `a`, `b`, `c` kimi adlardan uzaq durun.
 - Adları maksimal dərəcədə təsvirli və dəqiq edin. `data` və `value` kimi adlar pisdir. Bu adlar nəyin baş verdiyi haqqda heç nə təsvir etmir. Əgər kodun konteksti dəyişənin hansı məlumat və ya dəyərə istinad etdiyini göstərirsə, belə adlardan istifadə etmək olar.
-- Komandanızda və beyninizdə terminlər haqqında razılığıa gəlin. Əgər sayt ziyatətçisi "user" adlanırsa, buna aid dəyişənləri `currentVisitor` və ya `newManInTown` adlandırmaq əvəzinə `currentUser` və ya `newUser` adlandırın.
+- Komandanız daxilində və özünüzlə razılaşın. Əgər sayt ziyarətçisinə "istifadəçi" deyiriksə, onda əlaqəli dəyişənləri `currentUser` və ya `newUser` adlandırmalıyıq, `currentVisitor` və ya `newManInTown` deyil.
 
-Sadə görünür? Bunun sadə görünməyinə baxmayaraq praktikada təsvirli və dəqiq dəyişən adları düzəltmək çətindir.
+Sadə səslənir? Əslində belədir, amma praktikada təsviri və qısa dəyişən adları yaratmaq asan deyil.
 
 ```smart header="Yenidən istifadə et yoxsa yarat?"
 Son olaraq, bəzi tənbəl proqramçılar, yeni dəyişənlər elan etmək əvəzinə, mövcud dəyişənləri yenidən istifadə etməyə meyillidirlər.
