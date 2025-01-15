@@ -1,12 +1,12 @@
-## Bizim planetimizin dəyişəni
+## Bizim planet üçün dəyişən
 
-Bu asandır:
+Bu sadədir:
 
 ```js
 let ourPlanetName = "Yer";
 ```
 
-Nəzərə alın ki, biz `planet` adından istifadə edə bilərdik. Lakin, bu ad ilə hansı planetdən danışdığımız bilinməyəcəkdir. Daha aydın adlar yazmaq yaxşıdır.
+Qeyd edək ki, daha qısa `planet` adı istifadə edə bilərdik, amma onun hansı planetə aid olduğu aydın olmaya bilər. Daha izahlı olmaq yaxşıdır. Ən azı dəyişən çox uzun olmadığı müddətcə.
 
 ## Cari ziyarətçinin adı
 
@@ -14,8 +14,8 @@ Nəzərə alın ki, biz `planet` adından istifadə edə bilərdik. Lakin, bu ad
 let currentUserName = "Orxan";
 ```
 
-Biz bu dəyişənin həmişə cari istifadəçi haqqında olduğunu bilsəydik bu dəyişəni `userName` adlandıra bilərdik.
+Yenə də, əgər istifadəçinin cari olduğunu dəqiq bilsək, bunu `userName` kimi qısalda bilərik.
 
-Modern redaktorlarda olan avtomatik tamamlayıcı qurğular ilə uzun adları yazmaq asanlaşır. Üç sözdən ibarət ad normaldır.
+Müasir redaktorlar və avtomatik tamamlanma xüsusiyyəti uzun dəyişən adlarını yazmağı asanlaşdırır. Onlardan qənaət etməyin. Üç sözlük bir ad tamamilə qəbul ediləndir.
 
 Əgər redaktorunuzda avtomatik tamamlama xüsusiyyəti yoxdursa, [yeni redaktor əldə edin](/code-editors).
