@@ -1,4 +1,4 @@
-# Data types
+# Verilən tipləri
 
 A variable in JavaScript can contain any data. A variable can at one moment be a string and at another be a number:
 
