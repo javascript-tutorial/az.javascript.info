@@ -65,21 +65,21 @@ Biz <info:number> fəslində rəqəmlərlə işləməyi daha ətraflı öyrənə
 
 ## BigInt
 
-In JavaScript, the "number" type cannot represent integer values larger than <code>2<sup>53</sup></code> (or less than <code>-2<sup>53</sup></code> for negatives), that's a technical limitation caused by their internal representation. That's about 16 decimal digits, so for most purposes the limitation isn't a problem, but sometimes we need really big numbers, e.g. for cryptography or microsecond-precision timestamps.
+JavaScript-də "rəqəm" (`number`) tipi <code>2<sup>53</sup></code>-dən böyük (və ya <code>-2<sup>53</sup></code>-dən kiçik) tam ədədləri ifadə edə bilmir. Bu, onların daxili təqdimatındakı texniki məhdudiyyətdir. Bu, təxminən 16 onluq rəqəmə bərabərdir və əksər hallarda bu məhdudiyyət problem yaratmır. Lakin bəzən, məsələn, kriptoqrafiya və ya mikro-saniyə dəqiqliyi ilə vaxt ölçmələri üçün çox böyük ədədlərə ehtiyac duyula bilər.
 
-`BigInt` type was recently added to the language to represent integers of arbitrary length.
+Dilə yaxın zamanda əlavə edilmiş `BigInt` tipi istənilən uzunluqda tam ədədləri təmsil etmək üçün istifadə olunur.
 
-A `BigInt` is created by appending `n` to the end of an integer literal:
+`BigInt` yaratmaq üçün tam ədədin sonuna `n` əlavə olunur:
 
 ```js
-// the "n" at the end means it's a BigInt
+// sondakı "n" onun bir `BigInt` olduğunu bildirir
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
-As `BigInt` numbers are rarely needed, we devoted them a separate chapter <info:bigint>.
+`BigInt` rəqəmlərə nadir hallarda ehtiyac duyulduğundan, bu mövzuya xüsusi bir fəsil (<info:bigint>) həsr etmişik.
 
-```smart header="Compatability issues"
-Right now `BigInt` is supported in Firefox and Chrome, but not in Safari/IE/Edge.
+```smart header="Uyğunluq problemləri"
+Hal-hazırda `BigInt` Firefox və Chrome-da dəstəklənir, lakin Safari, IE və Edge-də dəstəklənmir.
 ```
 
 ## String
