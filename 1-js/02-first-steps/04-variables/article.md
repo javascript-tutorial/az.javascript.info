@@ -70,7 +70,7 @@ let user = 'Orxan',
   message = 'Salam';
 ```
 
-...və ya "vergül-birinci" stilində də müəyyənləşdirirlər:
+...və ya "vergül-birinci" stilində (comma-first style) də müəyyənləşdirirlər:
 
 ```js no-beautify
 let user = 'Orxan'
