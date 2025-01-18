@@ -84,47 +84,47 @@ Hal-hazırda `BigInt` Firefox və Chrome-da dəstəklənir, lakin Safari, IE və
 
 ## String
 
-A string in JavaScript must be surrounded by quotes.
+JavaScript-də bir [`string`](https://en.wikipedia.org/wiki/String_(computer_science)) mütləq dırnaqlar ilə əhatə olunmalıdır.
 
 ```js
-let str = "Hello";
-let str2 = 'Single quotes are ok too';
-let phrase = `can embed another ${str}`;
+let str = "Salam";
+let str2 = 'Tək dırnaqlar da uyğundur';
+let phrase = `başqa bir ${str} ehtiva edə bilər`;
 ```
 
-In JavaScript, there are 3 types of quotes.
+JavaScript-də `string`-i ifadə etməyin 3 yolu mövcuddur.
 
-1. Double quotes: `"Hello"`.
-2. Single quotes: `'Hello'`.
-3. Backticks: <code>&#96;Hello&#96;</code>.
+1. Cüt dırnaq: `"Hello"`.
+2. Tək dırnaq: `'Hello'`.
+3. Tərs dırnaq: <code>&#96;Salam&#96;</code>.
 
-Double and single quotes are "simple" quotes. There's practically no difference between them in JavaScript.
+Cüt dırnaq və tək dırnaqlar "sadə" dırnaqlar adlanır. JavaScript-də onların arasında demək olar ki, heç bir fərq yoxdur.
 
-Backticks are "extended functionality" quotes. They allow us to embed variables and expressions into a string by wrapping them in `${…}`, for example:
+Tərs dırnaqlar "genişləndirilmiş funksionallıq" təklif edən dırnaqlardır. Onlar bizə dəyişənləri və ifadələri `${...}` arasına alaraq bir `string`-ə daxil etməyə imkan verir, məsələn:
 
 ```js run
-let name = "John";
+let name = "Eldar";
 
-// embed a variable
-alert( `Hello, *!*${name}*/!*!` ); // Hello, John!
+// bir dəyişən daxil edin
+alert( `Salam, *!*${name}*/!*!` ); // Salam, Eldar!
 
-// embed an expression
-alert( `the result is *!*${1 + 2}*/!*` ); // the result is 3
+// bir ifadə daxil edin
+alert( `nəticə: *!*${1 + 2}*/!*` ); // nəticə: 3
 ```
 
-The expression inside `${…}` is evaluated and the result becomes a part of the string. We can put anything in there: a variable like `name` or an arithmetical expression like `1 + 2` or something more complex.
+`${...}` arasındakı ifadə JavaScript mühərriki tərəfindən dəyərləndirilir və nəticə `string`-in bir hissəsinə çevrilir. Biz burada istənilən şeyi yaza bilərik: məsələn, `name` adlı bir dəyişən, `1 + 2` kimi riyazi bir ifadə və ya daha kompleks bir şey.
 
-Please note that this can only be done in backticks. Other quotes don't have this embedding functionality!
+Qeyd edək ki, bu yanlız tərs dırnaqlar (backtricks: ``) üçün keçərlidir. Digər dırnaqlarda bu funksionallıq mövcud deyil.
 ```js run
-alert( "the result is ${1 + 2}" ); // the result is ${1 + 2} (double quotes do nothing)
+alert( "nəticə: ${1 + 2}" ); // nəticə: ${1 + 2} (cüt dırnaqlar heç nə etmir)
 ```
 
-We'll cover strings more thoroughly in the chapter <info:string>.
+Biz `string`-ləri <info:string> fəslində daha ətraflı izah edəcəyik.
 
-```smart header="There is no *character* type."
-In some languages, there is a special "character" type for a single character. For example, in the C language and in Java it is called "char".
+```smart header="*character* tipi mövcud deyil."
+Bəzi proqramlaşdırma dillərində yalnız bir simvolu saxlamaq üçün xüsusi bir verilənlər tipi mövcuddur. Məsələn, C və Java dillərində bu tip "char" adlanır.
 
-In JavaScript, there is no such type. There's only one type: `string`. A string may consist of only one character or many of them.
+JavaScript-də belə bir tip yoxdur. Yalnız bir verilən tipi var: `string`. Bir `string` bir və ya daha çox simvoldan ibarət ola bilər.
 ```
 
 ## Boolean (logical type)
