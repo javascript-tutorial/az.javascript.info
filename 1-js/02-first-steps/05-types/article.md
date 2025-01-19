@@ -245,23 +245,23 @@ Son üç sətir əlavə izah tələb edə bilər:
 2. `typeof null` nəticəsi `"object"` olaraq qaytarılır. Bu, səhvdir. Bu, `typeof` operatorunun rəsmi olaraq tanınmış bir xətasıdır və uyğunluq səbəbilə saxlanılıb. Əslində, `null` bir obyekt deyil. O, ayrıca bir tipə malik xüsusi bir dəyərdir. Beləliklə, bu, JavaScript dilində mövcud olan bir qüsurdur.
 3. `typeof alert` nəticəsi `"function"` olur, çünki, `alert` bir funksiyadır. Biz funksiyaları növbəti fəsillərdə öyrənəcəyik. Orada görəcəyik ki, əslində JavaScript-də xüsusi bir "function" tipi yoxdur. Funksiyalar `object` tipinə daxildir. Lakin, `typeof` funksiyalara fərqli davranaraq `"function"` kimi qaytarır. Bu tam doğru deyil, lakin praktikada çox rahatdır.
 
-## Summary
+## Xülasə
 
-There are 8 basic data types in JavaScript.
+JavaScript-də 8 sadə verilən tipi mövcuddur:
 
-- `number` for numbers of any kind: integer or floating-point, integers are limited by ±2<sup>53</sup>.
-- `bigint` is for integer numbers of arbitrary length.
-- `string` for strings. A string may have one or more characters, there's no separate single-character type.
-- `boolean` for `true`/`false`.
-- `null` for unknown values -- a standalone type that has a single value `null`.
-- `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
-- `object` for more complex data structures.
-- `symbol` for unique identifiers.
+- **`number`**: İstənilən növ rəqəmlər üçün, tam və ya onluq kəsr dəyərləri daxildir. Tam ədədlər ±2<sup>53</sup> həddində məhdudlaşdırılıb.
+- **`bigint`**: İxtiyari uzunluqlu tam ədədlər üçündür.
+- **`string`**: "mətn" tipidir. Bir `string` bir və ya daha çox simvolu ehtiva edə bilər. Tək simvol üçün ayrıca bir tip mövcud deyil.
+- **`boolean`**: `true` və `false` məntiqi dəyərləri üçün istifadə olunur.
+- **`null`**: Naməlum dəyərlər üçün nəzərdə tutulmuş ayrıca bir tipdir, yalnız `null` dəyərinə sahibdir.
+- **`undefined`**: Mənimsədilməmiş dəyərlər üçün ayrıca bir tipdir, yalnız `undefined` dəyərinə sahibdir.
+- **`object`**: Daha mürəkkəb verilən strukturlarını saxlamaq üçün istifadə olunur.
+- **`symbol`**: Unikal identifikatorlar yaratmaq üçün istifadə olunur.
 
-The `typeof` operator allows us to see which type is stored in a variable.
+`typeof` dəyişənin tipini müəyyənləşdirməyə imkan verir:
 
-- Two forms: `typeof x` or `typeof(x)`.
-- Returns a string with the name of the type, like `"string"`.
-- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+- İki sintaksis mövcuddur: `typeof x` və ya `typeof(x)`.
+- `string` olaraq tipin adını qaytarır, məsələn, `"string"`.
+- `null` dəyəri üçün `"object"` qaytarır -- bu, dilin daxilində olan bir səhvdir. Əslində, `null` bir obyekt deyil.
 
-In the next chapters, we'll concentrate on primitive values and once we're familiar with them, we'll move on to objects.
+Növbəti fəsillərdə, əvvəlcə ibtidai (primitive) dəyərləri öyrənəcəyik və onlarla tanış olduqdan sonra obyektlərə keçəcəyik.
