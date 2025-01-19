@@ -1,15 +1,15 @@
 
-Backticks embed the expression inside `${...}` into the string.
+Tərs dırnaqlar (backticks: ``) `${...}` daxilində ifadəni mətnə yerləşdirir.
 
 ```js run
 let name = "Ilya";
 
-// the expression is a number 1
-alert( `hello ${1}` ); // hello 1
+// İfadənin çıxışı bir rəqəmdir: 1
+alert( `salam ${1}` ); // salam 1
 
-// the expression is a string "name"
-alert( `hello ${"name"}` ); // hello name
+// İfadənin çıxışı bir mətndir: "ad"
+alert( `salam ${"ad"}` ); // salam ad
 
-// the expression is a variable, embed it
-alert( `hello ${name}` ); // hello Ilya
+// İfadə dəyişən olduğundan, dəyişənin dəyəri istifadə olunacaq
+alert( `salam ${name}` ); // salam Ilya
 ```
