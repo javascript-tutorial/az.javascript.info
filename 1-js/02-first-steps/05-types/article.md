@@ -127,28 +127,28 @@ Bəzi proqramlaşdırma dillərində yalnız bir simvolu saxlamaq üçün xüsus
 JavaScript-də belə bir tip yoxdur. Yalnız bir verilən tipi var: `string`. Bir `string` bir və ya daha çox simvoldan ibarət ola bilər.
 ```
 
-## Boolean (logical type)
+## Boolean (məntiqi tip)
 
-The boolean type has only two values: `true` and `false`.
+`boolean` tipi sadəcə 2 mümkün dəyərə sahibdir: `true` və `false`.
 
-This type is commonly used to store yes/no values: `true` means "yes, correct", and `false` means "no, incorrect".
+Bu tip ümumi olaraq hə/yox dəyərlərini saxlamaq üçün istifadə olunur: `true`, "bəli, doğrudur", `false` "xeyr, yanlışdır" mənasına gəlir.
 
-For instance:
+Məsələn:
 
 ```js
-let nameFieldChecked = true; // yes, name field is checked
-let ageFieldChecked = false; // no, age field is not checked
+let nameFieldChecked = true; // bəli, ad sahəsi yoxlandı
+let ageFieldChecked = false; // xeyr, yaş sahəsi yoxlanmadı
 ```
 
-Boolean values also come as a result of comparisons:
+`boolean` tipi həm də nəticələrin müqayisəsində istifadə edilir:
 
 ```js run
 let isGreater = 4 > 1;
 
-alert( isGreater ); // true (the comparison result is "yes")
+alert( isGreater ); // true (müqayisənin nəticəsi "doğru"dur)
 ```
 
-We'll cover booleans more deeply in the chapter <info:logical-operators>.
+Biz `boolean` tipini <info:logical-operators> fəslində daha dərindən izah edəcəyik.
 
 ## The "null" value
 
