@@ -200,18 +200,18 @@ Bütün digər tiplər "primitiv (primitive)" tip adlanır, çünki, onların d�
 
 `symbol` tipi obyektlər üçün unikal identifikatorlar yaratmaqda istifadə olunur. Onu burada tamlıq üçün qeyd edirik, lakin obyektləri öyrəndikdən sonra bu mövzuya qayıdacağıq.
 
-## The typeof operator [#type-typeof]
+### `typeof` operatoru [#type-typeof]
 
-The `typeof` operator returns the type of the argument. It's useful when we want to process values of different types differently or just want to do a quick check.
+`typeof` operatoru arqumentin tipini qaytarır. Fərqli tipləri müxtəlif üsullarla işləmək lazım olduqda və ya sadəcə sürətli bir yoxlama aparmaq istədikdə çox faydalıdır.
 
-It supports two forms of syntax:
+Bu operator iki sintaksisi dəstəkləyir:
 
-1. As an operator: `typeof x`.
-2. As a function: `typeof(x)`.
+1. Operator kimi: `typeof x`.
+2. Funksiya kimi: `typeof(x)`.
 
-In other words, it works with parentheses or without them. The result is the same.
+Başqa sözlə, mötərizələrlə və ya mötərizəsiz istifadə edilə bilər. Hər iki halda nəticə eyni olur.
 
-The call to `typeof x` returns a string with the type name:
+`typeof x` ifadəsi arqumentin tipini `string` formatında qaytarır:
 
 ```js
 typeof undefined // "undefined"
@@ -239,11 +239,11 @@ typeof alert // "function"  (3)
 */!*
 ```
 
-The last three lines may need additional explanation:
+Son üç sətir əlavə izah tələb edə bilər:
 
-1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
-2. The result of `typeof null` is `"object"`. That's wrong. It is an officially recognized error in `typeof`, kept for compatibility. Of course, `null` is not an object. It is a special value with a separate type of its own. So, again, this is an error in the language.
-3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That's not quite correct, but very convenient in practice.
+1. `Math` riyazi əməliyyatlar təqdim edən daxili obyektlərdən biridir. Biz onu <info:number> fəsilində daha ətraflı öyrənəcəyik. Burada isə, sadəcə obyektin bir nümunəsi kimi istifadə olunub.
+2. `typeof null` nəticəsi `"object"` olaraq qaytarılır. Bu, səhvdir. Bu, `typeof` operatorunun rəsmi olaraq tanınmış bir xətasıdır və uyğunluq səbəbilə saxlanılıb. Əslində, `null` bir obyekt deyil. O, ayrıca bir tipə malik xüsusi bir dəyərdir. Beləliklə, bu, JavaScript dilində mövcud olan bir qüsurdur.
+3. `typeof alert` nəticəsi `"function"` olur, çünki, `alert` bir funksiyadır. Biz funksiyaları növbəti fəsillərdə öyrənəcəyik. Orada görəcəyik ki, əslində JavaScript-də xüsusi bir "function" tipi yoxdur. Funksiyalar `object` tipinə daxildir. Lakin, `typeof` funksiyalara fərqli davranaraq `"function"` kimi qaytarır. Bu tam doğru deyil, lakin praktikada çox rahatdır.
 
 ## Summary
 
