@@ -150,21 +150,21 @@ alert( isGreater ); // true (müqayisənin nəticəsi "doğru"dur)
 
 Biz `boolean` tipini <info:logical-operators> fəslində daha dərindən izah edəcəyik.
 
-## The "null" value
+## "null" dəyəri
 
-The special `null` value does not belong to any of the types described above.
+Xüsusi bir dəyər olan `null`, yuxarıda təsvir edilən tiplərdən heç birinə aid deyil.
 
-It forms a separate type of its own which contains only the `null` value:
+Bu dəyər yalnız özünə məxsus ayrıca bir tipdir və bu tip sadəcə `null` dəyərindən ibarətdir.
 
 ```js
 let age = null;
 ```
 
-In JavaScript, `null` is not a "reference to a non-existing object" or a "null pointer" like in some other languages.
+JavaScript-də `null`, "mövcud olmayan bir obyektə referans" və ya digər dillərdə olduğu kimi "null göstərici (null pointer)" anlamına gəlmir.
 
-It's just a special value which represents "nothing", "empty" or "value unknown".
+Bu sadəcə xüsusi bir dəyərdir və "heç nə", "boş" və ya "bilinməyən dəyər"i ifadə edir.
 
-The code above states that `age` is unknown or empty for some reason.
+Yuxarıdakı kod, `age` dəyişənin dəyərinin nə üçünsə bilinməyən və ya boş olduğunu bildirir.
 
 ## The "undefined" value
 
