@@ -166,21 +166,21 @@ Bu sadəcə xüsusi bir dəyərdir və "heç nə", "boş" və ya "bilinməyən d
 
 Yuxarıdakı kod, `age` dəyişənin dəyərinin nə üçünsə bilinməyən və ya boş olduğunu bildirir.
 
-## The "undefined" value
+## "undefined" dəyəri
 
-The special value `undefined` also stands apart. It makes a type of its own, just like `null`.
+Xüsusi bir dəyər olan `undefined` da ayrıca bir mövqeyə malikdir. Bu, özünəməxsus bir tip meydana gətirir.
 
-The meaning of `undefined` is "value is not assigned".
+`undefined` dəyəri, "dəyər təyin edilməyib" anlamına gəlir.
 
-If a variable is declared, but not assigned, then its value is `undefined`:
+Əgər bir dəyişən elan olunubsa, lakin onun üçün heç bir dəyər təyin edilməyibsə, onun dəyəri `undefined` olacaq:
 
 ```js run
 let x;
 
-alert(x); // shows "undefined"
+alert(x); // "undefined" göstərir
 ```
 
-Technically, it is possible to assign `undefined` to any variable:
+Texniki olaraq, `undefined` istənilən dəyişənə mənimsədilə bilər:
 
 ```js run
 let x = 123;
@@ -190,7 +190,7 @@ x = undefined;
 alert(x); // "undefined"
 ```
 
-...But we don't recommend doing that. Normally, we use `null` to assign an "empty" or "unknown" value to a variable, and we use `undefined` for checks like seeing if a variable has been assigned.
+... Amma biz bunu etməyi tövsiyə etmirik. Normalda "boş" və ya "bilinməyən" bir dəyəri ifadə etmək üçün `null` istifadə olunur. `undefined` isə əsasən dəyişənin dəyərinin mənimsədildiyini yoxlamaq üçün istifadə edilir.
 
 ## Objects and Symbols
 
