@@ -1,5 +1,5 @@
 
-Tərs dırnaqlar (backticks: ``) `${...}` daxilində ifadəni mətndə yerləşdirir.
+Tərs dırnaqlar (backticks: ``) `${...}` daxilində ifadəni mətnə yerləşdirir.
 
 ```js run
 let name = "Ilya";
