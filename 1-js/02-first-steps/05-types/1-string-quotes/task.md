@@ -2,16 +2,16 @@ importance: 5
 
 ---
 
-# String quotes
+# String dırnaqları
 
-What is the output of the script?
+Skriptin nəticəsi nə olacaq?
 
 ```js
 let name = "Ilya";
 
-alert( `hello ${1}` ); // ?
+alert( `salam ${1}` ); // ?
 
-alert( `hello ${"name"}` ); // ?
+alert( `salam ${"ad"}` ); // ?
 
-alert( `hello ${name}` ); // ?
+alert( `salam ${name}` ); // ?
 ```
