@@ -192,13 +192,13 @@ alert(x); // "undefined"
 
 ... Amma biz bunu etməyi tövsiyə etmirik. Normalda "boş" və ya "bilinməyən" bir dəyəri ifadə etmək üçün `null` istifadə olunur. `undefined` isə əsasən dəyişənin dəyərinin mənimsədildiyini yoxlamaq üçün istifadə edilir.
 
-## Objects and Symbols
+## Obyektlər (Objects) və Simvollar (Symbols)
 
-The `object` type is special.
+`object` xüsusi bir tipdir.
 
-All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities. We'll deal with them later in the chapter <info:object> after we learn more about primitives.
+Bütün digər tiplər "primitiv (primitive)" tip adlanır, çünki, onların dəyərləri yalnız bir şey (məsələn, bir `string`, `number` və ya başqa bir şey) ehtiva edə bilər. Bunun əksinə olaraq, obyektlər verilən kolleksiyalarını və daha mürəkkəb quruluşları saxlamaq üçün istifadə olunur. Primitiv tipləri daha yaxşı öyrəndikdən sonra obyektlər mövzusuna <info:object> fəslində toxunacağıq.
 
-The `symbol` type is used to create unique identifiers for objects. We mention it here for completeness, but we'll study it after objects.
+`symbol` tipi obyektlər üçün unikal identifikatorlar yaratmaqda istifadə olunur. Onu burada tamlıq üçün qeyd edirik, lakin obyektləri öyrəndikdən sonra bu mövzuya qayıdacağıq.
 
 ## The typeof operator [#type-typeof]
 
