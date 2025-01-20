@@ -46,7 +46,11 @@ alert(3 +
 + 2);
 ```
 
+<<<<<<< HEAD
 Bu kodun nəticəsi `6` olacaq, çünki, JavaScript interpretatoru burada nöqtəli vergül daxil etmir. JavaScript üçün intuitiv olaraq aydındır ki, əgər sətir `+` (üstəgəl) simvolu ilə bitirsə, bu "natamam ifadə"dir və nöqtəli vergül tələb olunmur. Bu halda kod gözlənildiyi kimi işləyir.
+=======
+The code outputs `6` because JavaScript does not insert semicolons here. It is intuitively obvious that if the line ends with a plus `"+"`, then it is an "incomplete expression", so a semicolon there would be incorrect. And in this case, that works as intended.
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
 
 **Amma müəyyən hallar da var ki, JavaScript belə hallarda nöqtəli vergülü avtomatik əlavə edə bilmir və nəticədə xəta yaranır.**
 
@@ -56,28 +60,45 @@ Belə hallarda xətaları tapmaq və düzəltmək olduqca çətin ola bilər.
 Əgər belə bir xətaya konkret nümunə görmək istəyirsinizsə, bu kodu yoxlayın:
 
 ```js run
-[1, 2].forEach(alert)
+alert("Hello");
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 İndilik `[]` (kvadrat mötərizələr) və `forEach` haqqında düşünməyə ehtiyac yoxdur. Onları daha sonra öyrənəcəyik. Hazırda sadəcə kodun nəticəsinə diqqət edin: bu kod əvvəlcə `1`, daha sonra `2` göstərir.
 
 İndi kodun əvvəlinə bir `alert` əlavə edək və onu nöqtəli vergülsüz bitirək:
 
 ```js run no-beautify
 alert("Xəta baş verəcək")
+=======
+No need to think about the meaning of the brackets `[]` and `forEach` yet. We'll study them later. For now, just remember the result of running the code: it shows `Hello`, then `1`, then `2`.
 
-[1, 2].forEach(alert)
+Now let's remove the semicolon after the `alert`:
+
+```js run no-beautify
+alert("Hello")
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
+
+[1, 2].forEach(alert);
 ```
 
+<<<<<<< HEAD
 İndi bu kodu işə salsaq, yalnız ilk `alert` mesajı görünəcək və daha sonra xəta ilə üzləşəcəyik!
 
 Amma əgər `alert` ifadəsindən sonra nöqtəli vergül əlavə etsək, hər şey yenidən qaydasında olacaq:
 ```js run
 alert("Hər şey qaydasındadır.");
+=======
+The difference compared to the code above is only one character: the semicolon at the end of the first line is gone.
 
-[1, 2].forEach(alert)  
-```
+If we run this code, only the first `Hello` shows (and there's an error, you may need to open the console to see it). There are no numbers any more.
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
 
+That's because JavaScript does not assume a semicolon before square brackets `[...]`. So, the code in the last example is treated as a single statement.
+
+<<<<<<< HEAD
 İndi "Hər şey qaydasındadır." mesajından sonra `1` və `2` görünür.
 
 
@@ -90,6 +111,17 @@ alert("Xəta baş verəcək")[1, 2].forEach(alert)
 ```
 
 Amma kod iki ayrı ifadə olmalı idi, tək deyil. Bu halda birləşmə səhv baş verir və nəticədə xəta yaranır. Bu problem digər hallarda da yarana bilər.
+=======
+Here's how the engine sees it:
+
+```js run no-beautify
+alert("Hello")[1, 2].forEach(alert);
+```
+
+Looks weird, right? Such merging in this case is just wrong. We need to put a semicolon after `alert` for the code to work correctly.
+
+This can happen in other situations also.
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
 ````
 
 Əgər ifadələr sətirlərlə ayrılıbsa, onların arasına nöqtəli vergül qoymağı tövsiyə edirik. Bu qayda JavaScript cəmiyyəti tərəfindən geniş şəkildə qəbul olunub. Yenidən bir də qeyd edək ki, nöqtəli vergülləri çox vaxt buraxmaq -- *mümkündür*. Lakin, xüsusilə yeni başlayanlar üçün, nöqtəli vergüllərdən istifadə etmək daha təhlükəsizdir.
@@ -135,8 +167,13 @@ alert('Salam');
 alert('Dünya');
 ```
 
+<<<<<<< HEAD
 ```smart header="Qısayollardan istifadə edin!"
 Əksər redaktorlarda bir kod sətrini təksətirlik şərh etmək üçün `key:Ctrl+/` qısayolundan, çoxsətirli şərhlər üçün isə (kodun bir hissəsini seçib) `key:Ctrl+Shift+/` kombinasiyasından istifadə edə bilərsiniz. Mac istifadəçiləri, sözügedən kombinasiyalardan istifadədə key:Ctrl əvəzinə key:Cmd klavişiylə cəhd edə bilərlər.
+=======
+```smart header="Use hotkeys!"
+In most editors, a line of code can be commented out by pressing the `key:Ctrl+/` hotkey for a single-line comment and something like `key:Ctrl+Shift+/` -- for multiline comments (select a piece of code and press the hotkey). For Mac, try `key:Cmd` instead of `key:Ctrl` and `key:Option` instead of `key:Shift`.
+>>>>>>> 34a80e70f8cce5794be259d25f815d7a7db7cbe3
 ```
 
 ````warn header="İç-içə şərhlər dəstəklənmir!"
