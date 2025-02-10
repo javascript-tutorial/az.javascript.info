@@ -19,10 +19,14 @@ Məsələn:
 ...
 ```
 
+<<<<<<< HEAD
 Biz funksiyaları (ifadələri qruplaşdırmaq üçün bir yoldur) tezliklə öyrənəcəyik. İndilik isə qeyd etməliyik ki, `"use strict"` direktivini skriptin ən üstündə yerləşdirmək əvəzinə, bir funksiyanın başlanğıcına da əlavə etmək mümkündür. Bu halda yalnız həmin funksiya müasir qaydada işləyəcək. Lakin, adətən insanlar bu direktivi bütün skript üçün istifadə edirlər.
 
 ````warn header="\"use strict\" direktivinin ən üstdə olduğundan əmin olun"
 Əmin olun ki, `"use strict"` direktivi skriptinizin ən üst hissəsində yerləşir, əks halda sıx rejim aktivləşməyəcək.
+=======
+Quite soon we're going to learn functions (a way to group commands), so let's note in advance that `"use strict"` can be put at the beginning of a function. Doing that enables strict mode in that function only. But usually people use it for the whole script.
+>>>>>>> 6236eb8c3cdde729dab761a1d0967a88a1a6197e
 
 Burada sıx rejim aktiv deyil:
 
@@ -46,11 +50,21 @@ Bir dəfə sıx rejim aktivləşdikdən sonra, geri dönüş mümkün deyil.
 
 ## Brauzer Konsolu
 
+<<<<<<< HEAD
 Gələcəkdə brauzerin konsolundan xüsusiyyətləri test etmək üçün istifadə etdikdə unutmayın ki, konsol susqunluq halında `use strict` seçənəyini aktivləşdirmir.
+=======
+When you use a [developer console](info:devtools) to run code, please note that it doesn't `use strict` by default.
+>>>>>>> 6236eb8c3cdde729dab761a1d0967a88a1a6197e
 
 Bəzən, `use strict` ilə fərqlər yaranır və nəticədə yanlış nəticələr əldə edə bilərsiniz.
 
+<<<<<<< HEAD
 `key:Shift+Enter` kombinasiyasından istifadə edərək çoxsətirli kod daxil edib `use strict` direktivini ən üstünə yerləşdirin. Məsələn:
+=======
+So, how to actually `use strict` in the console?
+
+First, you can try to press `key:Shift+Enter` to input multiple lines, and put `use strict` on top, like this:
+>>>>>>> 6236eb8c3cdde729dab761a1d0967a88a1a6197e
 
 ```js
 'use strict'; <Shift+Enter ilə yeni sətir əlavə edin>
@@ -60,12 +74,17 @@ Bəzən, `use strict` ilə fərqlər yaranır və nəticədə yanlış nəticəl
 
 Bu metod əksər brauzerlərdə, məsələn, Firefox və Chrome'da işləyir.
 
+<<<<<<< HEAD
 Əgər bu işləməzsə, `use strict` ifadəsini istifadə etmənin ən etibarlı yolu aşağıdakı nümunədə göstərildiyi kimi istifadə etməkdir:
+=======
+If it doesn't, e.g. in an old browser, there's an ugly, but reliable way to ensure `use strict`. Put it inside this kind of wrapper:
+>>>>>>> 6236eb8c3cdde729dab761a1d0967a88a1a6197e
 
 ```js
 (function() {
   'use strict';
 
+<<<<<<< HEAD
   // ...sizin kod...
 })()
 ```
@@ -82,3 +101,24 @@ Növbəti fəsillərdə dil xüsusiyyətlərini öyrəndikcə, sıx rejim və de
 2. `"use strict"` direktivini skriptin və ya funksiyanın ən üstünə yerləşdirərək sıx rejimi aktivləşdirə bilərsiniz. "Siniflər" ("classes") və "modullar" ("modules") kimi bəzi dil xüsusiyyətləri sıx rejimi avtomatik aktivləşdirir.
 3. Sıx rejim bütün müasir brauzerlər tərəfindən dəstəklənir.
 4. Tövsiyə olunur ki, bütün skriptlərinizə `"use strict"` ilə başlayasınız. Bu dərslikdəki nümunələrin hamısı, başqa cür göstərilmədiyi təqdirdə (çox nadir hallarda), sıx rejimi nəzərdə tutur.
+=======
+  // ...your code here...
+})()
+```
+
+## Should we "use strict"?
+
+The question may sound obvious, but it's not so.
+
+One could recommend to start scripts with `"use strict"`... But you know what's cool?
+
+Modern JavaScript supports "classes" and "modules" - advanced language structures (we'll surely get to them), that enable `use strict` automatically. So we don't need to add the `"use strict"` directive, if we use them.
+
+**So, for now `"use strict";` is a welcome guest at the top of your scripts. Later, when your code is all in classes and modules, you may omit it.**
+
+As of now, we've got to know about `use strict` in general.
+
+In the next chapters, as we learn language features, we'll see the differences between the strict and old modes. Luckily, there aren't many and they actually make our lives better.
+
+All examples in this tutorial assume strict mode unless (very rarely) specified otherwise.
+>>>>>>> 6236eb8c3cdde729dab761a1d0967a88a1a6197e
