@@ -1,4 +1,4 @@
 
-# CSS for JS developers
+# JS developerlər üçün CSS
 
-- Outline
+- Xülasə
