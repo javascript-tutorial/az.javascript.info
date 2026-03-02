@@ -1,6 +1,14 @@
 # Verilən tipləri
 
+<<<<<<< HEAD
 JavaScript-də bir dəyişən istənilən veriləni ehtiva edə bilər. Bir dəyişən əvvəl `string` tipində ola bilər, sonra isə `number` tipinə çevrilə bilər.
+=======
+A value in JavaScript is always of a certain type. For example, a string or a number.
+
+There are eight basic data types in JavaScript. Here, we'll cover them in general and in the next chapters we'll talk about each of them in detail.
+
+We can put any type in a variable. For example, a variable can at one moment be a string and then store a number:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ```js
 // xəta yoxdur
@@ -8,9 +16,13 @@ let message = "salam";
 message = 123456;
 ```
 
+<<<<<<< HEAD
 Bu cür hallara icazə verən proqramlaşdırma dillərinə "dinamik tipli dillər" deyilir. Bu o deməkdir ki, verilən tipləri mövcuddur, lakin dəyişənlər həmin tiplərə bağlı deyil.
 
 JavaScript-də 8 əsas verilən tipi mövcuddur. Bu fəsildə onları ümumi olaraq nəzərdən keçirəcəyik, növbəti fəsillərdə isə hər biri haqqında daha ətraflı danışacağıq.
+=======
+Programming languages that allow such things, such as JavaScript, are called "dynamically typed", meaning that there exist data types, but variables are not bound to any of them.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## Rəqəm
 
@@ -45,6 +57,7 @@ Adi ədədlərlə yanaşı, bu verilən tipinə aid olan "xüsusi ədədi dəyə
     alert( "rəqəm deyil" / 2 ); // NaN, bu cür əməliyyat yanlışdır
     ```
 
+<<<<<<< HEAD
   `NaN` "yapışqan" kimidir. Üzərində aparılan hər hansı bir əməliyyat yenə `NaN` qaytarır:
 
     ```js run
@@ -52,6 +65,17 @@ Adi ədədlərlə yanaşı, bu verilən tipinə aid olan "xüsusi ədədi dəyə
     ```
 
   Yəni, əgər bir riyazi ifadədə `NaN` varsa, bu, nəticənin hamısına təsir edir.
+=======
+    `NaN` is sticky. Any further mathematical operation on `NaN` returns `NaN`:
+
+    ```js run
+    alert( NaN + 1 ); // NaN
+    alert( 3 * NaN ); // NaN
+    alert( "not a number" / 2 - 1 ); // NaN
+    ```
+
+    So, if there's a `NaN` somewhere in a mathematical expression, it propagates to the whole result (there's only one exception to that: `NaN ** 0` is `1`).
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ```smart header="Riyazi əməliyyatlar təhlükəsizdir"
 JavaScript-də riyazi əməliyyatlar "təhlükəsizdir". 0-a bölmə, ədədi olmayan sətirləri rəqəm kimi istifadə etmək və s. edə bilərik.
@@ -63,24 +87,49 @@ Xüsusi ədədi dəyərlər formal olaraq "rəqəm" (`number`) tipinə aiddir. A
 
 Biz <info:number> fəslində rəqəmlərlə işləməyi daha ətraflı öyrənəcəyik.
 
-## BigInt
+## BigInt [#bigint-type]
 
+<<<<<<< HEAD
 JavaScript-də "rəqəm" (`number`) tipi <code>2<sup>53</sup></code>-dən böyük (və ya <code>-2<sup>53</sup></code>-dən kiçik) tam ədədləri ifadə edə bilmir. Bu, onların daxili təqdimatındakı texniki məhdudiyyətdir. Bu, təxminən 16 onluq rəqəmə bərabərdir və əksər hallarda bu məhdudiyyət problem yaratmır. Lakin bəzən, məsələn, kriptoqrafiya və ya mikro-saniyə dəqiqliyi ilə vaxt ölçmələri üçün çox böyük ədədlərə ehtiyac duyula bilər.
+=======
+In JavaScript, the "number" type cannot safely represent integer values larger than <code>(2<sup>53</sup>-1)</code> (that's `9007199254740991`), or less than <code>-(2<sup>53</sup>-1)</code> for negatives.
+
+To be really precise, the "number" type can store larger integers (up to <code>1.7976931348623157 * 10<sup>308</sup></code>), but outside of the safe integer range <code>±(2<sup>53</sup>-1)</code> there'll be a precision error, because not all digits fit into the fixed 64-bit storage. So an "approximate" value may be stored.
+
+For example, these two numbers (right above the safe range) are the same:
+
+```js
+console.log(9007199254740991 + 1); // 9007199254740992
+console.log(9007199254740991 + 2); // 9007199254740992
+```
+
+So to say, all odd integers greater than <code>(2<sup>53</sup>-1)</code> can't be stored at all in the "number" type.
+
+For most purposes <code>±(2<sup>53</sup>-1)</code> range is quite enough, but sometimes we need the entire range of really big integers, e.g. for cryptography or microsecond-precision timestamps.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 Dilə yaxın zamanda əlavə edilmiş `BigInt` tipi istənilən uzunluqda tam ədədləri təmsil etmək üçün istifadə olunur.
 
+<<<<<<< HEAD
 `BigInt` yaratmaq üçün tam ədədin sonuna `n` əlavə olunur:
+=======
+A `BigInt` value is created by appending `n` to the end of an integer:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ```js
 // sondakı "n" onun bir `BigInt` olduğunu bildirir
 const bigInt = 1234567890123456789012345678901234567890n;
 ```
 
+<<<<<<< HEAD
 `BigInt` rəqəmlərə nadir hallarda ehtiyac duyulduğundan, bu mövzuya xüsusi bir fəsil (<info:bigint>) həsr etmişik.
 
 ```smart header="Uyğunluq problemləri"
 Hal-hazırda `BigInt` Firefox və Chrome-da dəstəklənir, lakin Safari, IE və Edge-də dəstəklənmir.
 ```
+=======
+As `BigInt` numbers are rarely needed, we don't cover them here, but devoted them a separate chapter <info:bigint>. Read it when you need such big numbers.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## String
 
@@ -124,7 +173,11 @@ Biz `string`-ləri <info:string> fəslində daha ətraflı izah edəcəyik.
 ```smart header="*character* tipi mövcud deyil."
 Bəzi proqramlaşdırma dillərində yalnız bir simvolu saxlamaq üçün xüsusi bir verilənlər tipi mövcuddur. Məsələn, C və Java dillərində bu tip "char" adlanır.
 
+<<<<<<< HEAD
 JavaScript-də belə bir tip yoxdur. Yalnız bir verilən tipi var: `string`. Bir `string` bir və ya daha çox simvoldan ibarət ola bilər.
+=======
+In JavaScript, there is no such type. There's only one type: `string`. A string may consist of zero characters (be empty), one character or many of them.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 ```
 
 ## Boolean (məntiqi tip)
@@ -164,7 +217,11 @@ JavaScript-də `null`, "mövcud olmayan bir obyektə referans" və ya digər dil
 
 Bu sadəcə xüsusi bir dəyərdir və "heç nə", "boş" və ya "bilinməyən dəyər"i ifadə edir.
 
+<<<<<<< HEAD
 Yuxarıdakı kod, `age` dəyişənin dəyərinin nə üçünsə bilinməyən və ya boş olduğunu bildirir.
+=======
+The code above states that `age` is unknown.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## "undefined" dəyəri
 
@@ -175,33 +232,54 @@ Xüsusi bir dəyər olan `undefined` da ayrıca bir mövqeyə malikdir. Bu, öz�
 Əgər bir dəyişən elan olunubsa, lakin onun üçün heç bir dəyər təyin edilməyibsə, onun dəyəri `undefined` olacaq:
 
 ```js run
-let x;
+let age;
 
+<<<<<<< HEAD
 alert(x); // "undefined" göstərir
 ```
 
 Texniki olaraq, `undefined` istənilən dəyişənə mənimsədilə bilər:
-
-```js run
-let x = 123;
-
-x = undefined;
-
-alert(x); // "undefined"
+=======
+alert(age); // shows "undefined"
 ```
 
+Technically, it is possible to explicitly assign `undefined` to a variable:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
+
+```js run
+let age = 100;
+
+// change the value to undefined
+age = undefined;
+
+alert(age); // "undefined"
+```
+
+<<<<<<< HEAD
 ... Amma biz bunu etməyi tövsiyə etmirik. Normalda "boş" və ya "bilinməyən" bir dəyəri ifadə etmək üçün `null` istifadə olunur. `undefined` isə əsasən dəyişənin dəyərinin mənimsədildiyini yoxlamaq üçün istifadə edilir.
+=======
+...But we don't recommend doing that. Normally, one uses `null` to assign an "empty" or "unknown" value to a variable, while `undefined` is reserved as a default initial value for unassigned things.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## Obyektlər (Objects) və Simvollar (Symbols)
 
 `object` xüsusi bir tipdir.
 
+<<<<<<< HEAD
 Bütün digər tiplər "primitiv (primitive)" tip adlanır, çünki, onların dəyərləri yalnız bir şey (məsələn, bir `string`, `number` və ya başqa bir şey) ehtiva edə bilər. Bunun əksinə olaraq, obyektlər verilən kolleksiyalarını və daha mürəkkəb quruluşları saxlamaq üçün istifadə olunur. Primitiv tipləri daha yaxşı öyrəndikdən sonra obyektlər mövzusuna <info:object> fəslində toxunacağıq.
 
 `symbol` tipi obyektlər üçün unikal identifikatorlar yaratmaqda istifadə olunur. Onu burada tamlıq üçün qeyd edirik, lakin obyektləri öyrəndikdən sonra bu mövzuya qayıdacağıq.
+=======
+All other types are called "primitive" because their values can contain only a single thing (be it a string or a number or whatever). In contrast, objects are used to store collections of data and more complex entities.
+
+Being that important, objects deserve a special treatment. We'll deal with them later in the chapter <info:object>, after we learn more about primitives.
+
+The `symbol` type is used to create unique identifiers for objects. We have to mention it here for the sake of completeness, but also postpone the details till we know objects.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ### `typeof` operatoru [#type-typeof]
 
+<<<<<<< HEAD
 `typeof` operatoru arqumentin tipini qaytarır. Fərqli tipləri müxtəlif üsullarla işləmək lazım olduqda və ya sadəcə sürətli bir yoxlama aparmaq istədikdə çox faydalıdır.
 
 Bu operator iki sintaksisi dəstəkləyir:
@@ -212,6 +290,11 @@ Bu operator iki sintaksisi dəstəkləyir:
 Başqa sözlə, mötərizələrlə və ya mötərizəsiz istifadə edilə bilər. Hər iki halda nəticə eyni olur.
 
 `typeof x` ifadəsi arqumentin tipini `string` formatında qaytarır:
+=======
+The `typeof` operator returns the type of the operand. It's useful when we want to process values of different types differently or just want to do a quick check.
+
+A call to `typeof x` returns a string with the type name:
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ```js
 typeof undefined // "undefined"
@@ -241,14 +324,31 @@ typeof alert // "function"  (3)
 
 Son üç sətir əlavə izah tələb edə bilər:
 
+<<<<<<< HEAD
 1. `Math` riyazi əməliyyatlar təqdim edən daxili obyektlərdən biridir. Biz onu <info:number> fəsilində daha ətraflı öyrənəcəyik. Burada isə, sadəcə obyektin bir nümunəsi kimi istifadə olunub.
 2. `typeof null` nəticəsi `"object"` olaraq qaytarılır. Bu, səhvdir. Bu, `typeof` operatorunun rəsmi olaraq tanınmış bir xətasıdır və uyğunluq səbəbilə saxlanılıb. Əslində, `null` bir obyekt deyil. O, ayrıca bir tipə malik xüsusi bir dəyərdir. Beləliklə, bu, JavaScript dilində mövcud olan bir qüsurdur.
 3. `typeof alert` nəticəsi `"function"` olur, çünki, `alert` bir funksiyadır. Biz funksiyaları növbəti fəsillərdə öyrənəcəyik. Orada görəcəyik ki, əslində JavaScript-də xüsusi bir "function" tipi yoxdur. Funksiyalar `object` tipinə daxildir. Lakin, `typeof` funksiyalara fərqli davranaraq `"function"` kimi qaytarır. Bu tam doğru deyil, lakin praktikada çox rahatdır.
+=======
+1. `Math` is a built-in object that provides mathematical operations. We will learn it in the chapter <info:number>. Here, it serves just as an example of an object.
+2. The result of `typeof null` is `"object"`. That's an officially recognized error in `typeof`, coming from very early days of JavaScript and kept for compatibility. Definitely, `null` is not an object. It is a special value with a separate type of its own. The behavior of `typeof` is wrong here.
+3. The result of `typeof alert` is `"function"`, because `alert` is a function. We'll study functions in the next chapters where we'll also see that there's no special "function" type in JavaScript. Functions belong to the object type. But `typeof` treats them differently, returning `"function"`. That also comes from the early days of JavaScript. Technically, such behavior isn't correct, but can be convenient in practice.
+
+```smart header="The `typeof(x)` syntax"
+You may also come across another syntax: `typeof(x)`. It's the same as `typeof x`.
+
+To put it clear: `typeof` is an operator, not a function. The parentheses here aren't a part of `typeof`. It's the kind of parentheses used for mathematical grouping.
+
+Usually, such parentheses contain a mathematical expression, such as `(2 + 2)`, but here they contain only one argument `(x)`. Syntactically, they allow to avoid a space between the `typeof` operator and its argument, and some people like it.
+
+Some people prefer `typeof(x)`, although the `typeof x` syntax is much more common.
+```
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 ## Xülasə
 
 JavaScript-də 8 sadə verilən tipi mövcuddur:
 
+<<<<<<< HEAD
 - **`number`**: İstənilən növ rəqəmlər üçün, tam və ya onluq kəsr dəyərləri daxildir. Tam ədədlər ±2<sup>53</sup> həddində məhdudlaşdırılıb.
 - **`bigint`**: İxtiyari uzunluqlu tam ədədlər üçündür.
 - **`string`**: "mətn" tipidir. Bir `string` bir və ya daha çox simvolu ehtiva edə bilər. Tək simvol üçün ayrıca bir tip mövcud deyil.
@@ -257,11 +357,29 @@ JavaScript-də 8 sadə verilən tipi mövcuddur:
 - **`undefined`**: Mənimsədilməmiş dəyərlər üçün ayrıca bir tipdir, yalnız `undefined` dəyərinə sahibdir.
 - **`object`**: Daha mürəkkəb verilən strukturlarını saxlamaq üçün istifadə olunur.
 - **`symbol`**: Unikal identifikatorlar yaratmaq üçün istifadə olunur.
+=======
+- Seven primitive data types:
+    - `number` for numbers of any kind: integer or floating-point, integers are limited by <code>±(2<sup>53</sup>-1)</code>.
+    - `bigint` for integer numbers of arbitrary length.
+    - `string` for strings. A string may have zero or more characters, there's no separate single-character type.
+    - `boolean` for `true`/`false`.
+    - `null` for unknown values -- a standalone type that has a single value `null`.
+    - `undefined` for unassigned values -- a standalone type that has a single value `undefined`.
+    - `symbol` for unique identifiers.
+- And one non-primitive data type:
+    - `object` for more complex data structures.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 `typeof` dəyişənin tipini müəyyənləşdirməyə imkan verir:
 
+<<<<<<< HEAD
 - İki sintaksis mövcuddur: `typeof x` və ya `typeof(x)`.
 - `string` olaraq tipin adını qaytarır, məsələn, `"string"`.
 - `null` dəyəri üçün `"object"` qaytarır -- bu, dilin daxilində olan bir səhvdir. Əslində, `null` bir obyekt deyil.
+=======
+- Usually used as `typeof x`, but `typeof(x)` is also possible.
+- Returns a string with the name of the type, like `"string"`.
+- For `null` returns `"object"` -- this is an error in the language, it's not actually an object.
+>>>>>>> ff804bc19351b72bc5df7766f4b9eb8249a3cb11
 
 Növbəti fəsillərdə, əvvəlcə ibtidai (primitive) dəyərləri öyrənəcəyik və onlarla tanış olduqdan sonra obyektlərə keçəcəyik.
