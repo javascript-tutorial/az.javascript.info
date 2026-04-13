@@ -22,7 +22,7 @@ Tərtibatçı alətləri açılacaq və orada çoxlu sayda tab görəcəksiniz. 
 
 Təxmini belə bir şey:
 
-![chrome](chrome.png)
+![chrome](chrome.webp)
 
 Konsolun dəqiq görünüşü Chrome-un versiyasına görə dəyişə bilər lakin çox vaxt oxşardır.
 
@@ -49,7 +49,11 @@ Görünüş hamısında demək olar ki, eynidir. Birini istifadə etməyi tam ö
 
 Safaridə (Mac brauzerdiri, Windows/Linux əməliyyat sistemlərində dəstəklənmir) isə vəziyyət bir qədər fərqlidir. Əvvəlcə "Develop menu"-nu aktiv etməyimiz lazımdır.
 
+<<<<<<< HEAD
 Bunun üçün öncəliklər (Preferences) pəncərəsini açın və "Advanced" panelinə daxil olun. Orada aşağıdakı kimi bir checkbox görəcəksiniz:
+=======
+Open Settings and go to the "Advanced" pane. There's a checkbox at the bottom:
+>>>>>>> 52c1e61915bc8970a950a3f59bd845827e49b4bf
 
 ![safari](safari.png)
 
